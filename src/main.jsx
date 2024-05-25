@@ -2,8 +2,8 @@ import "./styles/globals.css";
 import ReactDOM from "react-dom/client";
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Head } from "./components/Head/Head.jsx";
 import { Main } from "./components/Main/Main.jsx";
+import { Info } from "./components/Info/Info.jsx";
 import App from "./App.jsx";
 
 const router = createBrowserRouter([
@@ -12,12 +12,16 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/head",
-        element: <Head />,
+        index: true,
+        element: <Main />,
       },
       {
         path: "/main",
         element: <Main />,
+      },
+      {
+        path: "/info",
+        element: <Info />,
       },
     ],
   },
