@@ -1,13 +1,11 @@
-import styled from "styled-components";
-
-const StyledH1 = styled.h1`
-  color: red;
-`;
+import { Outlet } from "react-router-dom";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <StyledH1>Hello</StyledH1>
+      <Navbar />
+      <Outlet />
     </>
   );
 }
