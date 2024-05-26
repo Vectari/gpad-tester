@@ -33,19 +33,19 @@ const router = createBrowserRouter([
             element: <PlayerOne />,
           },
           {
-            path: "/main/#1",
+            path: "/main/one",
             element: <PlayerOne />,
           },
           {
-            path: "/main/#2",
+            path: "/main/two",
             element: <PlayerTwo />,
           },
           {
-            path: "/main/#3",
+            path: "/main/three",
             element: <PlayerThree />,
           },
           {
-            path: "/main/#4",
+            path: "/main/four",
             element: <PlayerFour />,
           },
         ],

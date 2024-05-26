@@ -17,16 +17,16 @@ export function Main() {
     <>
       <StyledUl>
         <li>
-          <Link to="/main/#1">#1</Link>
+          <Link to="/main/one">#1</Link>
         </li>
         <li>
-          <Link to="/main/#2">#2</Link>
+          <Link to="/main/two">#2</Link>
         </li>
         <li>
-          <Link to="/main/#3">#3</Link>
+          <Link to="/main/three">#3</Link>
         </li>
         <li>
-          <Link to="/main/#4">#4</Link>
+          <Link to="/main/four">#4</Link>
         </li>
       </StyledUl>
       <Outlet />
