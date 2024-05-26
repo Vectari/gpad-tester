@@ -5,6 +5,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Main } from "./components/Main/Main.jsx";
 import { Info } from "./components/Info/Info.jsx";
 import App from "./App.jsx";
+import { PlayerOne } from "./components/PlayerNumber/PlayerOne/PlayerOne.jsx";
+import { PlayerTwo } from "./components/PlayerNumber/PlayerTwo/PlayerTwo.jsx";
+import { PlayerThree } from "./components/PlayerNumber/PlayerThree/PlayerThree.jsx";
+import { PlayerFour } from "./components/PlayerNumber/PlayerFour/PlayerFour.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,11 +17,38 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Main />,
+        element: (
+          <>
+            <Main />
+            <PlayerOne />
+          </>
+        ),
       },
       {
         path: "/main",
         element: <Main />,
+        children: [
+          {
+            index: true,
+            element: <PlayerOne />,
+          },
+          {
+            path: "/main/#1",
+            element: <PlayerOne />,
+          },
+          {
+            path: "/main/#2",
+            element: <PlayerTwo />,
+          },
+          {
+            path: "/main/#3",
+            element: <PlayerThree />,
+          },
+          {
+            path: "/main/#4",
+            element: <PlayerFour />,
+          },
+        ],
       },
       {
         path: "/info",
