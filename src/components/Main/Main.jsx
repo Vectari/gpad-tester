@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledUl = styled.ul`
@@ -10,6 +10,10 @@ const StyledUl = styled.ul`
   li {
     margin-right: 10px;
   }
+
+  .active {
+    color: red;
+  }
 `;
 
 export function Main() {
@@ -17,16 +21,16 @@ export function Main() {
     <>
       <StyledUl>
         <li>
-          <Link to="/main/one">#1</Link>
+          <NavLink to="/main/one">#1</NavLink>
         </li>
         <li>
-          <Link to="/main/two">#2</Link>
+          <NavLink to="/main/two">#2</NavLink>
         </li>
         <li>
-          <Link to="/main/three">#3</Link>
+          <NavLink to="/main/three">#3</NavLink>
         </li>
         <li>
-          <Link to="/main/four">#4</Link>
+          <NavLink to="/main/four">#4</NavLink>
         </li>
       </StyledUl>
       <Outlet />

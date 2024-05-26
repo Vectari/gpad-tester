@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledUl = styled.ul`
@@ -10,6 +10,10 @@ const StyledUl = styled.ul`
   li {
     margin-right: 10px;
   }
+
+  .active {
+    color: red;
+  }
 `;
 
 export function Navbar() {
@@ -17,10 +21,10 @@ export function Navbar() {
     <nav>
       <StyledUl>
         <li>
-          <Link to="/main">Main</Link>
+          <NavLink to="/main">Main</NavLink>
         </li>
         <li>
-          <Link to="/info">INFO</Link>
+          <NavLink to="/info">INFO</NavLink>
         </li>
       </StyledUl>
     </nav>
