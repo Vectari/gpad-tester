@@ -1,4 +1,68 @@
 import { useEffect, useState } from "react";
+import USB_SVG from "../../assets/usb.svg";
+import BT_SVG from "../../assets/bt.svg";
+import styled from "styled-components";
+
+const StyledSVG = styled.div`
+  margin: 20px 0 10px 0;
+
+  img {
+    padding: 0 10px 0 10px;
+  }
+`;
+
+const StyledLoader = styled.div`
+  /* change color here */
+  color: #000000;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  div {
+    box-sizing: border-box;
+    position: absolute;
+    border: 4px solid currentColor;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+
+  div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 8px;
+      height: 8px;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 8px;
+      height: 8px;
+      opacity: 1;
+    }
+    100% {
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+    }
+  }
+`;
 
 export function PlayerOne() {
   const [leftX, setLeftX] = useState(0);
@@ -66,7 +130,15 @@ export function PlayerOne() {
   if (buttons === 0) {
     return (
       <>
-        <p>Not connected</p>
+        <StyledLoader>
+          <div></div>
+          <div></div>
+        </StyledLoader>
+        <p>Connect the controller via USB or Bluetooth and press any key</p>
+        <StyledSVG>
+          <img src={USB_SVG} alt="usb logo" />
+          <img src={BT_SVG} alt="bluetooth logo" />
+        </StyledSVG>
       </>
     );
   } else if (buttons === 17) {
