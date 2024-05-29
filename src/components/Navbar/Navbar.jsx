@@ -1,32 +1,52 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledUl = styled.ul`
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
+const StyledNav = styled.nav`
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
 
-  li {
-    margin-right: 10px;
-  }
+    li {
+      margin-right: 10px;
+    }
 
-  .active {
-    color: red;
+    .active {
+      color: red;
+    }
   }
 `;
 
 export function Navbar() {
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location]);
+
   return (
-    <nav>
-      <StyledUl>
+    <StyledNav>
+      <ul>
         <li>
-          <NavLink to="/main">Main</NavLink>
+          <NavLink
+            to="/main"
+            className={activeLink === ("/" || "/main") ? "active" : ""}
+          >
+            Main
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/info">INFO</NavLink>
+          <NavLink
+            to="/info"
+            className={activeLink === "/info" ? "active" : ""}
+          >
+            INFO
+          </NavLink>
         </li>
-      </StyledUl>
-    </nav>
+      </ul>
+    </StyledNav>
   );
 }
