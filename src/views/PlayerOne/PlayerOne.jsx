@@ -64,6 +64,21 @@ const StyledLoader = styled.div`
   }
 `;
 
+const AxesAndButtonsWrapper = styled.div``;
+
+const AxesWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+`;
+
+const ButtonsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 70px 0 0 10px;
+`;
+
 export function PlayerOne() {
   const [leftX, setLeftX] = useState(0);
   const [leftY, setLeftY] = useState(0);
@@ -127,6 +142,54 @@ export function PlayerOne() {
     }, 100);
   });
 
+  // BUTTONS SECTION
+
+  let buttonsNumber = [];
+  for (let i = 0; i < buttons; i++) {
+    // let buttonsValue = navigator.getGamepads()[0].buttons[i].value;
+
+    // STYLE FOR BUTTONS
+    // const StyledButtons = styled.div`
+    //   background-color: ${buttonsValue > 0
+    //     ? `rgba(0,0,0,${buttonsValue})`
+    //     : `white`};
+    //   color: ${buttonsValue > 0.4 ? `white` : `rgba(0,0,0)`};
+    //   padding: 10px;
+    //   margin: 5px;
+    //   border-radius: 10px;
+    //   width: 55px;
+    // `;
+    buttonsNumber.push(<div key={i}>B {i}</div>);
+  }
+
+  // AXES SECTION
+
+  let axesNumber = [];
+  for (let i = 0; i < axes; i++) {
+    let axesValue = navigator.getGamepads()[0].axes;
+    let renderedAxesValue = Math.abs(axesValue[i])
+      .toFixed(3)
+      .toString()
+      .substring(0, 5);
+
+    // STYLE FOR AXES
+    // const StyledAxes = styled.div`
+    //   background-color: white;
+    //   color: black;
+    //   padding: 10px;
+    //   margin: 5px;
+    //   border-radius: 10px;
+    //   width: 70px;
+    // `;
+
+    axesNumber.push(
+      <div key={i}>
+        Axis {i}: {renderedAxesValue}
+        {/* {Math.abs(axesValue![i]) >= 0.15 ? <div className="error">error</div> : <div className="ok">ok</div>} */}
+      </div>
+    );
+  }
+
   if (buttons === 0) {
     return (
       <>
@@ -141,12 +204,18 @@ export function PlayerOne() {
         </StyledSVG>
       </>
     );
+
+    // ------------------ XBOX ONE
   } else if (buttons === 17) {
     return (
       <>
         <p>Connected</p>
         <p>{connectionStatus ? "OK" : ""}</p>
         <p>{gamepadName}</p>
+        <AxesAndButtonsWrapper>
+          <AxesWrapper>{axesNumber}</AxesWrapper>
+          <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
+        </AxesAndButtonsWrapper>
         {leftX}
         {leftY}
         {rightX}
@@ -389,11 +458,18 @@ export function PlayerOne() {
         </svg>
       </>
     );
+
+    // ------------------ PS4 AND PS5
   } else {
     return (
       <>
         <p>Connected</p>
+        <p>{connectionStatus ? "OK" : ""}</p>
         <p>{gamepadName}</p>
+        <AxesAndButtonsWrapper>
+          <AxesWrapper>{axesNumber}</AxesWrapper>
+          <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
+        </AxesAndButtonsWrapper>
         {/* PS4 SVG BELOW*/}
         <svg
           fill="white"
