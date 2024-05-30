@@ -9,7 +9,15 @@ const StyledUl = styled.ul`
   margin: 0;
 
   li {
-    margin-right: 10px;
+    width: 130px;
+    background-color: pink;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  p {
+    color: green;
   }
 
   .active {
@@ -20,48 +28,97 @@ const StyledUl = styled.ul`
 export function Main() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
+  const [connectionStatusOne, setConnectionStatusOne] = useState(false);
+  const [connectionStatusTwo, setConnectionStatusTwo] = useState(false);
+  const [connectionStatusThree, setConnectionStatusThree] = useState(false);
+  const [connectionStatusFour, setConnectionStatusFour] = useState(false);
 
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location]);
 
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const interval = setInterval(() => {
+      const gpad = navigator.getGamepads()[0];
+      if (gpad) {
+        setConnectionStatusOne(gpad.connected);
+      }
+    }, 100);
+  });
+
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const interval = setInterval(() => {
+      const gpad = navigator.getGamepads()[1];
+      if (gpad) {
+        setConnectionStatusTwo(gpad.connected);
+      }
+    }, 100);
+  });
+
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const interval = setInterval(() => {
+      const gpad = navigator.getGamepads()[2];
+      if (gpad) {
+        setConnectionStatusThree(gpad.connected);
+      }
+    }, 100);
+  });
+
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const interval = setInterval(() => {
+      const gpad = navigator.getGamepads()[3];
+      if (gpad) {
+        setConnectionStatusFour(gpad.connected);
+      }
+    }, 100);
+  });
+
   return (
     <>
       <StyledUl>
-        <li>
-          <NavLink
-            to="/main/one"
-            className={
-              activeLink === "/" || activeLink === "/main" ? "active" : ""
-            }
-          >
+        <NavLink
+          to="/main/one"
+          className={
+            activeLink === "/" || activeLink === "/main" ? "active" : ""
+          }
+        >
+          <li>
             #1
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/main/two"
-            className={activeLink === "/main/two" ? "active" : ""}
-          >
+            <p>{connectionStatusOne ? "Connected" : ""}</p>
+          </li>
+        </NavLink>
+        <NavLink
+          to="/main/two"
+          className={activeLink === "/main/two" ? "active" : ""}
+        >
+          <li>
             #2
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/main/three"
-            className={activeLink === "/main/three" ? "active" : ""}
-          >
+            <p>{connectionStatusTwo ? "Connected" : ""}</p>
+          </li>
+        </NavLink>
+
+        <NavLink
+          to="/main/three"
+          className={activeLink === "/main/three" ? "active" : ""}
+        >
+          <li>
             #3
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/main/four"
-            className={activeLink === "/main/four" ? "active" : ""}
-          >
+            <p>{connectionStatusThree ? "Connected" : ""}</p>
+          </li>
+        </NavLink>
+        <NavLink
+          to="/main/four"
+          className={activeLink === "/main/four" ? "active" : ""}
+        >
+          <li>
             #4
-          </NavLink>
-        </li>
+            <p>{connectionStatusFour ? "Connected" : ""}</p>
+          </li>
+        </NavLink>
       </StyledUl>
       <Outlet />
     </>
