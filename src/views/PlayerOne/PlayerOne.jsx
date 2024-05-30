@@ -217,11 +217,6 @@ export function PlayerOne() {
           <AxesWrapper>{axesNumber}</AxesWrapper>
           <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
         </AxesAndButtonsWrapper>
-        {leftX}
-        {leftY}
-        {rightX}
-        {rightY}
-        {axes[0]}
         {/* XBOX SVG BELOW*/}
         <svg
           fill="white"
