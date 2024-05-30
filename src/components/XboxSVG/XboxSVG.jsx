@@ -1,62 +1,31 @@
-"use client";
-
-import { Theme } from "@/app/Theme";
-import { useAtom } from "jotai";
-import {
-  atomAPressed,
-  atomBPressed,
-  atomConnectionStatus,
-  atomDownPressed,
-  atomGamepadName,
-  atomL3Pressed,
-  atomLbPressed,
-  atomLeftPressed,
-  atomLeftX,
-  atomLeftY,
-  atomLt,
-  atomOptionsPressed,
-  atomR3Pressed,
-  atomRbPressed,
-  atomRightPressed,
-  atomRightX,
-  atomRightY,
-  atomRt,
-  atomSharePressed,
-  atomUpPressed,
-  atomXPressed,
-  atomYPressed,
-} from "@/GamepadAPI/GamepadAPI";
-
-export function XboxSVG() {
-  const [leftX] = useAtom(atomLeftX);
-  const [leftY] = useAtom(atomLeftY);
-  const [rightX] = useAtom(atomRightX);
-  const [rightY] = useAtom(atomRightY);
-  const [l3Pressed] = useAtom(atomL3Pressed);
-  const [r3Pressed] = useAtom(atomR3Pressed);
-  const [lt] = useAtom(atomLt);
-  const [rt] = useAtom(atomRt);
-  const [lbPressed] = useAtom(atomLbPressed);
-  const [rbPressed] = useAtom(atomRbPressed);
-  const [aPressed] = useAtom(atomAPressed);
-  const [bPressed] = useAtom(atomBPressed);
-  const [xPressed] = useAtom(atomXPressed);
-  const [yPressed] = useAtom(atomYPressed);
-  const [upPressed] = useAtom(atomUpPressed);
-  const [downPressed] = useAtom(atomDownPressed);
-  const [leftPressed] = useAtom(atomLeftPressed);
-  const [rightPressed] = useAtom(atomRightPressed);
-  const [sharePressed] = useAtom(atomSharePressed);
-  const [optionsPressed] = useAtom(atomOptionsPressed);
-  const [connectionStatus] = useAtom(atomConnectionStatus);
-  const [gamepadName] = useAtom(atomGamepadName);
-
+export function XboxSVG({
+  leftX,
+  leftY,
+  rightX,
+  rightY,
+  l3Pressed,
+  r3Pressed,
+  lt,
+  rt,
+  lbPressed,
+  rbPressed,
+  APressed,
+  BPressed,
+  XPressed,
+  YPressed,
+  upPressed,
+  downPressed,
+  leftPressed,
+  rightPressed,
+  sharePressed,
+  optionsPressed,
+}) {
   return (
     <>
       <svg
-        fill={Theme.SVGColors.white}
+        fill="white"
         stroke="black"
-        stroke-width="2"
+        strokeWidth="2"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -66,11 +35,11 @@ export function XboxSVG() {
         height="370"
         width="370"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           {" "}
@@ -86,8 +55,8 @@ export function XboxSVG() {
                 height="27"
                 rx="6.5"
                 fill={lbPressed ? "black" : "white"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <rect
                 // RB
@@ -97,8 +66,8 @@ export function XboxSVG() {
                 height="27"
                 rx="6.5"
                 fill={rbPressed ? "black" : "white"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <rect
                 // LT
@@ -108,8 +77,8 @@ export function XboxSVG() {
                 height="55"
                 rx="8"
                 fill={lt ? `rgba(0,0,0,${lt})` : "rgb(255, 255, 255)"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <rect
                 // LT
@@ -119,8 +88,8 @@ export function XboxSVG() {
                 height="55"
                 rx="8"
                 fill={rt ? `rgba(0,0,0,${rt})` : "rgb(255, 255, 255)"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <path d="M305.053,130c-3.182,1.512-8.127,3.941-8.616,6.634c0,0,13.488,13.14,12.895,25.251c2.754-3.874,4.412-8.58,4.412-13.684 C313.743,140.851,310.316,134.358,305.053,130z"></path>{" "}
               <circle
@@ -128,7 +97,7 @@ export function XboxSVG() {
                 cx={142 + leftX * 8}
                 cy={210.8 + leftY * 8}
                 r="40"
-                stroke-width={l3Pressed ? "5" : "2"}
+                strokeWidth={l3Pressed ? "5" : "2"}
                 fill={
                   Math.abs(leftX) > 0.1 || Math.abs(leftY) > 0.1
                     ? `rgba(0,0,0,${Math.abs(leftX) + Math.abs(leftY)})`
@@ -140,7 +109,7 @@ export function XboxSVG() {
                 cx="399.932"
                 cy="212.094"
                 r="18.77"
-                fill={xPressed ? "black" : "white"}
+                fill={XPressed ? "black" : "white"}
               ></circle>{" "}
               <circle
                 // SHARE
@@ -160,7 +129,7 @@ export function XboxSVG() {
                 cx="438.047"
                 cy="252.192"
                 r="18.77"
-                fill={aPressed ? "black" : "white"}
+                fill={APressed ? "black" : "white"}
               ></circle>{" "}
               <path d="M274.827,130.141c-5.171,4.352-8.525,10.79-8.525,18.066c0,4.829,1.469,9.314,3.954,13.066 c-0.11-11.934,12.907-24.627,12.907-24.627C282.685,134.034,278.009,131.659,274.827,130.141z"></path>{" "}
               <circle
@@ -168,7 +137,7 @@ export function XboxSVG() {
                 cx="479.1"
                 cy="212.094"
                 r="18.77"
-                fill={bPressed ? "black" : "white"}
+                fill={BPressed ? "black" : "white"}
               ></circle>{" "}
               <circle
                 // OPTION
@@ -182,14 +151,14 @@ export function XboxSVG() {
                 cx="438.047"
                 cy="173.997"
                 r="18.77"
-                fill={yPressed ? "black" : "white"}
+                fill={YPressed ? "black" : "white"}
               ></circle>{" "}
               <circle
                 // R AXES AND R3
                 cx={365.2 + rightX * 8}
                 cy={300.8 + rightY * 8}
                 r="40"
-                stroke-width={r3Pressed ? "5" : "2"}
+                strokeWidth={r3Pressed ? "5" : "2"}
                 fill={
                   Math.abs(rightX) > 0.1 || Math.abs(rightY) > 0.1
                     ? `rgba(0,0,0,${Math.abs(rightX) + Math.abs(rightY)})`
