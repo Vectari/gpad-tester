@@ -1,80 +1,47 @@
-"use client";
-
-import { Theme } from "@/app/Theme";
-import { useAtom } from "jotai";
-import {
-  atomLeftX,
-  atomLeftY,
-  atomRightX,
-  atomRightY,
-  atomL3Pressed,
-  atomR3Pressed,
-  atomLt,
-  atomRt,
-  atomLbPressed,
-  atomRbPressed,
-  atomAPressed,
-  atomBPressed,
-  atomXPressed,
-  atomYPressed,
-  atomUpPressed,
-  atomDownPressed,
-  atomLeftPressed,
-  atomRightPressed,
-  atomSharePressed,
-  atomOptionsPressed,
-  atomConnectionStatus,
-  atomGamepadName,
-  atomTouchbarPressed,
-  atomLogoPressed,
-} from "@/GamepadAPI/GamepadAPI";
-
-export function PS4SVG() {
-  const [leftX] = useAtom(atomLeftX);
-  const [leftY] = useAtom(atomLeftY);
-  const [rightX] = useAtom(atomRightX);
-  const [rightY] = useAtom(atomRightY);
-  const [l3Pressed] = useAtom(atomL3Pressed);
-  const [r3Pressed] = useAtom(atomR3Pressed);
-  const [lt] = useAtom(atomLt);
-  const [rt] = useAtom(atomRt);
-  const [lbPressed] = useAtom(atomLbPressed);
-  const [rbPressed] = useAtom(atomRbPressed);
-  const [aPressed] = useAtom(atomAPressed);
-  const [bPressed] = useAtom(atomBPressed);
-  const [xPressed] = useAtom(atomXPressed);
-  const [yPressed] = useAtom(atomYPressed);
-  const [upPressed] = useAtom(atomUpPressed);
-  const [downPressed] = useAtom(atomDownPressed);
-  const [leftPressed] = useAtom(atomLeftPressed);
-  const [rightPressed] = useAtom(atomRightPressed);
-  const [sharePressed] = useAtom(atomSharePressed);
-  const [optionsPressed] = useAtom(atomOptionsPressed);
-  const [logoPressed] = useAtom(atomLogoPressed);
-  const [touchbarPressed] = useAtom(atomTouchbarPressed);
-  const [connectionStatus] = useAtom(atomConnectionStatus);
-  const [gamepadName] = useAtom(atomGamepadName);
-
+export function PS4SVG({
+  leftX,
+  leftY,
+  rightX,
+  rightY,
+  l3Pressed,
+  r3Pressed,
+  lt,
+  rt,
+  lbPressed,
+  rbPressed,
+  APressed,
+  BPressed,
+  XPressed,
+  YPressed,
+  upPressed,
+  downPressed,
+  leftPressed,
+  rightPressed,
+  sharePressed,
+  optionsPressed,
+  logoPressed,
+  touchbarPressed,
+}) {
   return (
     <>
       <svg
-        fill={Theme.SVGColors.white}
+        fill="white"
         stroke="black"
-        stroke-width="2"
+        strokeWidth="2"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
         // xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 575.395 575.395"
+        viewBox="0 75 575.395 575.395"
         // xml:space="preserve"
         height="370"
         width="370"
       >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           {" "}
@@ -90,8 +57,8 @@ export function PS4SVG() {
                 height="27"
                 rx="6.5"
                 fill={lbPressed ? "black" : "white"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <rect
                 // RB
@@ -101,8 +68,8 @@ export function PS4SVG() {
                 height="27"
                 rx="6.5"
                 fill={rbPressed ? "black" : "white"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <rect
                 // LT
@@ -112,8 +79,8 @@ export function PS4SVG() {
                 height="55"
                 rx="8"
                 fill={lt ? `rgba(0,0,0,${lt})` : "rgb(255, 255, 255)"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <rect
                 // LT
@@ -123,8 +90,8 @@ export function PS4SVG() {
                 height="55"
                 rx="8"
                 fill={rt ? `rgba(0,0,0,${rt})` : "rgb(255, 255, 255)"}
-                stroke={Theme.SVGColors.black}
-                stroke-width="2"
+                stroke="black"
+                strokeWidth="2"
               ></rect>
               <path
                 // OPTION
@@ -136,7 +103,7 @@ export function PS4SVG() {
                 cx="466.5"
                 cy="231.598"
                 r="17.081"
-                fill={yPressed ? "black" : "white"}
+                fill={YPressed ? "black" : "white"}
               ></circle>{" "}
               <path
                 // PS BUTTON
@@ -148,14 +115,14 @@ export function PS4SVG() {
                 cx="506.592"
                 cy="271.69"
                 r="17.081"
-                fill={bPressed ? "black" : "white"}
+                fill={BPressed ? "black" : "white"}
               ></circle>{" "}
               <circle
                 // L AXES AND L3
                 cx={190.7 + leftX * 7}
                 cy={354 + leftY * 7}
                 r="25"
-                stroke-width={l3Pressed ? "5" : "2"}
+                strokeWidth={l3Pressed ? "5" : "2"}
                 fill={
                   Math.abs(leftX) > 0.1 || Math.abs(leftY) > 0.1
                     ? `rgba(0,0,0,${Math.abs(leftX) + Math.abs(leftY)})`
@@ -167,7 +134,7 @@ export function PS4SVG() {
                 cx={378.2 + rightX * 7}
                 cy={354 + rightY * 7}
                 r="25"
-                stroke-width={r3Pressed ? "5" : "2"}
+                strokeWidth={r3Pressed ? "5" : "2"}
                 fill={
                   Math.abs(rightX) > 0.1 || Math.abs(rightY) > 0.1
                     ? `rgba(0,0,0,${Math.abs(rightX) + Math.abs(rightY)})`
@@ -183,14 +150,14 @@ export function PS4SVG() {
                 cx="426.408"
                 cy="271.69"
                 r="17.081"
-                fill={xPressed ? "black" : "white"}
+                fill={XPressed ? "black" : "white"}
               ></circle>{" "}
               <circle
                 // A BUTTON
                 cx="466.5"
                 cy="311.776"
                 r="17.081"
-                fill={aPressed ? "black" : "white"}
+                fill={APressed ? "black" : "white"}
               ></circle>{" "}
               <path
                 // SHARE
