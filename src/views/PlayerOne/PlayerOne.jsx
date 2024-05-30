@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import USB_SVG from "../../assets/usb.svg";
 import BT_SVG from "../../assets/bt.svg";
 import styled from "styled-components";
+import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
 
 const StyledSVG = styled.div`
   margin: 20px 0 10px 0;
@@ -405,57 +406,14 @@ export function PlayerOne() {
             </g>{" "}
           </g>
         </svg>
-        {/* AXES SVG BELOW */}
-        <svg height="157" width="335">
-          <g transform="translate(78.5 78.5) scale(0.95, 0.95)">
-            <circle
-              cx="0"
-              cy="0"
-              r="78.5"
-              fill="none"
-              stroke="black"
-              strokeWidth={l3Pressed ? "5" : "1"}
-            ></circle>
-            <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="black"></line>
-            <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="black"></line>
-            <line
-              x1={leftX * 78.5}
-              y1={leftY * 78.5}
-              stroke="black"
-              strokeWidth="1"
-            ></line>
-            <circle
-              cx={leftX * 78.5}
-              cy={leftY * 78.5}
-              r="4"
-              fill="black"
-            ></circle>
-          </g>
-          <g transform="translate(258.5 78.5) scale(0.95, 0.95)">
-            <circle
-              cx="0"
-              cy="0"
-              r="78.5"
-              fill="none"
-              stroke="black"
-              strokeWidth={r3Pressed ? "5" : "1"}
-            ></circle>
-            <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="black"></line>
-            <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="black"></line>
-            <line
-              x1={rightX * 78.5}
-              y1={rightY * 78.5}
-              stroke="black"
-              strokeWidth="1"
-            ></line>
-            <circle
-              cx={rightX * 78.5}
-              cy={rightY * 78.5}
-              r="4"
-              fill="black"
-            ></circle>
-          </g>
-        </svg>
+        <AxesSVG
+          leftX={leftX}
+          leftY={leftY}
+          l3Pressed={l3Pressed}
+          rightX={rightX}
+          rightY={rightY}
+          r3Pressed={r3Pressed}
+        />
       </>
     );
 
@@ -640,57 +598,14 @@ export function PlayerOne() {
             </g>{" "}
           </g>
         </svg>
-        {/* AXES SVG BELOW */}
-        <svg height="157" width="335">
-          <g transform="translate(78.5 78.5) scale(0.95, 0.95)">
-            <circle
-              cx="0"
-              cy="0"
-              r="78.5"
-              fill="none"
-              stroke="black"
-              strokeWidth={l3Pressed ? "5" : "1"}
-            ></circle>
-            <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="black"></line>
-            <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="black"></line>
-            <line
-              x1={leftX * 78.5}
-              y1={leftY * 78.5}
-              stroke="black"
-              strokeWidth="1"
-            ></line>
-            <circle
-              cx={leftX * 78.5}
-              cy={leftY * 78.5}
-              r="4"
-              fill="black"
-            ></circle>
-          </g>
-          <g transform="translate(258.5 78.5) scale(0.95, 0.95)">
-            <circle
-              cx="0"
-              cy="0"
-              r="78.5"
-              fill="none"
-              stroke="black"
-              strokeWidth={r3Pressed ? "5" : "1"}
-            ></circle>
-            <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="black"></line>
-            <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="black"></line>
-            <line
-              x1={rightX * 78.5}
-              y1={rightY * 78.5}
-              stroke="black"
-              strokeWidth="1"
-            ></line>
-            <circle
-              cx={rightX * 78.5}
-              cy={rightY * 78.5}
-              r="4"
-              fill="black"
-            ></circle>
-          </g>
-        </svg>
+        <AxesSVG
+          leftX={leftX}
+          leftY={leftY}
+          l3Pressed={l3Pressed}
+          rightX={rightX}
+          rightY={rightY}
+          r3Pressed={r3Pressed}
+        />
       </>
     );
   }
