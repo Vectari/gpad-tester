@@ -16,13 +16,17 @@ const StyledUl = styled.ul`
     border-radius: 20px;
   }
 
-  p {
-    color: green;
-  }
-
   .active {
     color: red;
   }
+`;
+
+const StyledConnected = styled.p`
+  color: green;
+`;
+
+const StyledNotFound = styled.p`
+  color: blue;
 `;
 
 export function Main() {
@@ -46,7 +50,7 @@ export function Main() {
       }
 
       if (navigator.getGamepads()[0] === null) {
-        setConnectionStatusOne(false)
+        setConnectionStatusOne(false);
       }
     }, 100);
   });
@@ -60,7 +64,7 @@ export function Main() {
       }
 
       if (navigator.getGamepads()[1] === null) {
-        setConnectionStatusTwo(false)
+        setConnectionStatusTwo(false);
       }
     }, 100);
   });
@@ -72,9 +76,9 @@ export function Main() {
       if (gpad) {
         setConnectionStatusThree(gpad.connected);
       }
-      
+
       if (navigator.getGamepads()[2] === null) {
-        setConnectionStatusThree(false)
+        setConnectionStatusThree(false);
       }
     }, 100);
   });
@@ -88,7 +92,7 @@ export function Main() {
       }
 
       if (navigator.getGamepads()[3] === null) {
-        setConnectionStatusFour(false)
+        setConnectionStatusFour(false);
       }
     }, 100);
   });
@@ -104,7 +108,12 @@ export function Main() {
         >
           <li>
             #1
-            <p>{connectionStatusOne ? "Connected" : ""}</p>
+            <StyledConnected>
+              {connectionStatusOne ? "Connected" : ""}
+            </StyledConnected>
+            <StyledNotFound>
+              {!connectionStatusOne ? "Not found" : ""}
+            </StyledNotFound>
           </li>
         </NavLink>
         <NavLink
@@ -113,7 +122,12 @@ export function Main() {
         >
           <li>
             #2
-            <p>{connectionStatusTwo ? "Connected" : ""}</p>
+            <StyledConnected>
+              {connectionStatusTwo ? "Connected" : ""}
+            </StyledConnected>
+            <StyledNotFound>
+              {!connectionStatusTwo ? "Not found" : ""}
+            </StyledNotFound>
           </li>
         </NavLink>
 
@@ -123,7 +137,12 @@ export function Main() {
         >
           <li>
             #3
-            <p>{connectionStatusThree ? "Connected" : ""}</p>
+            <StyledConnected>
+              {connectionStatusThree ? "Connected" : ""}
+            </StyledConnected>
+            <StyledNotFound>
+              {!connectionStatusThree ? "Not found" : ""}
+            </StyledNotFound>
           </li>
         </NavLink>
         <NavLink
@@ -132,7 +151,12 @@ export function Main() {
         >
           <li>
             #4
-            <p>{connectionStatusFour ? "Connected" : ""}</p>
+            <StyledConnected>
+              {connectionStatusFour ? "Connected" : ""}
+            </StyledConnected>
+            <StyledNotFound>
+              {!connectionStatusFour ? "Not found" : ""}
+            </StyledNotFound>
           </li>
         </NavLink>
       </StyledUl>
