@@ -6,6 +6,13 @@ import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
 import { XboxSVG } from "../../components/XboxSVG/XboxSVG";
 import { PS4SVG } from "../../components/PS4SVG/PS4SVG";
 
+// one const to rule them all
+
+const playerNumber = 0;
+
+//
+//
+
 const StyledSVG = styled.div`
   margin: 20px 0 10px 0;
 
@@ -113,7 +120,7 @@ export function PlayerOne() {
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
     const interval = setInterval(() => {
-      const gpad = navigator.getGamepads()[0];
+      const gpad = navigator.getGamepads()[playerNumber];
       if (gpad) {
         setLeftX(gpad.axes[0]);
         setLeftY(gpad.axes[1]);
@@ -142,6 +149,11 @@ export function PlayerOne() {
         setButtons(gpad.buttons.length);
         setAxes(gpad.axes.length);
       }
+
+      if (navigator.getGamepads()[playerNumber] === null) {
+        setConnectionStatus(false);
+        setAxes(0);
+      }
     }, 100);
   });
 
@@ -169,7 +181,7 @@ export function PlayerOne() {
 
   let axesNumber = [];
   for (let i = 0; i < axes; i++) {
-    let axesValue = navigator.getGamepads()[0].axes;
+    let axesValue = navigator.getGamepads()[playerNumber].axes;
     let renderedAxesValue = Math.abs(axesValue[i])
       .toFixed(3)
       .toString()
@@ -193,7 +205,7 @@ export function PlayerOne() {
     );
   }
 
-  if (buttons === 0) {
+  if (buttons === 0 || connectionStatus === false) {
     return (
       <>
         <StyledLoader>
