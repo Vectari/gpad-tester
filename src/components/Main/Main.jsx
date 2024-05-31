@@ -107,7 +107,7 @@ export function Main() {
           }
         >
           <li>
-            #1
+            Gamepad #1
             <StyledConnected>
               {connectionStatusOne ? "Connected" : ""}
             </StyledConnected>
@@ -121,7 +121,7 @@ export function Main() {
           className={activeLink === "/main/two" ? "active" : ""}
         >
           <li>
-            #2
+            Gamepad #2
             <StyledConnected>
               {connectionStatusTwo ? "Connected" : ""}
             </StyledConnected>
@@ -136,7 +136,7 @@ export function Main() {
           className={activeLink === "/main/three" ? "active" : ""}
         >
           <li>
-            #3
+            Gamepad #3
             <StyledConnected>
               {connectionStatusThree ? "Connected" : ""}
             </StyledConnected>
@@ -150,7 +150,7 @@ export function Main() {
           className={activeLink === "/main/four" ? "active" : ""}
         >
           <li>
-            #4
+            Gamepad #4
             <StyledConnected>
               {connectionStatusFour ? "Connected" : ""}
             </StyledConnected>
