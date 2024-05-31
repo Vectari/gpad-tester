@@ -44,6 +44,10 @@ export function Main() {
       if (gpad) {
         setConnectionStatusOne(gpad.connected);
       }
+
+      if (navigator.getGamepads()[0] === null) {
+        setConnectionStatusOne(false)
+      }
     }, 100);
   });
 
@@ -68,6 +72,10 @@ export function Main() {
       if (gpad) {
         setConnectionStatusThree(gpad.connected);
       }
+      
+      if (navigator.getGamepads()[2] === null) {
+        setConnectionStatusThree(false)
+      }
     }, 100);
   });
 
@@ -77,6 +85,10 @@ export function Main() {
       const gpad = navigator.getGamepads()[3];
       if (gpad) {
         setConnectionStatusFour(gpad.connected);
+      }
+
+      if (navigator.getGamepads()[3] === null) {
+        setConnectionStatusFour(false)
       }
     }, 100);
   });
