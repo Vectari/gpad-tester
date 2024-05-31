@@ -54,6 +54,10 @@ export function Main() {
       if (gpad) {
         setConnectionStatusTwo(gpad.connected);
       }
+
+      if (navigator.getGamepads()[1] === null) {
+        setConnectionStatusTwo(false)
+      }
     }, 100);
   });
 
