@@ -74,19 +74,32 @@ const StyledLoader = styled.div`
   }
 `;
 
-const AxesAndButtonsWrapper = styled.div``;
+const AxesAndButtonsWrapper = styled.div`
+  margin-top: 2rem;
+`;
 
 const AxesWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  gap: 1rem;
 `;
 
 const ButtonsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin: 70px 0 0 10px;
+  gap: 1rem;
+  margin-top: 1rem;
+`;
+
+// STYLE FOR BUTTONS
+const StyledButtons = styled.div`
+  background-color: ${(props) =>
+    props ? `rgba(0,0,0,${props.value})` : `white`};
+  color: ${(props) => (props.value > 0.4 ? `white` : `rgba(0,0,0)`)};
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  width: 55px;
 `;
 
 export function PlayerOne() {
@@ -153,6 +166,7 @@ export function PlayerOne() {
       if (navigator.getGamepads()[playerNumber] === null) {
         setConnectionStatus(false);
         setAxes(0);
+        setButtons(0);
       }
     }, 100);
   });
@@ -161,23 +175,26 @@ export function PlayerOne() {
 
   let buttonsNumber = [];
   for (let i = 0; i < buttons; i++) {
-    // let buttonsValue = navigator.getGamepads()[0].buttons[i].value;
+    let buttonsValue = navigator.getGamepads()[playerNumber].buttons[i].value;
 
-    // STYLE FOR BUTTONS
-    // const StyledButtons = styled.div`
-    //   background-color: ${buttonsValue > 0
-    //     ? `rgba(0,0,0,${buttonsValue})`
-    //     : `white`};
-    //   color: ${buttonsValue > 0.4 ? `white` : `rgba(0,0,0)`};
-    //   padding: 10px;
-    //   margin: 5px;
-    //   border-radius: 10px;
-    //   width: 55px;
-    // `;
-    buttonsNumber.push(<div key={i}>B {i}</div>);
+    buttonsNumber.push(
+      <StyledButtons key={i} value={buttonsValue}>
+        B {i}
+      </StyledButtons>
+    );
   }
 
   // AXES SECTION
+
+  // STYLE FOR AXES
+  // const StyledAxes = styled.div`
+  //   background-color: white;
+  //   color: black;
+  //   padding: 10px;
+  //   margin: 5px;
+  //   border-radius: 10px;
+  //   width: 70px;
+  // `;
 
   let axesNumber = [];
   for (let i = 0; i < axes; i++) {
@@ -187,19 +204,11 @@ export function PlayerOne() {
       .toString()
       .substring(0, 5);
 
-    // STYLE FOR AXES
-    // const StyledAxes = styled.div`
-    //   background-color: white;
-    //   color: black;
-    //   padding: 10px;
-    //   margin: 5px;
-    //   border-radius: 10px;
-    //   width: 70px;
-    // `;
+    const axesLabels = ["Left X ", "Left Y ", "Right X ", "Right Y "];
 
     axesNumber.push(
       <div key={i}>
-        Axis {i}: {renderedAxesValue}
+        {axesLabels[i] || `Axes${i} `}&rArr; {renderedAxesValue}
         {/* {Math.abs(axesValue![i]) >= 0.15 ? <div className="error">error</div> : <div className="ok">ok</div>} */}
       </div>
     );
@@ -224,9 +233,7 @@ export function PlayerOne() {
   } else if (buttons === 17) {
     return (
       <>
-        <p>Connected</p>
-        <p>{connectionStatus ? "OK" : ""}</p>
-        <p>{gamepadName}</p>
+        <p>Gamepad ID: {gamepadName}</p>
         <AxesAndButtonsWrapper>
           <AxesWrapper>{axesNumber}</AxesWrapper>
           <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
@@ -268,9 +275,7 @@ export function PlayerOne() {
   } else {
     return (
       <>
-        <p>Connected</p>
-        <p>{connectionStatus ? "OK" : ""}</p>
-        <p>{gamepadName}</p>
+        <p>Gamepad ID: {gamepadName}</p>
         <AxesAndButtonsWrapper>
           <AxesWrapper>{axesNumber}</AxesWrapper>
           <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
