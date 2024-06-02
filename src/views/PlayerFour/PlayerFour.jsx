@@ -1,7 +1,5 @@
+import { MainGamepad } from "../../components/MainGamepad/MainGamepad";
+
 export function PlayerFour() {
-  return (
-    <>
-      <p>PlayerFour content</p>
-    </>
-  );
+  return <MainGamepad playerNumber={3} />;
 }
