@@ -6,13 +6,6 @@ import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
 import { XboxSVG } from "../../components/XboxSVG/XboxSVG";
 import { PS4SVG } from "../../components/PS4SVG/PS4SVG";
 
-// one const to rule them all
-
-// const playerNumber = 0;
-
-//
-//
-
 const StyledSVG = styled.div`
   margin: 20px 0 10px 0;
 
