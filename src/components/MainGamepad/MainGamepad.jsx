@@ -4,7 +4,15 @@ import BT_SVG from "../../assets/bt.svg";
 import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
 import { XboxSVG } from "../../components/XboxSVG/XboxSVG";
 import { PS4SVG } from "../../components/PS4SVG/PS4SVG";
-import { StyledSVG, StyledLoader, AxesAndButtonsWrapper, AxesWrapper, ButtonsWrapper, HistoryWrapper, StyledButtons } from "./MainGamepad.styles";
+import {
+  StyledSVG,
+  StyledLoader,
+  AxesAndButtonsWrapper,
+  AxesWrapper,
+  ButtonsWrapper,
+  HistoryWrapper,
+  StyledButtons,
+} from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
   const [leftX, setLeftX] = useState(0);
@@ -33,7 +41,6 @@ export function MainGamepad({ playerNumber }) {
   const [gamepadName, setGamepadName] = useState("");
   const [buttons, setButtons] = useState(0);
   const [axes, setAxes] = useState(0);
-
   const [buttonHistory, setButtonHistory] = useState([]);
 
   useEffect(() => {
@@ -86,6 +93,20 @@ export function MainGamepad({ playerNumber }) {
     }, 100);
     return () => clearInterval(interval);
   }, [playerNumber]);
+
+  // BUTTON HISTORY SECTION
+
+  const buttonHistorySection = (
+    <HistoryWrapper>
+      <button onClick={() => setButtonHistory([])}>Clear history</button>
+      <h3>Button Press History:</h3>
+      <ul>
+        {buttonHistory.map((event, index) => (
+          <li key={index}>{event}</li>
+        ))}
+      </ul>
+    </HistoryWrapper>
+  );
 
   // BUTTONS SECTION
 
@@ -184,15 +205,7 @@ export function MainGamepad({ playerNumber }) {
           rightY={rightY}
           r3Pressed={r3Pressed}
         />
-        <HistoryWrapper>
-          <button onClick={() => setButtonHistory([])}>Clear history</button>
-          <h3>Button Press History:</h3>
-          <ul>
-            {buttonHistory.map((event, index) => (
-              <li key={index}>{event}</li>
-            ))}
-          </ul>
-        </HistoryWrapper>
+        {buttonHistorySection}
       </>
     );
 
@@ -238,15 +251,7 @@ export function MainGamepad({ playerNumber }) {
           rightY={rightY}
           r3Pressed={r3Pressed}
         />
-        <HistoryWrapper>
-          <button onClick={() => setButtonHistory([])}>Clear history</button>
-          <h3>Button Press History:</h3>
-          <ul>
-            {buttonHistory.map((event, index) => (
-              <li key={index}>{event}</li>
-            ))}
-          </ul>
-        </HistoryWrapper>
+        {buttonHistorySection}
       </>
     );
   }
