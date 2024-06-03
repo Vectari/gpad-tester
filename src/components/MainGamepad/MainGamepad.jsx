@@ -84,6 +84,10 @@ const ButtonsWrapper = styled.div`
   margin-top: 1rem;
 `;
 
+const HistoryWrapper = styled.div`
+  margin-top: 2rem;
+`;
+
 // STYLE FOR BUTTONS
 const StyledButtons = styled.div`
   background-color: ${(props) =>
@@ -123,6 +127,8 @@ export function MainGamepad({ playerNumber }) {
   const [buttons, setButtons] = useState(0);
   const [axes, setAxes] = useState(0);
 
+  const [buttonHistory, setButtonHistory] = useState([]);
+
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
     const interval = setInterval(() => {
@@ -154,6 +160,15 @@ export function MainGamepad({ playerNumber }) {
         setGamepadName(gpad.id);
         setButtons(gpad.buttons.length);
         setAxes(gpad.axes.length);
+
+        // Update button history
+        const newHistory = [];
+        gpad.buttons.forEach((button, index) => {
+          if (button.pressed) {
+            newHistory.push(`Button ${index} pressed`);
+          }
+        });
+        setButtonHistory((prevHistory) => [...prevHistory, ...newHistory]);
       }
 
       if (navigator.getGamepads()[playerNumber] === null) {
@@ -162,7 +177,8 @@ export function MainGamepad({ playerNumber }) {
         setButtons(0);
       }
     }, 100);
-  });
+    return () => clearInterval(interval);
+  }, [playerNumber]);
 
   // BUTTONS SECTION
 
@@ -261,6 +277,15 @@ export function MainGamepad({ playerNumber }) {
           rightY={rightY}
           r3Pressed={r3Pressed}
         />
+        <HistoryWrapper>
+          <button onClick={() => setButtonHistory([])}>Clear history</button>
+          <h3>Button Press History:</h3>
+          <ul>
+            {buttonHistory.map((event, index) => (
+              <li key={index}>{event}</li>
+            ))}
+          </ul>
+        </HistoryWrapper>
       </>
     );
 
@@ -306,6 +331,15 @@ export function MainGamepad({ playerNumber }) {
           rightY={rightY}
           r3Pressed={r3Pressed}
         />
+        <HistoryWrapper>
+          <button onClick={() => setButtonHistory([])}>Clear history</button>
+          <h3>Button Press History:</h3>
+          <ul>
+            {buttonHistory.map((event, index) => (
+              <li key={index}>{event}</li>
+            ))}
+          </ul>
+        </HistoryWrapper>
       </>
     );
   }
