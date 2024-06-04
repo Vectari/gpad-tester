@@ -5,26 +5,38 @@ import { Theme } from "../../styles/Theme";
 
 const StyledUl = styled.ul`
   display: flex;
+  background-color: ${Theme.greyOne};
+  border-radius: 0 0 1rem 1rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;
 
   li {
-    width: 8rem;
-    background-color: ${Theme.greyOne};
+    width: 9rem;
     padding: 1rem;
-    border-radius: 0 0 1rem 1rem;
+    box-sizing: border-box;
   }
 
   .active {
-    border-color: 1px solid ${Theme.greyTwo};
-    color: red;
+    border-top: 3px solid transparent;
+    border-left: 3px solid ${Theme.greyTwo};
+    border-right: 3px solid ${Theme.greyTwo};
+    border-bottom: 3px solid ${Theme.greyTwo};
+
+    &:first-child {
+      border-radius: 0 0 0 1rem;
+    }
+    &:last-child {
+      border-radius: 0 0 1rem 0;
+    }
   }
 `;
 
 const StyledConnected = styled.p`
-  color: green;
+  color: ${Theme.connected};
 `;
 
 const StyledNotFound = styled.p`
-  color: blue;
+  color: ${Theme.disconnected};
 `;
 
 export function Main() {
