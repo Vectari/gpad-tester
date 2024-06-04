@@ -1,20 +1,24 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { Theme } from "../../styles/Theme";
 
 const StyledNav = styled.nav`
   ul {
-    list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
+    background-color: ${Theme.greyOne};
+    padding: 1rem 15rem;
+    border-radius: 0 0 1rem 1rem;
+    gap: 5rem;
 
     li {
-      margin-right: 10px;
+      font-size: 1.2rem;
     }
 
     .active {
-      color: red;
+      padding: 1rem;
+      background-color: ${Theme.greyTwo};
+      border-radius: 1rem;
     }
   }
 `;
@@ -35,7 +39,7 @@ export function Navbar() {
             to="/main"
             className={activeLink === ("/" || "/main") ? "active" : ""}
           >
-            Main
+            Home
           </NavLink>
         </li>
         <li>

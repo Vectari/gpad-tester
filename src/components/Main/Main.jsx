@@ -1,22 +1,20 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { Theme } from "../../styles/Theme";
 
 const StyledUl = styled.ul`
-  list-style: none;
   display: flex;
-  padding: 0;
-  margin: 0;
 
   li {
-    width: 130px;
-    background-color: pink;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 20px;
+    width: 8rem;
+    background-color: ${Theme.greyOne};
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
   }
 
   .active {
+    border-color: 1px solid ${Theme.greyTwo};
     color: red;
   }
 `;
