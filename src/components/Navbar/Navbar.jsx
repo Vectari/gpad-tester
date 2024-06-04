@@ -10,6 +10,8 @@ const StyledNav = styled.nav`
     padding: 1rem 15rem;
     border-radius: 0 0 1rem 1rem;
     gap: 5rem;
+    border-left: 3px solid ${Theme.greyTwo};
+    border-right: 3px solid ${Theme.greyTwo};
 
     li {
       font-size: 1.2rem;
@@ -18,7 +20,7 @@ const StyledNav = styled.nav`
     .active {
       padding: 1rem;
       background-color: ${Theme.greyTwo};
-      border-radius: 1rem;
+      border-radius: 0 0 1rem 1rem;
     }
   }
 `;
