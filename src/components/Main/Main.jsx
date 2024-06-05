@@ -1,32 +1,42 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { Theme } from "../../styles/Theme";
 
 const StyledUl = styled.ul`
-  list-style: none;
   display: flex;
-  padding: 0;
-  margin: 0;
+  background-color: ${Theme.greyOne};
+  border-radius: 0 0 1rem 1rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;
 
   li {
-    width: 130px;
-    background-color: pink;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 20px;
+    width: 9rem;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .active {
-    color: red;
+    border-top: 3px solid transparent;
+    border-left: 3px solid ${Theme.greyTwo};
+    border-right: 3px solid ${Theme.greyTwo};
+    border-bottom: 3px solid ${Theme.greyTwo};
+
+    &:first-child {
+      border-radius: 0 0 0 1rem;
+    }
+    &:last-child {
+      border-radius: 0 0 1rem 0;
+    }
   }
 `;
 
 const StyledConnected = styled.p`
-  color: green;
+  color: ${Theme.connected};
 `;
 
 const StyledNotFound = styled.p`
-  color: blue;
+  color: ${Theme.disconnected};
 `;
 
 export function Main() {
