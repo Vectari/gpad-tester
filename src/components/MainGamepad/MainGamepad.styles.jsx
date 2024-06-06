@@ -9,7 +9,6 @@ export const StyledSVG = styled.div`
 `;
 
 export const StyledLoader = styled.div`
-  /* change color here */
   color: #000000;
   box-sizing: border-box;
   display: inline-block;
@@ -61,14 +60,28 @@ export const StyledLoader = styled.div`
   }
 `;
 
+export const HistoryList = styled.ul`
+  display: flex;
+  overflow-x: scroll;
+  list-style-type: none;
+  padding: 0;
+  height: 2.5rem;
+  width: 200px;
+  max-width: 200px;
+`;
+
+export const HistoryItem = styled.li`
+  min-width: 2rem;
+`;
+
 export const AxesAndButtonsWrapper = styled.div`
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 `;
 
 export const AxesWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: .3rem;
 `;
 
 export const ButtonsWrapper = styled.div`
