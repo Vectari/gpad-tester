@@ -94,7 +94,7 @@ export function MainGamepad({ playerNumber }) {
         setAxes(0);
         setButtons(0);
       }
-    }, 100);
+    }, 10);
     return () => clearInterval(interval);
   }, [playerNumber]);
 
