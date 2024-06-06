@@ -214,44 +214,48 @@ export function MainGamepad({ playerNumber }) {
     return (
       <>
         <StyledContener>
-          <p>Gamepad ID: {gamepadName}</p>
           <AxesAndButtonsWrapper>
+            <p>
+              <span>Gamepad ID:</span> {gamepadName}
+            </p>
             <AxesWrapper>{axesNumber}</AxesWrapper>
             <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
+            {buttonHistorySection}
           </AxesAndButtonsWrapper>
-          {buttonHistorySection}
-          <PS4SVG
-            leftX={leftX}
-            leftY={leftY}
-            rightX={rightX}
-            rightY={rightY}
-            l3Pressed={l3Pressed}
-            r3Pressed={r3Pressed}
-            lt={lt}
-            rt={rt}
-            lbPressed={lbPressed}
-            rbPressed={rbPressed}
-            APressed={APressed}
-            BPressed={BPressed}
-            XPressed={XPressed}
-            YPressed={YPressed}
-            upPressed={upPressed}
-            downPressed={downPressed}
-            leftPressed={leftPressed}
-            rightPressed={rightPressed}
-            sharePressed={sharePressed}
-            optionsPressed={optionsPressed}
-            logoPressed={logoPressed}
-            touchbarPressed={touchbarPressed}
-          />
-          <AxesSVG
-            leftX={leftX}
-            leftY={leftY}
-            l3Pressed={l3Pressed}
-            rightX={rightX}
-            rightY={rightY}
-            r3Pressed={r3Pressed}
-          />
+          <StyledGamepadSVGAxesAVGWrapper>
+            <PS4SVG
+              leftX={leftX}
+              leftY={leftY}
+              rightX={rightX}
+              rightY={rightY}
+              l3Pressed={l3Pressed}
+              r3Pressed={r3Pressed}
+              lt={lt}
+              rt={rt}
+              lbPressed={lbPressed}
+              rbPressed={rbPressed}
+              APressed={APressed}
+              BPressed={BPressed}
+              XPressed={XPressed}
+              YPressed={YPressed}
+              upPressed={upPressed}
+              downPressed={downPressed}
+              leftPressed={leftPressed}
+              rightPressed={rightPressed}
+              sharePressed={sharePressed}
+              optionsPressed={optionsPressed}
+              logoPressed={logoPressed}
+              touchbarPressed={touchbarPressed}
+            />
+            <AxesSVG
+              leftX={leftX}
+              leftY={leftY}
+              l3Pressed={l3Pressed}
+              rightX={rightX}
+              rightY={rightY}
+              r3Pressed={r3Pressed}
+            />
+          </StyledGamepadSVGAxesAVGWrapper>
         </StyledContener>
       </>
     );
