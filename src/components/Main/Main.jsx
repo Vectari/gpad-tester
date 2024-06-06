@@ -5,22 +5,24 @@ import { Theme } from "../../styles/Theme";
 
 const StyledUl = styled.ul`
   display: flex;
-  background-color: ${Theme.greyOne};
   border-radius: 0 0 1rem 1rem;
-  box-sizing: border-box;
   font-size: 1.1rem;
+  background-color: ${Theme.interface};
 
   li {
     width: 9rem;
     padding: 1rem;
     box-sizing: border-box;
+    color: white;
   }
 
   .active {
-    border-top: 3px solid transparent;
+    /* border-top: 3px solid transparent;
     border-left: 3px solid ${Theme.greyTwo};
     border-right: 3px solid ${Theme.greyTwo};
-    border-bottom: 3px solid ${Theme.greyTwo};
+    border-bottom: 3px solid ${Theme.greyTwo}; */
+    color: ${Theme.primary};
+    border-bottom: 5px solid ${Theme.primary};
 
     &:first-child {
       border-radius: 0 0 0 1rem;

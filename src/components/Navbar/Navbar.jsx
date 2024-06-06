@@ -6,21 +6,22 @@ import { Theme } from "../../styles/Theme";
 const StyledNav = styled.nav`
   ul {
     display: flex;
-    background-color: ${Theme.greyOne};
+    background-color: ${Theme.interface};
     padding: 1rem 15rem;
     border-radius: 0 0 1rem 1rem;
     gap: 5rem;
-    border-left: 3px solid ${Theme.greyTwo};
-    border-right: 3px solid ${Theme.greyTwo};
+    border-bottom: 1px solid ${Theme.secondary};
 
     li {
       font-size: 1.2rem;
     }
+    span {
+      color: white;
+    }
 
     .active {
-      padding: 1rem;
-      background-color: ${Theme.greyTwo};
-      border-radius: 0 0 1rem 1rem;
+      color: ${Theme.primary};
+      border-bottom: 3px solid ${Theme.primary};
     }
   }
 `;
@@ -41,7 +42,7 @@ export function Navbar() {
             to="/main"
             className={activeLink === ("/" || "/main") ? "active" : ""}
           >
-            Home
+            <span>Home</span>
           </NavLink>
         </li>
         <li>
@@ -49,7 +50,7 @@ export function Navbar() {
             to="/info"
             className={activeLink === "/info" ? "active" : ""}
           >
-            INFO
+            <span>INFO</span>
           </NavLink>
         </li>
       </ul>

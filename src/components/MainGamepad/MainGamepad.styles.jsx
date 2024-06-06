@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Theme } from "../../styles/Theme";
 
 export const StyledSVG = styled.div`
   margin: 20px 0 10px 0;
@@ -9,7 +10,6 @@ export const StyledSVG = styled.div`
 `;
 
 export const StyledLoader = styled.div`
-  /* change color here */
   color: #000000;
   box-sizing: border-box;
   display: inline-block;
@@ -61,34 +61,101 @@ export const StyledLoader = styled.div`
   }
 `;
 
-export const AxesAndButtonsWrapper = styled.div`
+export const StyledContener = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
+  justify-items: center;
+  max-width: 1150px;
+  padding: 0 30px;
+  margin-left: 100px;
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: ${Theme.interface};
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  span {
+    font-weight: 700;
+  }
+`;
+
+export const StyledGamepadSVGAxesAVGWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+`;
+
+export const AxesAndButtonsWrapper = styled.div`
+  /* margin-top: 2rem; */
 `;
 
 export const AxesWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3rem;
+  margin: 0 auto;
+  justify-items: center;
 `;
 
 export const ButtonsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 `;
 
-export const HistoryWrapper = styled.div`
-  margin-top: 2rem;
-`;
-
-// STYLE FOR BUTTONS
 export const StyledButtons = styled.div`
   background-color: ${(props) =>
     props ? `rgba(0,0,0,${props.value})` : `white`};
   color: ${(props) => (props.value > 0.4 ? `white` : `rgba(0,0,0)`)};
   padding: 10px;
-  margin: 5px;
+  /* margin: 5px; */
   border-radius: 10px;
   width: 55px;
+`;
+
+export const HistoryList = styled.ul`
+  display: flex;
+  overflow-x: scroll;
+  list-style-type: none;
+  padding: 0;
+  height: 2.5rem;
+  width: 400px;
+  max-width: 400px;
+`;
+
+export const HistoryWrapper = styled.div`
+  /* margin-top: 2rem; */
+  h3 {
+    color: red;
+  }
+
+  button {
+    padding: 1rem;
+  }
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+`;
+
+export const HistoryItem = styled.li`
+  min-width: 2rem;
 `;
