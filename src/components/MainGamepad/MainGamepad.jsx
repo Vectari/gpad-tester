@@ -14,6 +14,8 @@ import {
   StyledButtons,
   HistoryList,
   HistoryItem,
+  StyledContener,
+  StyledGamepadSVGAxesAVGWrapper,
 } from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
@@ -162,42 +164,48 @@ export function MainGamepad({ playerNumber }) {
   } else if (buttons === 17) {
     return (
       <>
-        <p>Gamepad ID: {gamepadName}</p>
-        <AxesAndButtonsWrapper>
-          <AxesWrapper>{axesNumber}</AxesWrapper>
-          <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
-        </AxesAndButtonsWrapper>
-        {buttonHistorySection}
-        <XboxSVG
-          leftX={leftX}
-          leftY={leftY}
-          rightX={rightX}
-          rightY={rightY}
-          l3Pressed={l3Pressed}
-          r3Pressed={r3Pressed}
-          lt={lt}
-          rt={rt}
-          lbPressed={lbPressed}
-          rbPressed={rbPressed}
-          APressed={APressed}
-          BPressed={BPressed}
-          XPressed={XPressed}
-          YPressed={YPressed}
-          upPressed={upPressed}
-          downPressed={downPressed}
-          leftPressed={leftPressed}
-          rightPressed={rightPressed}
-          sharePressed={sharePressed}
-          optionsPressed={optionsPressed}
-        />
-        <AxesSVG
-          leftX={leftX}
-          leftY={leftY}
-          l3Pressed={l3Pressed}
-          rightX={rightX}
-          rightY={rightY}
-          r3Pressed={r3Pressed}
-        />
+        <StyledContener>
+          <AxesAndButtonsWrapper>
+            <p>
+              <span>Gamepad ID:</span> {gamepadName}
+            </p>
+            <AxesWrapper>{axesNumber}</AxesWrapper>
+            <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
+            {buttonHistorySection}
+          </AxesAndButtonsWrapper>
+          <StyledGamepadSVGAxesAVGWrapper>
+            <XboxSVG
+              leftX={leftX}
+              leftY={leftY}
+              rightX={rightX}
+              rightY={rightY}
+              l3Pressed={l3Pressed}
+              r3Pressed={r3Pressed}
+              lt={lt}
+              rt={rt}
+              lbPressed={lbPressed}
+              rbPressed={rbPressed}
+              APressed={APressed}
+              BPressed={BPressed}
+              XPressed={XPressed}
+              YPressed={YPressed}
+              upPressed={upPressed}
+              downPressed={downPressed}
+              leftPressed={leftPressed}
+              rightPressed={rightPressed}
+              sharePressed={sharePressed}
+              optionsPressed={optionsPressed}
+            />
+            <AxesSVG
+              leftX={leftX}
+              leftY={leftY}
+              l3Pressed={l3Pressed}
+              rightX={rightX}
+              rightY={rightY}
+              r3Pressed={r3Pressed}
+            />
+          </StyledGamepadSVGAxesAVGWrapper>
+        </StyledContener>
       </>
     );
 
@@ -205,44 +213,46 @@ export function MainGamepad({ playerNumber }) {
   } else {
     return (
       <>
-        <p>Gamepad ID: {gamepadName}</p>
-        <AxesAndButtonsWrapper>
-          <AxesWrapper>{axesNumber}</AxesWrapper>
-          <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
-        </AxesAndButtonsWrapper>
-        {buttonHistorySection}
-        <PS4SVG
-          leftX={leftX}
-          leftY={leftY}
-          rightX={rightX}
-          rightY={rightY}
-          l3Pressed={l3Pressed}
-          r3Pressed={r3Pressed}
-          lt={lt}
-          rt={rt}
-          lbPressed={lbPressed}
-          rbPressed={rbPressed}
-          APressed={APressed}
-          BPressed={BPressed}
-          XPressed={XPressed}
-          YPressed={YPressed}
-          upPressed={upPressed}
-          downPressed={downPressed}
-          leftPressed={leftPressed}
-          rightPressed={rightPressed}
-          sharePressed={sharePressed}
-          optionsPressed={optionsPressed}
-          logoPressed={logoPressed}
-          touchbarPressed={touchbarPressed}
-        />
-        <AxesSVG
-          leftX={leftX}
-          leftY={leftY}
-          l3Pressed={l3Pressed}
-          rightX={rightX}
-          rightY={rightY}
-          r3Pressed={r3Pressed}
-        />
+        <StyledContener>
+          <p>Gamepad ID: {gamepadName}</p>
+          <AxesAndButtonsWrapper>
+            <AxesWrapper>{axesNumber}</AxesWrapper>
+            <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
+          </AxesAndButtonsWrapper>
+          {buttonHistorySection}
+          <PS4SVG
+            leftX={leftX}
+            leftY={leftY}
+            rightX={rightX}
+            rightY={rightY}
+            l3Pressed={l3Pressed}
+            r3Pressed={r3Pressed}
+            lt={lt}
+            rt={rt}
+            lbPressed={lbPressed}
+            rbPressed={rbPressed}
+            APressed={APressed}
+            BPressed={BPressed}
+            XPressed={XPressed}
+            YPressed={YPressed}
+            upPressed={upPressed}
+            downPressed={downPressed}
+            leftPressed={leftPressed}
+            rightPressed={rightPressed}
+            sharePressed={sharePressed}
+            optionsPressed={optionsPressed}
+            logoPressed={logoPressed}
+            touchbarPressed={touchbarPressed}
+          />
+          <AxesSVG
+            leftX={leftX}
+            leftY={leftY}
+            l3Pressed={l3Pressed}
+            rightX={rightX}
+            rightY={rightY}
+            r3Pressed={r3Pressed}
+          />
+        </StyledContener>
       </>
     );
   }
