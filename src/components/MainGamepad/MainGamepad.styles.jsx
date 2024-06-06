@@ -97,6 +97,8 @@ export const AxesWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.3rem;
+  margin: 0 auto;
+  justify-items: center;
 `;
 
 export const ButtonsWrapper = styled.div`
