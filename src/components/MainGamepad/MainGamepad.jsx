@@ -12,6 +12,8 @@ import {
   ButtonsWrapper,
   HistoryWrapper,
   StyledButtons,
+  HistoryList,
+  HistoryItem,
 } from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
@@ -75,11 +77,11 @@ export function MainGamepad({ playerNumber }) {
         setButtons(gpad.buttons.length);
         setAxes(gpad.axes.length);
 
-        // Update button history
+        // -------------------------- Update buttons history
         const newHistory = [];
         gpad.buttons.forEach((button, index) => {
           if (button.pressed) {
-            newHistory.push(`Button ${index} pressed`);
+            newHistory.push(`B${index}`);
           }
         });
         setButtonHistory((prevHistory) => [...prevHistory, ...newHistory]);
@@ -94,22 +96,20 @@ export function MainGamepad({ playerNumber }) {
     return () => clearInterval(interval);
   }, [playerNumber]);
 
-  // BUTTON HISTORY SECTION
-
+  // ------------------------------- BUTTONS HISTORY SECTION
   const buttonHistorySection = (
     <HistoryWrapper>
       <button onClick={() => setButtonHistory([])}>Clear history</button>
-      <h3>Button Press History:</h3>
-      <ul>
+      <h3>Buttons History:</h3>
+      <HistoryList>
         {buttonHistory.map((event, index) => (
-          <li key={index}>{event}</li>
+          <HistoryItem key={index}>{event}</HistoryItem>
         ))}
-      </ul>
+      </HistoryList>
     </HistoryWrapper>
   );
 
-  // BUTTONS SECTION
-
+  // ------------------------------- BUTTONS SECTION
   let buttonsNumber = [];
   for (let i = 0; i < buttons; i++) {
     let buttonsValue = navigator.getGamepads()[playerNumber].buttons[i].value;
@@ -121,18 +121,7 @@ export function MainGamepad({ playerNumber }) {
     );
   }
 
-  // AXES SECTION
-
-  // STYLE FOR AXES
-  // const StyledAxes = styled.div`
-  //   background-color: white;
-  //   color: black;
-  //   padding: 10px;
-  //   margin: 5px;
-  //   border-radius: 10px;
-  //   width: 70px;
-  // `;
-
+  // ------------------------------- AXES SECTION
   let axesNumber = [];
   for (let i = 0; i < axes; i++) {
     let axesValue = navigator.getGamepads()[playerNumber].axes;
@@ -151,6 +140,9 @@ export function MainGamepad({ playerNumber }) {
     );
   }
 
+  //
+  //
+  // RENDER SECTION
   if (buttons === 0 || connectionStatus === false) {
     return (
       <>
@@ -175,6 +167,7 @@ export function MainGamepad({ playerNumber }) {
           <AxesWrapper>{axesNumber}</AxesWrapper>
           <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
         </AxesAndButtonsWrapper>
+        {buttonHistorySection}
         <XboxSVG
           leftX={leftX}
           leftY={leftY}
@@ -205,7 +198,6 @@ export function MainGamepad({ playerNumber }) {
           rightY={rightY}
           r3Pressed={r3Pressed}
         />
-        {buttonHistorySection}
       </>
     );
 
@@ -218,7 +210,7 @@ export function MainGamepad({ playerNumber }) {
           <AxesWrapper>{axesNumber}</AxesWrapper>
           <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
         </AxesAndButtonsWrapper>
-        {/* PS4 SVG BELOW*/}
+        {buttonHistorySection}
         <PS4SVG
           leftX={leftX}
           leftY={leftY}
@@ -251,7 +243,6 @@ export function MainGamepad({ playerNumber }) {
           rightY={rightY}
           r3Pressed={r3Pressed}
         />
-        {buttonHistorySection}
       </>
     );
   }
