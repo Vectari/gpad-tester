@@ -11,8 +11,9 @@ const StyledFooterWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  position: absolute;
+  position: sticky;
   bottom: 0;
+  /* bottom: 100px; */
 `;
 
 export function Footer() {
