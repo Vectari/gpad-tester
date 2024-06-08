@@ -91,6 +91,7 @@ export function MainGamepad({ playerNumber }) {
 
       if (navigator.getGamepads()[playerNumber] === null) {
         setConnectionStatus(false);
+        setButtonHistory([]);
         setAxes(0);
         setButtons(0);
       }
