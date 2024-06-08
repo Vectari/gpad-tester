@@ -1,5 +1,6 @@
 export const Theme = {
   white: "rgb(255,255,255)",
+  black: "rgb(0,0,0)",
   connected: "rgb(0, 128, 0)",
   disconnected: "rgb(199, 35, 35)",
   primary: "rgb(253, 165, 33)",
