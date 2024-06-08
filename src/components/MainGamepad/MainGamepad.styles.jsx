@@ -67,8 +67,9 @@ export const StyledContener = styled.div`
   margin-top: 2rem;
   justify-items: center;
   max-width: 1150px;
-  padding: 0 30px;
-  margin-left: 100px;
+  padding: 30px 30px;
+  border: 3px solid ${Theme.secondary};
+  border-radius: 1rem;
 
   p {
     font-size: 1.2rem;
@@ -87,6 +88,9 @@ export const StyledContener = styled.div`
 export const StyledGamepadSVGAxesAVGWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
 `;
 
 export const AxesAndButtonsWrapper = styled.div`
@@ -99,6 +103,9 @@ export const AxesWrapper = styled.div`
   gap: 0.3rem;
   margin: 0 auto;
   justify-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -106,6 +113,9 @@ export const ButtonsWrapper = styled.div`
   grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
 `;
 
 export const StyledButtons = styled.div`
@@ -123,32 +133,43 @@ export const HistoryList = styled.ul`
   overflow-x: scroll;
   list-style-type: none;
   padding: 0;
-  height: 2.5rem;
-  width: 400px;
-  max-width: 400px;
+  height: 3rem;
+  max-width: 500px;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 1rem;
 `;
 
 export const HistoryWrapper = styled.div`
-  /* margin-top: 2rem; */
   h3 {
-    color: red;
+    color: white;
+    background-color: ${Theme.interface};
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
   }
 
   button {
+    background-color: ${Theme.secondary};
+    border-radius: 1rem;
     padding: 1rem;
+    margin-top: 1rem;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
   }
 
   /* Custom Scrollbar Styles */
   ::-webkit-scrollbar {
+    margin-top: 1rem;
     width: 12px;
   }
 
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: ${Theme.interface};
+    border-radius: 0 0 1rem 1rem;
+    height: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -158,4 +179,10 @@ export const HistoryWrapper = styled.div`
 
 export const HistoryItem = styled.li`
   min-width: 2rem;
+  margin: 0.2rem 0.8rem;
+  background-color: ${Theme.secondary};
+  color: white;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  padding-left: 0.4rem;
 `;
