@@ -91,6 +91,7 @@ export function MainGamepad({ playerNumber }) {
 
       if (navigator.getGamepads()[playerNumber] === null) {
         setConnectionStatus(false);
+        setButtonHistory([]);
         setAxes(0);
         setButtons(0);
       }
@@ -101,13 +102,13 @@ export function MainGamepad({ playerNumber }) {
   // ------------------------------- BUTTONS HISTORY SECTION
   const buttonHistorySection = (
     <HistoryWrapper>
-      <button onClick={() => setButtonHistory([])}>Clear history</button>
-      <h3>Buttons History:</h3>
+      <h3>Buttons History</h3>
       <HistoryList>
         {buttonHistory.map((event, index) => (
           <HistoryItem key={index}>{event}</HistoryItem>
         ))}
       </HistoryList>
+      <button onClick={() => setButtonHistory([])}>Clear history</button>
     </HistoryWrapper>
   );
 
@@ -152,7 +153,7 @@ export function MainGamepad({ playerNumber }) {
           <div></div>
           <div></div>
         </StyledLoader>
-        <p>Connect the controller via USB or Bluetooth and press any key</p>
+        <h2>Connect the controller via USB or Bluetooth and press any key</h2>
         <StyledSVG>
           <img src={USB_SVG} alt="usb logo" />
           <img src={BT_SVG} alt="bluetooth logo" />
