@@ -1,16 +1,9 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 
-export const StyledSVG = styled.div`
-  margin: 20px 0 10px 0;
-
-  img {
-    padding: 0 10px 0 10px;
-  }
-`;
-
 export const StyledLoader = styled.div`
-  color: #000000;
+  margin: 2rem 0 1rem 0;
+  color: ${Theme.black};
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -58,6 +51,15 @@ export const StyledLoader = styled.div`
       height: 80px;
       opacity: 0;
     }
+  }
+`;
+
+export const StyledSVG = styled.div`
+  margin: 20px 0 10px 0;
+  scale: 1.2;
+
+  img {
+    padding: 0 10px 0 10px;
   }
 `;
 
