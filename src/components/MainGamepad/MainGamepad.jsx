@@ -102,13 +102,13 @@ export function MainGamepad({ playerNumber }) {
   // ------------------------------- BUTTONS HISTORY SECTION
   const buttonHistorySection = (
     <HistoryWrapper>
-      <button onClick={() => setButtonHistory([])}>Clear history</button>
-      <h3>Buttons History:</h3>
+      <h3>Buttons History</h3>
       <HistoryList>
         {buttonHistory.map((event, index) => (
           <HistoryItem key={index}>{event}</HistoryItem>
         ))}
       </HistoryList>
+      <button onClick={() => setButtonHistory([])}>Clear history</button>
     </HistoryWrapper>
   );
 
