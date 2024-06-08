@@ -38,6 +38,7 @@ const StyledNav = styled.nav`
     li {
       font-size: 1.2rem;
     }
+
     span {
       color: ${Theme.white};
       font-size: 1.5rem;
