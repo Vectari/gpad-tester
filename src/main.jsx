@@ -9,6 +9,7 @@ import { PlayerOne } from "./views/PlayerOne/PlayerOne.jsx";
 import { PlayerTwo } from "./views/PlayerTwo/PlayerTwo.jsx";
 import { PlayerThree } from "./views/PlayerThree/PlayerThree.jsx";
 import { PlayerFour } from "./views/PlayerFour/PlayerFour.jsx";
+import { About } from "./components/About/About.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/info",
         element: <Info />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
