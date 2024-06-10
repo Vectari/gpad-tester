@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import USB_SVG from "../../assets/usb.svg";
 import BT_SVG from "../../assets/bt.svg";
 import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
@@ -46,6 +46,8 @@ export function MainGamepad({ playerNumber }) {
   const [buttons, setButtons] = useState(0);
   const [axes, setAxes] = useState(0);
   const [buttonHistory, setButtonHistory] = useState([]);
+  const historyListRef = useRef(null);
+  const [scaleValue, setScaleValue] = useState(1);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -99,11 +101,34 @@ export function MainGamepad({ playerNumber }) {
     return () => clearInterval(interval);
   }, [playerNumber]);
 
+  // ------------------------------- SCALE INTERFACE SECTION
+  const scaleInterface = (
+    <>
+      <label>Interface scale: </label>
+      <select
+        value={scaleValue}
+        onChange={(e) => setScaleValue(e.target.value)}
+      >
+        <option value={"1.0"}>x1.0</option>
+        <option value={"0.9"}>x0.9</option>
+        <option value={"1.1"}>x1.1</option>
+      </select>
+      <br />
+      <br />
+    </>
+  );
+
   // ------------------------------- BUTTONS HISTORY SECTION
+  useEffect(() => {
+    if (historyListRef.current) {
+      historyListRef.current.scrollLeft = historyListRef.current.scrollWidth;
+    }
+  }, [buttonHistory]);
+
   const buttonHistorySection = (
     <HistoryWrapper>
       <h3>Buttons History</h3>
-      <HistoryList>
+      <HistoryList ref={historyListRef}>
         {buttonHistory.map((event, index) => (
           <HistoryItem key={index}>{event}</HistoryItem>
         ))}
@@ -165,8 +190,9 @@ export function MainGamepad({ playerNumber }) {
   } else if (buttons === 17) {
     return (
       <>
-        <StyledContener>
+        <StyledContener scale={scaleValue}>
           <AxesAndButtonsWrapper>
+            {scaleInterface}
             <p>
               <span>Gamepad ID:</span> {gamepadName}
             </p>
@@ -214,8 +240,9 @@ export function MainGamepad({ playerNumber }) {
   } else {
     return (
       <>
-        <StyledContener>
+        <StyledContener scale={scaleValue}>
           <AxesAndButtonsWrapper>
+            {scaleInterface}
             <p>
               <span>Gamepad ID:</span> {gamepadName}
             </p>
