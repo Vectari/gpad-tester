@@ -46,6 +46,7 @@ export function MainGamepad({ playerNumber }) {
   const [buttons, setButtons] = useState(0);
   const [axes, setAxes] = useState(0);
   const [buttonHistory, setButtonHistory] = useState([]);
+  const [scaleValue, setScaleValue] = useState(1);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -167,6 +168,14 @@ export function MainGamepad({ playerNumber }) {
       <>
         <StyledContener>
           <AxesAndButtonsWrapper>
+            <label>Interface scale: </label>
+            <select
+              value={scaleValue}
+              onChange={(e) => setScaleValue(e.target.value)}
+            >
+              <option value={0.9}>x0.9</option>
+              <option value={1.1}>x1.1</option>
+            </select>
             <p>
               <span>Gamepad ID:</span> {gamepadName}
             </p>

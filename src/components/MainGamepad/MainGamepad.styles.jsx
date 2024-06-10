@@ -72,6 +72,7 @@ export const StyledContener = styled.div`
   padding: 30px 30px;
   border: 3px solid ${Theme.secondary};
   border-radius: 1rem;
+  scale: 1;
 
   p {
     font-size: 1.2rem;
@@ -165,7 +166,6 @@ export const HistoryWrapper = styled.div`
   /* Custom Scrollbar Styles */
   ::-webkit-scrollbar {
     margin-top: 1rem;
-    width: 12px;
     scrollbar-width: thin;
   }
 
@@ -182,10 +182,10 @@ export const HistoryWrapper = styled.div`
 
 export const HistoryItem = styled.li`
   min-width: 2rem;
-  margin: 0.2rem 0.8rem;
+  font-size: 0.85rem;
+  margin: 0.2rem 0.6rem;
   background-color: ${Theme.secondary};
   color: ${Theme.white};
-  padding: 0.2rem;
+  padding: 0.4rem;
   border-radius: 1rem;
-  padding-left: 0.4rem;
 `;
