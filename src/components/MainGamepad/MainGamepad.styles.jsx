@@ -72,7 +72,7 @@ export const StyledContener = styled.div`
   padding: 30px 30px;
   border: 3px solid ${Theme.secondary};
   border-radius: 1rem;
-  scale: 1;
+  transform: scale(${(props) => props.scale || 1});
 
   p {
     font-size: 1.2rem;

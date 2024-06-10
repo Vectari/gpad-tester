@@ -100,6 +100,23 @@ export function MainGamepad({ playerNumber }) {
     return () => clearInterval(interval);
   }, [playerNumber]);
 
+  // ------------------------------- SCALE INTERFACE SECTION
+  const scaleInterface = (
+    <>
+      <label>Interface scale: </label>
+      <select
+        value={scaleValue}
+        onChange={(e) => setScaleValue(e.target.value)}
+      >
+        <option value={"1.0"}>x1.0</option>
+        <option value={"0.9"}>x0.9</option>
+        <option value={"1.1"}>x1.1</option>
+      </select>
+      <br />
+      <br />
+    </>
+  );
+
   // ------------------------------- BUTTONS HISTORY SECTION
   const buttonHistorySection = (
     <HistoryWrapper>
@@ -166,16 +183,9 @@ export function MainGamepad({ playerNumber }) {
   } else if (buttons === 17) {
     return (
       <>
-        <StyledContener>
+        <StyledContener scale={scaleValue}>
           <AxesAndButtonsWrapper>
-            <label>Interface scale: </label>
-            <select
-              value={scaleValue}
-              onChange={(e) => setScaleValue(e.target.value)}
-            >
-              <option value={0.9}>x0.9</option>
-              <option value={1.1}>x1.1</option>
-            </select>
+            {scaleInterface}
             <p>
               <span>Gamepad ID:</span> {gamepadName}
             </p>
@@ -225,6 +235,7 @@ export function MainGamepad({ playerNumber }) {
       <>
         <StyledContener>
           <AxesAndButtonsWrapper>
+            {scaleInterface}
             <p>
               <span>Gamepad ID:</span> {gamepadName}
             </p>
