@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import USB_SVG from "../../assets/usb.svg";
 import BT_SVG from "../../assets/bt.svg";
 import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
@@ -46,6 +46,7 @@ export function MainGamepad({ playerNumber }) {
   const [buttons, setButtons] = useState(0);
   const [axes, setAxes] = useState(0);
   const [buttonHistory, setButtonHistory] = useState([]);
+  const historyListRef = useRef(null);
   const [scaleValue, setScaleValue] = useState(1);
 
   useEffect(() => {
@@ -118,10 +119,16 @@ export function MainGamepad({ playerNumber }) {
   );
 
   // ------------------------------- BUTTONS HISTORY SECTION
+  useEffect(() => {
+    if (historyListRef.current) {
+      historyListRef.current.scrollLeft = historyListRef.current.scrollWidth;
+    }
+  }, [buttonHistory]);
+
   const buttonHistorySection = (
     <HistoryWrapper>
       <h3>Buttons History</h3>
-      <HistoryList>
+      <HistoryList ref={historyListRef}>
         {buttonHistory.map((event, index) => (
           <HistoryItem key={index}>{event}</HistoryItem>
         ))}
