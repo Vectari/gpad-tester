@@ -233,7 +233,7 @@ export function MainGamepad({ playerNumber }) {
   } else {
     return (
       <>
-        <StyledContener>
+        <StyledContener scale={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
             <p>
