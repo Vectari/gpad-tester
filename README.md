@@ -1,6 +1,6 @@
 # GamePad Tester
 
-> https://gpad-tester.netlify.app/
+> Check App here! >> https://gpad-tester.netlify.app/
 
 ### Technologies:
 
@@ -13,5 +13,10 @@ React Icons
 
 ## App Screenshots:
 
+#### waiting for connection
+
 ![screenshot_1](src/assets/screenshot_1.png)
+
+#### view after detect connected gamepad
+
 ![screenshot_2](src/assets/screenshot_2.png)
