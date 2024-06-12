@@ -192,9 +192,7 @@ export function MainGamepad({ playerNumber }) {
   } else if (buttons === 17) {
     return (
       <>
-        <StyledContener 
-        // scale={scaleValue} 
-        className={scaleValue}>
+        <StyledContener className={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
             <p>
@@ -244,7 +242,7 @@ export function MainGamepad({ playerNumber }) {
   } else {
     return (
       <>
-        <StyledContener scale={scaleValue}>
+        <StyledContener className={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
             <p>
