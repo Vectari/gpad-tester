@@ -10,3 +10,8 @@
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 React Icons
+
+## App Screenshots:
+
+![screenshot_1](src/assets/screenshot_1.png)
+![screenshot_2](src/assets/screenshot_2.png)
