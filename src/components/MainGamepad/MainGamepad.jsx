@@ -47,7 +47,11 @@ export function MainGamepad({ playerNumber }) {
   const [axes, setAxes] = useState(0);
   const [buttonHistory, setButtonHistory] = useState([]);
   const historyListRef = useRef(null);
-  const [scaleValue, setScaleValue] = useState(1);
+  const [scaleValue, setScaleValue] = useState(
+    localStorage.getItem("interfaceScale")
+      ? localStorage.getItem("interfaceScale")
+      : "scale1"
+  );
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -107,11 +111,16 @@ export function MainGamepad({ playerNumber }) {
       <label>Interface scale: </label>
       <select
         value={scaleValue}
-        onChange={(e) => setScaleValue(e.target.value)}
+        onChange={(e) => {
+          setScaleValue(e.target.value);
+          localStorage.setItem("interfaceScale", e.target.value);
+        }}
       >
-        <option value={"1.0"}>x1.0</option>
-        <option value={"0.9"}>x0.9</option>
-        <option value={"1.1"}>x1.1</option>
+        <option value={"scale1"}>x1.0</option>
+        <option value={"scale08"}>x0.8</option>
+        <option value={"scale09"}>x0.9</option>
+        <option value={"scale11"}>x1.1</option>
+        <option value={"scale12"}>x1.2</option>
       </select>
       <br />
       <br />
@@ -190,7 +199,7 @@ export function MainGamepad({ playerNumber }) {
   } else if (buttons === 17) {
     return (
       <>
-        <StyledContener scale={scaleValue}>
+        <StyledContener className={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
             <p>
@@ -240,7 +249,7 @@ export function MainGamepad({ playerNumber }) {
   } else {
     return (
       <>
-        <StyledContener scale={scaleValue}>
+        <StyledContener className={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
             <p>

@@ -72,7 +72,30 @@ export const StyledContener = styled.div`
   padding: 30px 30px;
   border: 3px solid ${Theme.secondary};
   border-radius: 1rem;
-  transform: scale(${(props) => props.scale || 1});
+
+  &.scale08 {
+    transform: scale(0.8);
+    margin-top: -2.7rem;
+  }
+
+  &.scale09 {
+    transform: scale(0.9);
+    margin-top: -0.4rem;
+  }
+
+  &.scale1 {
+    transform: scale(1);
+  }
+
+  &.scale11 {
+    transform: scale(1.1);
+    margin-top: 4.1rem;
+  }
+
+  &.scale12 {
+    transform: scale(1.2);
+    margin-top: 6.5rem;
+  }
 
   p {
     font-size: 1.2rem;
