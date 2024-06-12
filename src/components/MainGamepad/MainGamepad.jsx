@@ -47,7 +47,11 @@ export function MainGamepad({ playerNumber }) {
   const [axes, setAxes] = useState(0);
   const [buttonHistory, setButtonHistory] = useState([]);
   const historyListRef = useRef(null);
-  const [scaleValue, setScaleValue] = useState("scale1");
+  const [scaleValue, setScaleValue] = useState(
+    localStorage.getItem("interfaceScale")
+      ? localStorage.getItem("interfaceScale")
+      : "scale1"
+  );
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -107,7 +111,10 @@ export function MainGamepad({ playerNumber }) {
       <label>Interface scale: </label>
       <select
         value={scaleValue}
-        onChange={(e) => setScaleValue(e.target.value)}
+        onChange={(e) => {
+          setScaleValue(e.target.value);
+          localStorage.setItem("interfaceScale", e.target.value);
+        }}
       >
         <option value={"scale1"}>x1.0</option>
         <option value={"scale08"}>x0.8</option>
