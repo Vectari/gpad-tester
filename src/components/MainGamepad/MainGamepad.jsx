@@ -146,6 +146,26 @@ export function MainGamepad({ playerNumber }) {
     </HistoryWrapper>
   );
 
+  // ------------------------------- VIBRATION SECTION
+
+  const vibrationSection = (
+    <>
+      <button
+        onClick={() =>
+          navigator
+            .getGamepads()[0]
+            .vibrationActuator.playEffect("dual-rumble", {
+              startDelay: 0, // Delay before the effect starts, in milliseconds
+              duration: 1000, // Duration of the effect, in milliseconds
+              weakMagnitude: 1.0, // Intensity of the low-frequency (weak) rumble, between 0.0 and 1.0
+              strongMagnitude: 1.0, // Intensity of the high-frequency (strong) rumble, between 0.0 and 1.0
+            })
+        }
+      >
+        Test Vibration
+      </button>
+    </>
+  );
   // ------------------------------- BUTTONS SECTION
   let buttonsNumber = [];
   for (let i = 0; i < buttons; i++) {
@@ -208,6 +228,7 @@ export function MainGamepad({ playerNumber }) {
             <AxesWrapper>{axesNumber}</AxesWrapper>
             <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
             {buttonHistorySection}
+            {vibrationSection}
           </AxesAndButtonsWrapper>
           <StyledGamepadSVGAxesAVGWrapper>
             <XboxSVG
