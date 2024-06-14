@@ -279,6 +279,7 @@ export function MainGamepad({ playerNumber }) {
             <AxesWrapper>{axesNumber}</AxesWrapper>
             <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
             {buttonHistorySection}
+            {vibrationSection}
           </AxesAndButtonsWrapper>
           <StyledGamepadSVGAxesAVGWrapper>
             <PS4SVG
