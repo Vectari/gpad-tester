@@ -15,11 +15,11 @@ export function AxesSVG({
             cy="0"
             r="78.5"
             fill="none"
-            stroke="black"
-            strokeWidth={l3Pressed ? "5" : "1"}
+            stroke="grey"
+            strokeWidth={l3Pressed ? "4" : "1"}
           ></circle>
-          <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="black"></line>
-          <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="black"></line>
+          <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="grey"></line>
+          <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="grey"></line>
           <line
             x1={leftX * 78.5}
             y1={leftY * 78.5}
@@ -39,11 +39,11 @@ export function AxesSVG({
             cy="0"
             r="78.5"
             fill="none"
-            stroke="black"
-            strokeWidth={r3Pressed ? "5" : "1"}
+            stroke="grey"
+            strokeWidth={r3Pressed ? "4" : "1"}
           ></circle>
-          <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="black"></line>
-          <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="black"></line>
+          <line x1="0" y1="-78.5" x2="0" y2="78.5" stroke="grey"></line>
+          <line x1="-78.5" y1="0" x2="78.5" y2="0" stroke="grey"></line>
           <line
             x1={rightX * 78.5}
             y1={rightY * 78.5}

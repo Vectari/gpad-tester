@@ -158,9 +158,8 @@ export const HistoryList = styled.ul`
   display: flex;
   overflow-x: scroll;
   list-style-type: none;
-  padding: 0;
   height: 3rem;
-  max-width: 500px;
+  max-width: 550px;
   margin: 1rem auto;
   background-color: ${Theme.white};
   border-radius: 1rem;
@@ -178,12 +177,34 @@ export const HistoryWrapper = styled.div`
   button {
     background-color: ${Theme.secondary};
     border-radius: 1rem;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     border-style: none;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 2rem;
     color: ${Theme.white};
+    border: 2px solid ${Theme.white};
+
+    &:hover {
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+      box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+      background-color: ${Theme.white};
+      color: ${Theme.secondary};
+      border: 2px solid ${Theme.secondary};
+    }
+
+    &:first-child {
+      background-color: ${Theme.white};
+      padding: 0 1.6rem;
+      margin-left: 2rem;
+      border: 2px solid ${Theme.secondary};
+      color: ${Theme.secondary};
+
+      &:hover {
+        background-color: ${Theme.secondary};
+        color: ${Theme.white};
+      }
+    }
   }
 
   /* Custom Scrollbar Styles */
@@ -194,8 +215,7 @@ export const HistoryWrapper = styled.div`
 
   ::-webkit-scrollbar-thumb {
     background: ${Theme.interface};
-    border-radius: 0 0 1rem 1rem;
-    height: 5px;
+    border-radius: 1rem;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -209,6 +229,19 @@ export const HistoryItem = styled.li`
   margin: 0.2rem 0.6rem;
   background-color: ${Theme.secondary};
   color: ${Theme.white};
-  padding: 0.4rem;
+  padding: 0.3rem;
   border-radius: 1rem;
+`;
+
+export const StyledHistoryAndVibrationButtonsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const StyledVibrationLoopButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${Theme.white};
+  border-radius: 1rem;
+  padding: 0.5rem;
 `;
