@@ -158,7 +158,6 @@ export const HistoryList = styled.ul`
   display: flex;
   overflow-x: scroll;
   list-style-type: none;
-  padding: 0;
   height: 3rem;
   max-width: 550px;
   margin: 1rem auto;
@@ -213,8 +212,7 @@ export const HistoryWrapper = styled.div`
 
   ::-webkit-scrollbar-thumb {
     background: ${Theme.interface};
-    border-radius: 0 0 1rem 1rem;
-    height: 5px;
+    border-radius: 1rem;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -228,7 +226,7 @@ export const HistoryItem = styled.li`
   margin: 0.2rem 0.6rem;
   background-color: ${Theme.secondary};
   color: ${Theme.white};
-  padding: 0.4rem;
+  padding: 0.3rem;
   border-radius: 1rem;
 `;
 
