@@ -16,6 +16,7 @@ import {
   HistoryItem,
   StyledContener,
   StyledGamepadSVGAxesAVGWrapper,
+  StyledHistoryAndVibrationButtonsWrapper,
 } from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
@@ -142,29 +143,27 @@ export function MainGamepad({ playerNumber }) {
           <HistoryItem key={index}>{event}</HistoryItem>
         ))}
       </HistoryList>
-      <button onClick={() => setButtonHistory([])}>Clear history</button>
+      <StyledHistoryAndVibrationButtonsWrapper>
+        <button onClick={() => setButtonHistory([])}>Clear history</button>
+
+        {/* // ------------------------------- VIBRATION SECTION */}
+
+        <button
+          onClick={() =>
+            navigator
+              .getGamepads()[0]
+              .vibrationActuator.playEffect("dual-rumble", {
+                startDelay: 0, // Delay before the effect starts, in milliseconds
+                duration: 1000, // Duration of the effect, in milliseconds
+                weakMagnitude: 1.0, // Intensity of the low-frequency (weak) rumble, between 0.0 and 1.0
+                strongMagnitude: 1.0, // Intensity of the high-frequency (strong) rumble, between 0.0 and 1.0
+              })
+          }
+        >
+          Test Vibration
+        </button>
+      </StyledHistoryAndVibrationButtonsWrapper>
     </HistoryWrapper>
-  );
-
-  // ------------------------------- VIBRATION SECTION
-
-  const vibrationSection = (
-    <>
-      <button
-        onClick={() =>
-          navigator
-            .getGamepads()[0]
-            .vibrationActuator.playEffect("dual-rumble", {
-              startDelay: 0, // Delay before the effect starts, in milliseconds
-              duration: 1000, // Duration of the effect, in milliseconds
-              weakMagnitude: 1.0, // Intensity of the low-frequency (weak) rumble, between 0.0 and 1.0
-              strongMagnitude: 1.0, // Intensity of the high-frequency (strong) rumble, between 0.0 and 1.0
-            })
-        }
-      >
-        Test Vibration
-      </button>
-    </>
   );
   // ------------------------------- BUTTONS SECTION
   let buttonsNumber = [];
@@ -228,7 +227,6 @@ export function MainGamepad({ playerNumber }) {
             <AxesWrapper>{axesNumber}</AxesWrapper>
             <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
             {buttonHistorySection}
-            {vibrationSection}
           </AxesAndButtonsWrapper>
           <StyledGamepadSVGAxesAVGWrapper>
             <XboxSVG
@@ -279,7 +277,6 @@ export function MainGamepad({ playerNumber }) {
             <AxesWrapper>{axesNumber}</AxesWrapper>
             <ButtonsWrapper>{buttonsNumber}</ButtonsWrapper>
             {buttonHistorySection}
-            {vibrationSection}
           </AxesAndButtonsWrapper>
           <StyledGamepadSVGAxesAVGWrapper>
             <PS4SVG

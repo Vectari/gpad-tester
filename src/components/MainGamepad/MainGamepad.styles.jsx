@@ -184,6 +184,17 @@ export const HistoryWrapper = styled.div`
     font-size: 1rem;
     font-weight: 700;
     color: ${Theme.white};
+
+    &:first-child {
+      background-color: ${Theme.white};
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 2px solid ${Theme.secondary};
+      font-size: 1rem;
+      font-weight: 700;
+      color: ${Theme.secondary};
+    }
   }
 
   /* Custom Scrollbar Styles */
@@ -211,4 +222,9 @@ export const HistoryItem = styled.li`
   color: ${Theme.white};
   padding: 0.4rem;
   border-radius: 1rem;
+`;
+
+export const StyledHistoryAndVibrationButtonsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
