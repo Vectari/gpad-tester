@@ -182,11 +182,15 @@ export const HistoryWrapper = styled.div`
     border-style: none;
     font-size: 2rem;
     color: ${Theme.white};
+    border: 2px solid ${Theme.white};
 
     &:hover {
       -webkit-box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
       -moz-box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
       box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+      background-color: ${Theme.white};
+      color: ${Theme.secondary};
+      border: 2px solid ${Theme.secondary};
     }
 
     &:first-child {
@@ -197,9 +201,8 @@ export const HistoryWrapper = styled.div`
       color: ${Theme.secondary};
 
       &:hover {
-        -webkit-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
-        -moz-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
-        box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+        background-color: ${Theme.secondary};
+        color: ${Theme.white};
       }
     }
   }
