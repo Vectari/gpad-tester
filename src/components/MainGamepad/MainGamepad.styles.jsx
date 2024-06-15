@@ -228,3 +228,8 @@ export const StyledHistoryAndVibrationButtonsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
+export const StyledVibrationLoopButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

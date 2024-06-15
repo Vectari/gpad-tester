@@ -4,6 +4,7 @@ import BT_SVG from "../../assets/bt.svg";
 import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
 import { XboxSVG } from "../../components/XboxSVG/XboxSVG";
 import { PS4SVG } from "../../components/PS4SVG/PS4SVG";
+// import { GiVibratingBall } from "react-icons/gi";
 import {
   StyledSVG,
   StyledLoader,
@@ -17,6 +18,7 @@ import {
   StyledContener,
   StyledGamepadSVGAxesAVGWrapper,
   StyledHistoryAndVibrationButtonsWrapper,
+  StyledVibrationLoopButtonWrapper,
 } from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
@@ -53,6 +55,7 @@ export function MainGamepad({ playerNumber }) {
       ? localStorage.getItem("interfaceScale")
       : "scale1"
   );
+  const [infiniteVibration, setInfiniteVibration] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -135,6 +138,31 @@ export function MainGamepad({ playerNumber }) {
     }
   }, [buttonHistory]);
 
+  // ------------------------------- VIBRATION INFINITE LOOP SECTION
+  useEffect(() => {
+    let vibrationInterval;
+
+    if (infiniteVibration) {
+      vibrationInterval = setInterval(() => {
+        const gamepad = navigator.getGamepads()[0];
+        if (gamepad && gamepad.vibrationActuator) {
+          gamepad.vibrationActuator.playEffect("dual-rumble", {
+            startDelay: 0,
+            duration: 1000,
+            weakMagnitude: 1.0,
+            strongMagnitude: 1.0,
+          });
+        }
+      }, 1000); // Trigger every 1 second
+    } else {
+      if (vibrationInterval) clearInterval(vibrationInterval);
+    }
+
+    return () => {
+      if (vibrationInterval) clearInterval(vibrationInterval);
+    };
+  }, [infiniteVibration]);
+
   const buttonHistorySection = (
     <HistoryWrapper>
       <h3>Buttons History</h3>
@@ -147,21 +175,30 @@ export function MainGamepad({ playerNumber }) {
         <button onClick={() => setButtonHistory([])}>Clear history</button>
 
         {/* // ------------------------------- VIBRATION SECTION */}
-
-        <button
-          onClick={() =>
-            navigator
-              .getGamepads()[0]
-              .vibrationActuator.playEffect("dual-rumble", {
-                startDelay: 0, // Delay before the effect starts, in milliseconds
-                duration: 1000, // Duration of the effect, in milliseconds
-                weakMagnitude: 1.0, // Intensity of the low-frequency (weak) rumble, between 0.0 and 1.0
-                strongMagnitude: 1.0, // Intensity of the high-frequency (strong) rumble, between 0.0 and 1.0
-              })
-          }
-        >
-          Test Vibration
-        </button>
+        <StyledVibrationLoopButtonWrapper>
+          <label>
+            <input
+              type="checkbox"
+              checked={infiniteVibration}
+              onChange={(e) => setInfiniteVibration(e.target.checked)}
+            />{" "}
+            Infinite Vibration
+          </label>
+          <button
+            onClick={() =>
+              navigator
+                .getGamepads()[0]
+                .vibrationActuator.playEffect("dual-rumble", {
+                  startDelay: 0, // Delay before the effect starts, in milliseconds
+                  duration: 1000, // Duration of the effect, in milliseconds
+                  weakMagnitude: 1.0, // Intensity of the low-frequency (weak) rumble, between 0.0 and 1.0
+                  strongMagnitude: 1.0, // Intensity of the high-frequency (strong) rumble, between 0.0 and 1.0
+                })
+            }
+          >
+            Test Vibration
+          </button>
+        </StyledVibrationLoopButtonWrapper>
       </StyledHistoryAndVibrationButtonsWrapper>
     </HistoryWrapper>
   );
