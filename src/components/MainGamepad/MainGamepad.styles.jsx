@@ -178,21 +178,16 @@ export const HistoryWrapper = styled.div`
   button {
     background-color: ${Theme.secondary};
     border-radius: 1rem;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     border-style: none;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 2rem;
     color: ${Theme.white};
 
     &:first-child {
       background-color: ${Theme.white};
-      border-radius: 1rem;
       padding: 1rem;
-      margin-top: 1rem;
       border: 2px solid ${Theme.secondary};
-      font-size: 1rem;
-      font-weight: 700;
       color: ${Theme.secondary};
     }
   }
