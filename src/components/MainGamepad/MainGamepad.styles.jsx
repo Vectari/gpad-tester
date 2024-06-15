@@ -160,7 +160,7 @@ export const HistoryList = styled.ul`
   list-style-type: none;
   padding: 0;
   height: 3rem;
-  max-width: 500px;
+  max-width: 550px;
   margin: 1rem auto;
   background-color: ${Theme.white};
   border-radius: 1rem;
@@ -184,11 +184,24 @@ export const HistoryWrapper = styled.div`
     font-size: 2rem;
     color: ${Theme.white};
 
+    &:hover {
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+      box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 1);
+    }
+
     &:first-child {
       background-color: ${Theme.white};
-      padding: 1rem;
+      padding: 0 1.6rem;
+      margin-left: 2rem;
       border: 2px solid ${Theme.secondary};
       color: ${Theme.secondary};
+
+      &:hover {
+        -webkit-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+        box-shadow: 0px 0px 7px -2px rgba(66, 68, 90, 1);
+      }
     }
   }
 
@@ -227,4 +240,7 @@ export const StyledHistoryAndVibrationButtonsWrapper = styled.div`
 export const StyledVibrationLoopButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: ${Theme.white};
+  border-radius: 1rem;
+  padding: 0.5rem;
 `;
