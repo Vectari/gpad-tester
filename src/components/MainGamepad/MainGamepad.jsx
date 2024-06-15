@@ -4,7 +4,8 @@ import BT_SVG from "../../assets/bt.svg";
 import { AxesSVG } from "../../components/AxesSVG/AxesSVG";
 import { XboxSVG } from "../../components/XboxSVG/XboxSVG";
 import { PS4SVG } from "../../components/PS4SVG/PS4SVG";
-// import { GiVibratingBall } from "react-icons/gi";
+import { GiVibratingBall } from "react-icons/gi";
+import { MdDeleteSweep } from "react-icons/md";
 import {
   StyledSVG,
   StyledLoader,
@@ -172,7 +173,9 @@ export function MainGamepad({ playerNumber }) {
         ))}
       </HistoryList>
       <StyledHistoryAndVibrationButtonsWrapper>
-        <button onClick={() => setButtonHistory([])}>Clear history</button>
+        <button onClick={() => setButtonHistory([])}>
+          <MdDeleteSweep />
+        </button>
 
         {/* // ------------------------------- VIBRATION SECTION */}
         <StyledVibrationLoopButtonWrapper>
@@ -196,7 +199,7 @@ export function MainGamepad({ playerNumber }) {
                 })
             }
           >
-            Test Vibration
+            <GiVibratingBall />
           </button>
         </StyledVibrationLoopButtonWrapper>
       </StyledHistoryAndVibrationButtonsWrapper>
