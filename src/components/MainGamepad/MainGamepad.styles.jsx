@@ -246,6 +246,3 @@ export const StyledVibrationLoopButtonWrapper = styled.div`
   padding: 0.5rem;
 `;
 
-//
-//
-//
