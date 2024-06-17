@@ -231,7 +231,6 @@ export function MainGamepad({ playerNumber }) {
     axesNumber.push(
       <div key={i}>
         {axesLabels[i] || `Axes${i} `}&rArr; {renderedAxesValue}
-        {/* {Math.abs(axesValue![i]) >= 0.15 ? <div className="error">error</div> : <div className="ok">ok</div>} */}
       </div>
     );
   }
