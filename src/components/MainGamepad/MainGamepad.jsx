@@ -20,6 +20,7 @@ import {
   StyledGamepadSVGAxesAVGWrapper,
   StyledHistoryAndVibrationButtonsWrapper,
   StyledVibrationLoopButtonWrapper,
+  StyledSmallInfo,
 } from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
@@ -201,6 +202,7 @@ export function MainGamepad({ playerNumber }) {
           >
             <GiVibratingBall />
           </button>
+          <StyledSmallInfo>PS5 not supported</StyledSmallInfo>
         </StyledVibrationLoopButtonWrapper>
       </StyledHistoryAndVibrationButtonsWrapper>
     </HistoryWrapper>

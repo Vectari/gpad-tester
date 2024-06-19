@@ -246,3 +246,7 @@ export const StyledVibrationLoopButtonWrapper = styled.div`
   padding: 0.5rem;
 `;
 
+export const StyledSmallInfo = styled.div`
+  font-size: 0.6rem;
+  margin-top: 0.3rem;
+`;
