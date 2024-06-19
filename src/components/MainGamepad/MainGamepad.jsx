@@ -20,6 +20,7 @@ import {
   StyledGamepadSVGAxesAVGWrapper,
   StyledHistoryAndVibrationButtonsWrapper,
   StyledVibrationLoopButtonWrapper,
+  StyledSmallInfo,
 } from "./MainGamepad.styles";
 
 export function MainGamepad({ playerNumber }) {
@@ -201,6 +202,7 @@ export function MainGamepad({ playerNumber }) {
           >
             <GiVibratingBall />
           </button>
+          <StyledSmallInfo>PS5 not supported</StyledSmallInfo>
         </StyledVibrationLoopButtonWrapper>
       </StyledHistoryAndVibrationButtonsWrapper>
     </HistoryWrapper>
@@ -231,7 +233,6 @@ export function MainGamepad({ playerNumber }) {
     axesNumber.push(
       <div key={i}>
         {axesLabels[i] || `Axes${i} `}&rArr; {renderedAxesValue}
-        {/* {Math.abs(axesValue![i]) >= 0.15 ? <div className="error">error</div> : <div className="ok">ok</div>} */}
       </div>
     );
   }
