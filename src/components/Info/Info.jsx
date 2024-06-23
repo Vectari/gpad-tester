@@ -8,7 +8,7 @@ export function Info() {
       <article></article>
       <h1>LT/RT Issues</h1>
       <img src="" alt="img" />
-      <article>article</article>
+      <article>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, quam!</article>
       <h1>Analog issues</h1>
       <img src="" alt="img" />
       <article>article</article>
