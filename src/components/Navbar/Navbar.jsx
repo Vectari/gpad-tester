@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
-import { FaTools } from "react-icons/fa";
+// import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
 
 const StyledNav = styled.nav`
@@ -30,7 +30,7 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     background-color: ${Theme.interface};
-    padding: 1rem 18rem;
+    padding: 1rem 12rem 1rem 18rem;
     border-radius: 0 0 1rem 1rem;
     gap: 5rem;
     border-bottom: 1px solid ${Theme.secondary};
@@ -52,6 +52,10 @@ const StyledNav = styled.nav`
   }
 `;
 
+const StyledSpace = styled.span`
+  /* margin-left: 20rem; */
+`;
+
 export function Navbar() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
@@ -69,6 +73,7 @@ export function Navbar() {
             <GrGamepad />
           </span>
         </h2>
+        <StyledSpace></StyledSpace>
         <li>
           <NavLink
             to="/main"
@@ -79,7 +84,7 @@ export function Navbar() {
             </span>
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/info"
             className={activeLink === "/info" ? "active" : ""}
@@ -88,7 +93,7 @@ export function Navbar() {
               <FaTools />
             </span>
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="/about"
