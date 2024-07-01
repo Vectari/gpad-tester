@@ -13,7 +13,7 @@ React Icons
 
 ## App Video:
 
-[![video_1](src/assets/screenshot_1.png)](https://youtu.be/V-nk11RfANA)
+[![video_1](src/assets/YT.png)](https://youtu.be/V-nk11RfANA)
 
 ## App Screenshots:
 
