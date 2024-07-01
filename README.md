@@ -13,6 +13,8 @@ React Icons
 
 ## App Video:
 
+[![video_1](src/assets/screenshot_1.png)](https://youtu.be/V-nk11RfANA)
+
 ## App Screenshots:
 
 #### waiting for connection
