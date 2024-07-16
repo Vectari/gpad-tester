@@ -7,4 +7,5 @@ export const Theme = {
   secondary: "rgb(58,114,115)",
   interface: "rgb(3, 48, 67)",
   background: "rgb(233,227,213)",
+  logo: "rgb(230, 229, 229)",
 };

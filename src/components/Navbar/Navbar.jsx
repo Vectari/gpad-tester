@@ -9,7 +9,7 @@ import { GrGamepad } from "react-icons/gr";
 
 const StyledNav = styled.nav`
   h2 {
-    color: ${Theme.secondary};
+    color: ${Theme.logo};
     position: absolute;
     margin-left: -17rem;
     border-left: 3px solid ${Theme.primary};
@@ -19,7 +19,7 @@ const StyledNav = styled.nav`
   }
 
   .logo {
-    color: ${Theme.secondary};
+    color: ${Theme.logo};
     font-size: 1.8rem;
     position: absolute;
     border-right: 3px solid ${Theme.primary};
@@ -40,7 +40,7 @@ const StyledNav = styled.nav`
     }
 
     span {
-      color: ${Theme.white};
+      color: ${Theme.logo};
       font-size: 1.5rem;
       padding: 0 10px;
     }
