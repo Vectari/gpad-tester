@@ -13,7 +13,7 @@ const StyledUl = styled.ul`
     width: 9rem;
     padding: 1rem;
     box-sizing: border-box;
-    color: ${Theme.white};
+    color: ${Theme.logo};
   }
 
   .active {
