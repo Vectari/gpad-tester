@@ -1,6 +1,6 @@
 # GamePad Tester
 
-> Check App here! >> https://gpad-tester.netlify.app/
+> Check App here! >> https://gpadtester.com
 
 ### Technologies:
 
