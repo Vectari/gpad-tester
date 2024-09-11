@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 
 export const StyledLoader = styled.div`
-  margin: 2rem 0 1rem 0;
+  margin: 3rem 0 1rem 0;
   color: ${Theme.black};
   box-sizing: border-box;
   display: inline-block;
@@ -55,7 +55,7 @@ export const StyledLoader = styled.div`
 `;
 
 export const StyledSVG = styled.div`
-  margin: 20px 0 10px 0;
+  margin: 20px 0 400px 0;
   scale: 1.2;
 
   img {
