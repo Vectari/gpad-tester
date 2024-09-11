@@ -3,6 +3,7 @@ import { Theme } from "../../styles/Theme";
 
 const StyledMainPageInfo = styled.div`
   max-width: 70%;
+  margin: 2rem 0 2rem 0;
 
   h1 {
     margin: 1rem 0 1rem 2rem;
@@ -18,6 +19,7 @@ const StyledMainPageInfo = styled.div`
 
   span {
     font-weight: bold;
+    color: ${Theme.secondary};
   }
 `;
 
