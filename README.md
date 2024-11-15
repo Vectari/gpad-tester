@@ -1,5 +1,7 @@
 # GamePad Tester
 
+React App created for xbox and ps controler.
+
 > Check App here! >> https://gpadtester.com
 
 ### Technologies:
