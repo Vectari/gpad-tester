@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
-import { MainPageInfo } from "./components/MainPageInfo/MainPageInfo";
+// import { MainPageInfo } from "./components/MainPageInfo/MainPageInfo";
 // import { Footer } from "./components/Footer/Footer";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <Outlet />
-      <MainPageInfo />
+      {/* <MainPageInfo /> */}
       {/* <Footer /> */}
     </>
   );

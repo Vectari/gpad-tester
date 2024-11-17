@@ -22,6 +22,7 @@ import {
   StyledVibrationLoopButtonWrapper,
   StyledSmallInfo,
 } from "./MainGamepad.styles";
+import { MainPageInfo } from "../MainPageInfo/MainPageInfo";
 
 export function MainGamepad({ playerNumber }) {
   const [leftX, setLeftX] = useState(0);
@@ -252,6 +253,7 @@ export function MainGamepad({ playerNumber }) {
           <img src={USB_SVG} alt="usb logo" />
           <img src={BT_SVG} alt="bluetooth logo" />
         </StyledSVG>
+        <MainPageInfo />
       </>
     );
 
@@ -302,6 +304,7 @@ export function MainGamepad({ playerNumber }) {
             />
           </StyledGamepadSVGAxesAVGWrapper>
         </StyledContener>
+        <MainPageInfo />
       </>
     );
 
@@ -354,6 +357,7 @@ export function MainGamepad({ playerNumber }) {
             />
           </StyledGamepadSVGAxesAVGWrapper>
         </StyledContener>
+        <MainPageInfo />
       </>
     );
   }
