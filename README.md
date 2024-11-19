@@ -2,6 +2,8 @@
 
 React App created for xbox and ps controller.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3797e246-fa52-4634-ac9a-4def79cdf6a6/deploy-status)](https://app.netlify.com/sites/gpad-tester/deploys)
+
 > Check App here! >> https://gpadtester.com
 
 ### Technologies:
