@@ -4,8 +4,8 @@ export const Theme = {
   connected: "rgb(0, 128, 0)",
   disconnected: "rgb(199, 35, 35)",
   primary: "rgb(253, 165, 33)",
-  secondary: "rgb(58,114,115)",
-  interface: "rgb(3, 48, 67)",
+  secondary: "rgb(99, 99, 99)",
+  interface: "rgb(44, 44, 44)",
   background: "rgb(233,227,213)",
   logo: "rgb(230, 229, 229)",
 };
