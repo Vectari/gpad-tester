@@ -248,7 +248,7 @@ export function MainGamepad({ playerNumber }) {
           <div></div>
           <div></div>
         </StyledLoader>
-        <h2>Connect the controller via USB or Bluetooth and press any key</h2>
+        <h2>Connect the controller via USB or Bluetooth (only USB on Linux) and press any key</h2>
         <StyledSVG>
           <img src={USB_SVG} alt="usb logo" />
           <img src={BT_SVG} alt="bluetooth logo" />
