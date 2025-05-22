@@ -171,7 +171,7 @@ export const HistoryWrapper = styled.div`
     background-color: ${Theme.interface};
     border-radius: 1rem;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: -1rem;
   }
 
   button {
