@@ -242,6 +242,11 @@ export function MainGamepad({ playerNumber }) {
     buttonsNumber.push(
       <StyledButtons key={i} value={buttonsValue}>
         B {i}
+        <span>
+          <br />
+          {(i === 6 || i === 7) && buttonsValue.toFixed(2)}
+        </span>
+        <br />
       </StyledButtons>
     );
   }
@@ -259,7 +264,7 @@ export function MainGamepad({ playerNumber }) {
 
     axesNumber.push(
       <div key={i}>
-        {axesLabels[i] || `Axes${i} `}&rArr; {renderedAxesValue}
+        {axesLabels[i] || `Axes${i} `}&rArr; <span>{renderedAxesValue}</span>
       </div>
     );
   }
