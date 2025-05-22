@@ -166,9 +166,35 @@ export function MainGamepad({ playerNumber }) {
     };
   }, [infiniteVibration]);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "v" || e.key === "V") {
+        setInfiniteVibration((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "h" || e.key === "H") {
+        setButtonHistory([]);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const buttonHistorySection = (
     <HistoryWrapper>
-      <h3>Buttons History</h3>
+      <h3>Buttons History (h)</h3>
       <HistoryList ref={historyListRef}>
         {buttonHistory.map((event, index) => (
           <HistoryItem key={index}>{event}</HistoryItem>
@@ -187,7 +213,7 @@ export function MainGamepad({ playerNumber }) {
               checked={infiniteVibration}
               onChange={(e) => setInfiniteVibration(e.target.checked)}
             />{" "}
-            Infinite Vibration
+            Infinite Vibration (v)
           </label>
           <button
             onClick={() =>
@@ -248,7 +274,10 @@ export function MainGamepad({ playerNumber }) {
           <div></div>
           <div></div>
         </StyledLoader>
-        <h2>Connect the controller via USB or Bluetooth (only USB on Linux) and press any key</h2>
+        <h2>
+          Connect the controller via USB or Bluetooth (only USB on Linux) and
+          press any key
+        </h2>
         <StyledSVG>
           <img src={USB_SVG} alt="usb logo" />
           <img src={BT_SVG} alt="bluetooth logo" />
