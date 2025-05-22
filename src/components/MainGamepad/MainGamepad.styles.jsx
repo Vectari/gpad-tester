@@ -152,6 +152,7 @@ export const StyledButtons = styled.div`
   /* margin: 5px; */
   border-radius: 10px;
   width: 55px;
+  border: 1px solid ${Theme.secondary};
 `;
 
 export const HistoryList = styled.ul`
