@@ -72,6 +72,8 @@ export const StyledContener = styled.div`
   padding: 30px 30px;
   border: 3px solid ${Theme.secondary};
   border-radius: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
   &.scale08 {
     transform: scale(0.8);

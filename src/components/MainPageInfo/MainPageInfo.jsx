@@ -4,6 +4,7 @@ import { Theme } from "../../styles/Theme";
 const StyledMainPageInfo = styled.div`
   max-width: 55%;
   margin: 2rem 0 2rem 0;
+  padding: 0px 1rem;
 
   h1 {
     margin: 1rem 0 1rem 2rem;
