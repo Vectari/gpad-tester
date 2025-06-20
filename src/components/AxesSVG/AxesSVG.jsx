@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 
-const AxesSVGWrapper = styled.div`
-`;
+const AxesSVGWrapper = styled.div``;
 
 const StyledButton = styled.button`
   background-color: ${Theme.secondary};
@@ -13,6 +12,7 @@ const StyledButton = styled.button`
   margin-left: -2rem;
   border-style: none;
   font-size: 1.3rem;
+  font-family: Roboto;
   color: ${Theme.white};
   border: 2px solid ${Theme.white};
 
@@ -145,7 +145,9 @@ export function AxesSVG({
 
       {/* Clear Button */}
       <div style={{ textAlign: "center", marginTop: "10px" }}>
-        <StyledButton onClick={clearPaths}>Clear Paths History (p)</StyledButton>
+        <StyledButton onClick={clearPaths}>
+          Clear Paths History (p)
+        </StyledButton>
       </div>
     </AxesSVGWrapper>
   );
