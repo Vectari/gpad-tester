@@ -9,6 +9,10 @@ const AudioRecorderWrapper = styled.div`
     border-radius: 1rem;
     padding: 1rem;
     margin-top: -1rem;
+
+    span {
+      font-size: 0.8rem;
+    }
   }
 `;
 
@@ -86,7 +90,7 @@ export function AudioRecorder() {
   return (
     <AudioRecorderWrapper>
       <h3>
-        Gamepad Microphone Tester
+        Gamepad Microphone Tester <span>(Experimental)</span>
         <StyledSmallInfo>If supported</StyledSmallInfo>
       </h3>
 
