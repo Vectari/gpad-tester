@@ -93,7 +93,7 @@ export function AudioRecorder() {
       <StyledRecorderConatiner>
         {!recording && !audioURL && (
           <button style={styles.button} onClick={startRecording}>
-            🎙️ Start Recording
+            Start Recording
           </button>
         )}
 
@@ -105,11 +105,11 @@ export function AudioRecorder() {
             </div>
             <button
               style={{
-                ...styles.button,
+                ...styles.button_stop,
               }}
               onClick={stopRecording}
             >
-              ⏹️ Stop
+              Stop
             </button>
           </div>
         )}
@@ -126,7 +126,7 @@ export function AudioRecorder() {
                 }}
                 onClick={deleteRecording}
               >
-                🗑️ Delete
+                Delete
               </button>
               <button
                 style={{
@@ -136,7 +136,7 @@ export function AudioRecorder() {
                 }}
                 onClick={openInNewTab}
               >
-                🌐 Open in New Tab
+                Open in New Tab
               </button>
               <StyledSmallInfo>
                 For audio playback, connect headphones to the gamepad. If you
@@ -155,6 +155,15 @@ const styles = {
   container: {},
   button: {
     backgroundColor: "#4CAF50",
+    color: "white",
+    padding: "10px 20px",
+    fontSize: 16,
+    border: "none",
+    borderRadius: 8,
+    cursor: "pointer",
+  },
+  button_stop: {
+    backgroundColor: "#f44336",
     color: "white",
     padding: "10px 20px",
     fontSize: 16,
