@@ -23,6 +23,7 @@ import {
   StyledSmallInfo,
 } from "./MainGamepad.styles";
 import { MainPageInfo } from "../MainPageInfo/MainPageInfo";
+import { AudioRecorder } from "../AudioRecorder/AudioRecorder";
 
 export function MainGamepad({ playerNumber }) {
   const [leftX, setLeftX] = useState(0);
@@ -194,6 +195,7 @@ export function MainGamepad({ playerNumber }) {
 
   const buttonHistorySection = (
     <HistoryWrapper>
+      <AudioRecorder />
       <h3>Buttons History (h)</h3>
       <HistoryList ref={historyListRef}>
         {buttonHistory.map((event, index) => (

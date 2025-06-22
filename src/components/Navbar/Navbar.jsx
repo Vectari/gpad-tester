@@ -4,8 +4,9 @@ import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
-// import { FaTools } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
+
 
 const StyledNav = styled.nav`
   h2 {
@@ -84,16 +85,16 @@ export function Navbar() {
             </span>
           </NavLink>
         </li>
-        {/* <li>
+        <li>
           <NavLink
-            to="/info"
-            className={activeLink === "/info" ? "active" : ""}
+            to="/blog"
+            className={activeLink === "/blog" ? "active" : ""}
           >
             <span>
               <FaTools />
             </span>
           </NavLink>
-        </li> */}
+        </li>
         <li>
           <NavLink
             to="/about"

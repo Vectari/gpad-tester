@@ -129,7 +129,7 @@ export const AxesWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.3rem;
-  margin: 0 auto;
+  margin: 0 auto -3rem;
   justify-items: center;
   background-color: ${Theme.white};
   border-radius: 1rem;
