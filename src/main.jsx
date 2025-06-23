@@ -11,13 +11,13 @@ import { PlayerTwo } from "./views/PlayerTwo/PlayerTwo.jsx";
 import { PlayerThree } from "./views/PlayerThree/PlayerThree.jsx";
 import { PlayerFour } from "./views/PlayerFour/PlayerFour.jsx";
 import { About } from "./components/About/About.jsx";
-import { ErrorPage } from "./components/ErrorPage/ErrorPage.jsx";
+// import { ErrorPage } from "./components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    // errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/main",
         element: <Main />,
-        errorElement: <ErrorPage />,
+        // errorElement: <ErrorPage />,
         children: [
           {
             index: true,
@@ -58,12 +58,12 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
-        errorElement: <ErrorPage />,
+        // errorElement: <ErrorPage />,
       },
       {
         path: "/about",
         element: <About />,
-        errorElement: <ErrorPage />,
+        // errorElement: <ErrorPage />,
       },
     ],
   },
