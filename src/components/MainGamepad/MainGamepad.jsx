@@ -51,7 +51,7 @@ export function MainGamepad({ playerNumber }) {
   const [connectionStatus, setConnectionStatus] = useState(false);
   const [gamepadName, setGamepadName] = useState("");
   const [buttons, setButtons] = useState(0);
-  const [axes, setAxes] = useState(0);
+  // const [axes, setAxes] = useState(0);
   const [buttonHistory, setButtonHistory] = useState([]);
   const historyListRef = useRef(null);
   const [scaleValue, setScaleValue] = useState(
@@ -65,7 +65,7 @@ export function MainGamepad({ playerNumber }) {
     // eslint-disable-next-line no-unused-vars
     const interval = setInterval(() => {
       const gpad = navigator.getGamepads()[playerNumber];
-      if (gpad) {
+      if (gpad && gpad.connected && gpad.buttons) {
         setLeftX(gpad.axes[0]);
         setLeftY(gpad.axes[1]);
         setRightX(gpad.axes[2]);
@@ -91,22 +91,24 @@ export function MainGamepad({ playerNumber }) {
         setConnectionStatus(gpad.connected);
         setGamepadName(gpad.id);
         setButtons(gpad.buttons.length);
-        setAxes(gpad.axes.length);
+        // setAxes(gpad.axes.length);
 
         // -------------------------- Update buttons history
-        const newHistory = [];
-        gpad.buttons.forEach((button, index) => {
-          if (button.pressed) {
-            newHistory.push(`B${index}`);
-          }
-        });
-        setButtonHistory((prevHistory) => [...prevHistory, ...newHistory]);
+        if (gpad && gpad.buttons) {
+          const newHistory = [];
+          gpad.buttons.forEach((button, index) => {
+            if (button.pressed) {
+              newHistory.push(`B${index}`);
+            }
+          });
+          setButtonHistory((prevHistory) => [...prevHistory, ...newHistory]);
+        }
       }
 
       if (navigator.getGamepads()[playerNumber] === null) {
         setConnectionStatus(false);
         setButtonHistory([]);
-        setAxes(0);
+        // setAxes(0);
         setButtons(0);
       }
     }, 10);
@@ -148,9 +150,9 @@ export function MainGamepad({ playerNumber }) {
 
     if (infiniteVibration) {
       vibrationInterval = setInterval(() => {
-        const gamepad = navigator.getGamepads()[0];
-        if (gamepad && gamepad.vibrationActuator) {
-          gamepad.vibrationActuator.playEffect("dual-rumble", {
+        const activeGpad = navigator.getGamepads()[0];
+        if (activeGpad && activeGpad.vibrationActuator) {
+          activeGpad.vibrationActuator.playEffect("dual-rumble", {
             startDelay: 0,
             duration: 1000,
             weakMagnitude: 1.0,
@@ -238,43 +240,43 @@ export function MainGamepad({ playerNumber }) {
   );
   // ------------------------------- BUTTONS SECTION
   let buttonsNumber = [];
-  for (let i = 0; i < buttons; i++) {
-    let buttonsValue = navigator.getGamepads()[playerNumber].buttons[i].value;
+  const gpad = navigator.getGamepads()[playerNumber];
 
-    buttonsNumber.push(
-      <StyledButtons key={i} value={buttonsValue}>
-        B {i}
-        <span>
+  if (gpad && gpad.buttons) {
+    for (let i = 0; i < gpad.buttons.length; i++) {
+      let buttonsValue = gpad.buttons[i]?.value || 0;
+      buttonsNumber.push(
+        <StyledButtons key={i} value={buttonsValue}>
+          B {i}
+          <span>
+            <br />
+            {(i === 6 || i === 7) && buttonsValue.toFixed(2)}
+          </span>
           <br />
-          {(i === 6 || i === 7) && buttonsValue.toFixed(2)}
-        </span>
-        <br />
-      </StyledButtons>
-    );
+        </StyledButtons>
+      );
+    }
   }
 
   // ------------------------------- AXES SECTION
   let axesNumber = [];
-  for (let i = 0; i < axes; i++) {
-    let axesValue = navigator.getGamepads()[playerNumber].axes;
-    let renderedAxesValue = Math.abs(axesValue[i])
-      .toFixed(3)
-      .toString()
-      .substring(0, 5);
+  if (gpad && gpad.axes) {
+    for (let i = 0; i < gpad.axes.length; i++) {
+      let renderedAxesValue = Math.abs(gpad.axes[i]).toFixed(3).substring(0, 5);
+      const axesLabels = ["Left X ", "Left Y ", "Right X ", "Right Y "];
 
-    const axesLabels = ["Left X ", "Left Y ", "Right X ", "Right Y "];
-
-    axesNumber.push(
-      <div key={i}>
-        {axesLabels[i] || `Axes${i} `}&rArr; <span>{renderedAxesValue}</span>
-      </div>
-    );
+      axesNumber.push(
+        <div key={i}>
+          {axesLabels[i] || `Axes${i} `} → <span>{renderedAxesValue}</span>
+        </div>
+      );
+    }
   }
 
   //
   //
   // RENDER SECTION
-  if (buttons === 0 || connectionStatus === false) {
+  if (buttons === 0 || !connectionStatus) {
     return (
       <>
         <StyledLoader>
