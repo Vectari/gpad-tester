@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 
 const StyledMainPageInfo = styled.div`
-  max-width: 55%;
-  margin: 2rem 0 2rem 0;
+  max-width: 80%;
+  margin: 2rem auto;
   padding: 0px 1rem;
 
   h1 {
