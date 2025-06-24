@@ -3,9 +3,11 @@ import { Theme } from "../../styles/Theme";
 
 export const StyledLoader = styled.div`
   margin: 3rem 0 1rem 0;
+  margin: 3rem auto;
+  margin-bottom: 1rem;
   color: ${Theme.black};
   box-sizing: border-box;
-  display: inline-block;
+  display: flex;
   position: relative;
   width: 80px;
   height: 80px;
@@ -54,6 +56,39 @@ export const StyledLoader = styled.div`
   }
 `;
 
+export const StyledLoaderTextWrapper = styled.span`
+  border: 2px solid black;
+  justify-items: center;
+  width: 1150px;
+  border: 3px solid ${Theme.secondary};
+  border-radius: 1rem;
+  margin-top: 2rem;
+
+  &.scale08 {
+    transform: scale(0.8);
+    margin-top: -2.7rem;
+  }
+
+  &.scale09 {
+    transform: scale(0.9);
+    margin-top: -0.4rem;
+  }
+
+  &.scale1 {
+    transform: scale(1);
+  }
+
+  &.scale11 {
+    transform: scale(1.1);
+    margin-top: 4.1rem;
+  }
+
+  &.scale12 {
+    transform: scale(1.2);
+    margin-top: 6.5rem;
+  }
+`;
+
 export const StyledSVG = styled.div`
   margin: 20px 0 400px 0;
   scale: 1.2;
@@ -68,7 +103,7 @@ export const StyledContener = styled.div`
   grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
   justify-items: center;
-  max-width: 1150px;
+  width: 1150px;
   padding: 30px 30px;
   border: 3px solid ${Theme.secondary};
   border-radius: 1rem;
@@ -151,7 +186,6 @@ export const StyledButtons = styled.div`
     props ? `rgba(0,0,0,${props.value})` : `white`};
   color: ${(props) => (props.value > 0.4 ? `white` : `rgba(0,0,0)`)};
   padding: 10px;
-  /* margin: 5px; */
   border-radius: 10px;
   width: 55px;
   border: 1px solid ${Theme.secondary};

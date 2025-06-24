@@ -21,6 +21,7 @@ import {
   StyledHistoryAndVibrationButtonsWrapper,
   StyledVibrationLoopButtonWrapper,
   StyledSmallInfo,
+  StyledLoaderTextWrapper,
 } from "./MainGamepad.styles";
 import { MainPageInfo } from "../MainPageInfo/MainPageInfo";
 import { AudioRecorder } from "../AudioRecorder/AudioRecorder";
@@ -279,18 +280,22 @@ export function MainGamepad({ playerNumber }) {
   if (buttons === 0 || !connectionStatus) {
     return (
       <>
-        <StyledLoader>
-          <div></div>
-          <div></div>
-        </StyledLoader>
-        <h2>
-          Connect the controller via USB or Bluetooth (only USB on Linux) and
-          press any key
-        </h2>
-        <StyledSVG>
-          <img src={USB_SVG} alt="usb logo" />
-          <img src={BT_SVG} alt="bluetooth logo" />
-        </StyledSVG>
+        <StyledLoaderTextWrapper className={scaleValue}>
+          <StyledLoader>
+            <div></div>
+            <div></div>
+          </StyledLoader>
+
+          <h2>
+            Connect the controller via USB or Bluetooth (only USB on Linux) and
+            press any key
+          </h2>
+
+          <StyledSVG>
+            <img src={USB_SVG} alt="usb logo" />
+            <img src={BT_SVG} alt="bluetooth logo" />
+          </StyledSVG>
+        </StyledLoaderTextWrapper>
         <MainPageInfo />
       </>
     );
