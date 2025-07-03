@@ -47,8 +47,8 @@ export function MainPageInfo() {
         <article>
           Test your controller online with our free{" "}
           <strong>gamepad tester</strong>! Run{" "}
-          <strong>PS5 controller test</strong>,{" "}
-          <strong>PS4 controller test</strong>,{" "}
+          <strong>PS5 DualSense controller test</strong>,{" "}
+          <strong>PS4 DualShock controller test</strong>,{" "}
           <strong>PS3 controller test</strong>,{" "}
           <strong>Xbox One controller test</strong>, and{" "}
           <strong>Xbox Series controller test</strong> directly in your browser
@@ -72,12 +72,15 @@ export function MainPageInfo() {
           <strong>controller vibration tester</strong>, and view live feedback.
           Our tool supports:
           <ul>
-            <li>PS5, PS4, PS3 controllers</li>
+            <li>PS5 DualSense controllers</li>
+            <li>PS4 DualShock controllers</li>
+            <li>PS3 controllers</li>
             <li>Xbox One, Xbox Series controllers</li>
             <li>Generic PC gamepads</li>
           </ul>
         </article>
       </StyledMainPageInfo>
+
       <StyledMainPageInfo>
         <h2>Stick Drift Test – How to Diagnose and Fix Joystick Drift</h2>
         <article>
@@ -98,6 +101,7 @@ export function MainPageInfo() {
           .
         </article>
       </StyledMainPageInfo>
+
       <StyledMainPageInfo>
         <h2>Controller Button Test – Fix Faulty Buttons Easily</h2>
         <article>
@@ -115,6 +119,7 @@ export function MainPageInfo() {
           <span>5.</span> Retesting with our <strong>controller tester</strong>.
         </article>
       </StyledMainPageInfo>
+
       <StyledMainPageInfo>
         <h2>Why Choose Our Gamepad Tester?</h2>
         <article>
