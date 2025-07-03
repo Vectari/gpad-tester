@@ -25,6 +25,7 @@ import {
 } from "./MainGamepad.styles";
 import { MainPageInfo } from "../MainPageInfo/MainPageInfo";
 import { AudioRecorder } from "../AudioRecorder/AudioRecorder";
+import { Theme } from "../../styles/Theme";
 
 export function MainGamepad({ playerNumber }) {
   const [leftX, setLeftX] = useState(0);
@@ -268,7 +269,15 @@ export function MainGamepad({ playerNumber }) {
 
       axesNumber.push(
         <div key={i}>
-          {axesLabels[i] || `Axes${i} `} → <span>{renderedAxesValue}</span>
+          {axesLabels[i] || `Axes${i} `}→
+          <span
+            style={{
+              color:
+                renderedAxesValue <= 0.14 ? `${Theme.connected}` : "inherit",
+            }}
+          >
+            {renderedAxesValue}
+          </span>
         </div>
       );
     }

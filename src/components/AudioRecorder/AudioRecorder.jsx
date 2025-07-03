@@ -125,7 +125,7 @@ export function AudioRecorder() {
               <button
                 style={{
                   ...styles.button,
-                  backgroundColor: "#f44336",
+                  backgroundColor: `${Theme.disconnected}`,
                   marginLeft: 8,
                 }}
                 onClick={deleteRecording}
@@ -158,7 +158,7 @@ export function AudioRecorder() {
 const styles = {
   container: {},
   button: {
-    backgroundColor: "#4CAF50",
+    backgroundColor: `${Theme.connected}`,
     color: "white",
     padding: "10px 20px",
     fontSize: 16,
@@ -167,7 +167,7 @@ const styles = {
     cursor: "pointer",
   },
   button_stop: {
-    backgroundColor: "#f44336",
+    backgroundColor: `${Theme.disconnected}`,
     color: "white",
     padding: "10px 20px",
     fontSize: 16,
@@ -186,13 +186,13 @@ const styles = {
     gap: 10,
     marginBottom: 10,
     fontWeight: "bold",
-    color: "#f44336",
+    color: `${Theme.disconnected}`,
   },
   pulse: {
     width: 12,
     height: 12,
     borderRadius: "50%",
-    backgroundColor: "#f44336",
+    backgroundColor: `${Theme.disconnected}`,
     animation: "pulse 1s infinite",
   },
 };

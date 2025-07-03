@@ -101,10 +101,10 @@ export const StyledSVG = styled.div`
 export const StyledContener = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 2rem;
+  margin-top: 1rem;
   justify-items: center;
   width: 1150px;
-  padding: 30px 30px;
+  padding: 2rem 0 1rem 3rem;
   border: 3px solid ${Theme.secondary};
   border-radius: 1rem;
   margin-left: 1rem;
@@ -153,7 +153,7 @@ export const StyledGamepadSVGAxesAVGWrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   background-color: ${Theme.white};
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 3rem;
 `;
 
 export const AxesAndButtonsWrapper = styled.div`
@@ -168,7 +168,7 @@ export const AxesWrapper = styled.div`
   justify-items: center;
   background-color: ${Theme.white};
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -185,7 +185,7 @@ export const StyledButtons = styled.div`
   background-color: ${(props) =>
     props ? `rgba(0,0,0,${props.value})` : `white`};
   color: ${(props) => (props.value > 0.4 ? `white` : `rgba(0,0,0)`)};
-  padding: 10px;
+  padding: 0.5rem;
   border-radius: 10px;
   width: 55px;
   border: 1px solid ${Theme.secondary};
