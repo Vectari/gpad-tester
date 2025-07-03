@@ -7,7 +7,6 @@ import { FaInfoCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
 
-
 const StyledNav = styled.nav`
   h2 {
     color: ${Theme.logo};
@@ -87,8 +86,8 @@ export function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/blog"
-            className={activeLink === "/blog" ? "active" : ""}
+            to="/guides"
+            className={activeLink === "/guides" ? "active" : ""}
           >
             <span>
               <FaTools />

@@ -4,7 +4,7 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Main } from "./components/Main/Main.jsx";
 // import { Info } from "./components/Info/Info.jsx";
-import { Blog } from "./components/Blog/Blog.jsx";
+import { Guides } from "./components/Guides/Guides.jsx";
 import App from "./App.jsx";
 import { PlayerOne } from "./views/PlayerOne/PlayerOne.jsx";
 import { PlayerTwo } from "./views/PlayerTwo/PlayerTwo.jsx";
@@ -56,8 +56,8 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/blog",
-        element: <Blog />,
+        path: "/guides",
+        element: <Guides />,
         // errorElement: <ErrorPage />,
       },
       {
