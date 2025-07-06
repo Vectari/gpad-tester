@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Main } from "./components/Main/Main.jsx";
-// import { Info } from "./components/Info/Info.jsx";
 import { Guides } from "./components/Guides/Guides.jsx";
 import App from "./App.jsx";
 import { PlayerOne } from "./views/PlayerOne/PlayerOne.jsx";
@@ -29,41 +28,41 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/main",
+        path: "main",
         element: <Main />,
-        // errorElement: <ErrorPage />,
+        children: [
+          { index: true, element: <PlayerOne /> },
+          { path: "one", element: <PlayerOne /> },
+          { path: "two", element: <PlayerTwo /> },
+          { path: "three", element: <PlayerThree /> },
+          { path: "four", element: <PlayerFour /> },
+        ],
+      },
+      {
+        path: "guides",
+        element: <Guides />,
         children: [
           {
-            index: true,
-            element: <PlayerOne />,
-          },
-          {
-            path: "/main/one",
-            element: <PlayerOne />,
-          },
-          {
-            path: "/main/two",
-            element: <PlayerTwo />,
-          },
-          {
-            path: "/main/three",
-            element: <PlayerThree />,
-          },
-          {
-            path: "/main/four",
-            element: <PlayerFour />,
+            path: ":companySlug",
+            element: <Guides />,
+            children: [
+              {
+                path: ":deviceSlug",
+                element: <Guides />,
+                children: [
+                  {
+                    path: ":guideSlug",
+                    element: <Guides />,
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
       {
-        path: "/guides",
-        element: <Guides />,
-        // errorElement: <ErrorPage />,
-      },
-      {
-        path: "/about",
+        path: "about",
         element: <About />,
-        // errorElement: <ErrorPage />,
       },
     ],
   },
@@ -71,6 +70,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
