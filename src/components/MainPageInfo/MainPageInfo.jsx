@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 import x_series_full from "../../media/x_series_full.webp";
 import x_series_open from "../../media/x_series_open.webp";
+import ps5_full from "../../media/ps5_full.webp";
+import ps5_mb from "../../media/ps5_mb.webp";
 
 const StyledMainPageWrapper = styled.div`
   width: 90%;
@@ -32,6 +34,7 @@ const StyledImgWrapper = styled.div`
 
 const StyledMainPageInfo = styled.div`
   margin-bottom: 2rem;
+  text-align: center;
 
   h1 {
     padding-bottom: 0.5rem;
@@ -72,7 +75,7 @@ export function MainPageInfo() {
             src={x_series_open}
             loading="lazy"
             decoding="async"
-            alt="Xbox Series X controller inside – joystick and button modules"
+            alt="Xbox Series X controller inside – analogs and button modules"
           />
         </StyledImgWrapper>
 
@@ -133,6 +136,21 @@ export function MainPageInfo() {
           .
         </article>
       </StyledMainPageInfo>
+
+      <StyledImgWrapper>
+        <img
+          src={ps5_full}
+          loading="lazy"
+          decoding="async"
+          alt="PS5 DualSense controller test – front view"
+        />
+        <img
+          src={ps5_mb}
+          loading="lazy"
+          decoding="async"
+          alt="PS5 DualSense controller inside – analogs module"
+        />
+      </StyledImgWrapper>
 
       <StyledMainPageInfo>
         <h2>Controller Button Test – Fix Faulty Buttons Easily</h2>
