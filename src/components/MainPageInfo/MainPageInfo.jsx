@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
+import x_series_full from "../../media/x_series_full.webp";
+import x_series_open from "../../media/x_series_open.webp";
 
 const StyledMainPageWrapper = styled.div`
   width: 90%;
@@ -9,6 +11,22 @@ const StyledMainPageWrapper = styled.div`
 
   @media (min-width: 768px) {
     padding: 2rem;
+  }
+`;
+
+const StyledImgWrapper = styled.div`
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+
+  @media (max-width: 1250px) {
+    display: grid;
+  }
+
+  img {
+    width: 450px;
+    margin: 1rem 2rem;
+    height: auto;
   }
 `;
 
@@ -43,6 +61,20 @@ export function MainPageInfo() {
         <h1>
           Free Online Gamepad Tester – Test Your PS5, PS4, PS3, Xbox Controller
         </h1>
+        <StyledImgWrapper>
+          <img
+            src={x_series_full}
+            loading="lazy"
+            decoding="async"
+            alt="Xbox Series X controller test – front view"
+          />
+          <img
+            src={x_series_open}
+            loading="lazy"
+            decoding="async"
+            alt="Xbox Series X controller inside – joystick and button modules"
+          />
+        </StyledImgWrapper>
 
         <article>
           Test your controller online with our free{" "}
