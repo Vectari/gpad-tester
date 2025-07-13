@@ -1,21 +1,46 @@
 import { useParams, Link } from "react-router-dom";
 import { guidesData } from "./guidesData";
 import styled from "styled-components";
+import { Theme } from "../../styles/Theme";
+
+const StyledDevelopmentNote = styled.h3`
+  text-align: center;
+  text-decoration: underline;
+`;
 
 const StyledGuidesWrapper = styled.div`
-  h2 {
-    color: red;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 95%;
+  text-align: center;
+
+  ul {
+    font-size: 2rem;
+  }
+
+  span {
+    padding: 0.5rem;
   }
 `;
 
-// const StyledLink = styled(Link)`
-//   font-size: 2rem;
-// `;
+const StyledLinkWrapper = styled.div`
+  background-color: ${Theme.background};
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  text-align: center;
+`;
+
+const StyledLink = styled(Link)`
+  width: 95%;
+  font-size: 1rem;
+  color: ${Theme.black};
+`;
 
 export function Guides() {
   const { companySlug, deviceSlug, guideSlug } = useParams();
 
-  // Pobranie danych na podstawie slugów
   const companyData = companySlug ? guidesData[companySlug] : null;
   const deviceData =
     companyData && deviceSlug ? companyData.devices[deviceSlug] : null;
@@ -24,31 +49,35 @@ export function Guides() {
 
   // Wspólne breadcrumbs
   const breadcrumbs = (
-    <nav className="breadcrumbs" style={{ marginBottom: "1rem" }}>
-      <h1>Guides currently in development</h1>
-      <Link to="/guides">Guides</Link>
-      {companySlug && (
-        <>
-          {" > "}
-          <Link to={`/guides/${companySlug}`}>
-            {(companySlug || "").replaceAll("_", " ")}
-          </Link>
-        </>
-      )}
-      {deviceSlug && (
-        <>
-          {" > "}
-          <Link to={`/guides/${companySlug}/${deviceSlug}`}>
-            {(deviceSlug || "").replaceAll("_", " ")}
-          </Link>
-        </>
-      )}
-      {guideSlug && (
-        <>
-          {" > "}
-          <span>{(guideSlug || "").replaceAll("_", " ")}</span>
-        </>
-      )}
+    <nav className="breadcrumbs">
+      <StyledDevelopmentNote>
+        Note: Guides currently in development
+      </StyledDevelopmentNote>
+      <StyledLinkWrapper>
+        <StyledLink to="/guides">Guides</StyledLink>
+        {companySlug && (
+          <>
+            <span>&#10140;</span>
+            <StyledLink to={`/guides/${companySlug}`}>
+              {(companySlug || "").replaceAll("_", " ")}
+            </StyledLink>
+          </>
+        )}
+        {deviceSlug && (
+          <>
+            <span>&#10140;</span>
+            <StyledLink to={`/guides/${companySlug}/${deviceSlug}`}>
+              {(deviceSlug || "").replaceAll("_", " ")}
+            </StyledLink>
+          </>
+        )}
+        {guideSlug && (
+          <>
+            <span>&#10140;</span>
+            <span>{(guideSlug || "").replaceAll("_", " ")}</span>
+          </>
+        )}
+      </StyledLinkWrapper>
     </nav>
   );
 
@@ -61,7 +90,7 @@ export function Guides() {
         <ul>
           {Object.keys(guidesData).map((company) => (
             <li key={company}>
-              <Link to={`/guides/${company}`}>{company}</Link>
+              <StyledLink to={`/guides/${company}`}>{company}</StyledLink>
             </li>
           ))}
         </ul>
@@ -87,7 +116,9 @@ export function Guides() {
         <ul>
           {Object.keys(companyData.devices).map((device) => (
             <li key={device}>
-              <Link to={`/guides/${companySlug}/${device}`}>{device}</Link>
+              <StyledLink to={`/guides/${companySlug}/${device}`}>
+                {device}
+              </StyledLink>
             </li>
           ))}
         </ul>
@@ -113,9 +144,9 @@ export function Guides() {
         <ul>
           {Object.keys(deviceData.guides).map((guide) => (
             <li key={guide}>
-              <Link to={`/guides/${companySlug}/${deviceSlug}/${guide}`}>
+              <StyledLink to={`/guides/${companySlug}/${deviceSlug}/${guide}`}>
                 {guide.replace("_", " ")}
-              </Link>
+              </StyledLink>
             </li>
           ))}
         </ul>
