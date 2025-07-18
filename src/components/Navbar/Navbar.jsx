@@ -7,13 +7,33 @@ import { FaInfoCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
 
-const StyledNav = styled.nav`
+const StyledNav = styled.div`
+  display: flex;
+  background-color: ${Theme.interface};
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 0 0 1rem 1rem;
+  border-bottom: 1px solid ${Theme.secondary};
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  align-items: center;
+
+  @media (max-width: 765px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+`;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
   h2 {
     color: ${Theme.logo};
-    position: absolute;
-    margin-left: -17rem;
-    border-left: 3px solid ${Theme.primary};
-    border-top: 1px solid ${Theme.primary};
+    border-left: 4px solid ${Theme.primary};
+    border-top: 2px solid ${Theme.primary};
+    border-right: 1px solid ${Theme.primary};
+    border-bottom: 2px solid ${Theme.primary};
     border-radius: 1rem;
     padding: 3px 2px 0 5px;
   }
@@ -21,39 +41,41 @@ const StyledNav = styled.nav`
   .logo {
     color: ${Theme.logo};
     font-size: 1.8rem;
-    position: absolute;
-    border-right: 3px solid ${Theme.primary};
-    border-bottom: 1px solid ${Theme.primary};
+    margin-left: 0.5rem;
+    /* border-right: 3px solid ${Theme.primary}; */
+    /* border-bottom: 1px solid ${Theme.primary}; */
     border-radius: 1rem;
-  }
-
-  ul {
-    display: flex;
-    background-color: ${Theme.interface};
-    padding: 1rem 12rem 1rem 18rem;
-    border-radius: 0 0 1rem 1rem;
-    gap: 5rem;
-    border-bottom: 1px solid ${Theme.secondary};
-
-    li {
-      font-size: 1.2rem;
-    }
-
-    span {
-      color: ${Theme.logo};
-      font-size: 1.5rem;
-      padding: 0 10px;
-    }
-
-    .active {
-      color: ${Theme.primary};
-      border-bottom: 3px solid ${Theme.primary};
-    }
   }
 `;
 
-const StyledSpace = styled.span`
-  /* margin-left: 20rem; */
+const MenuWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  @media (min-width: 765px) {
+    gap: 7rem;
+    padding-right: 7rem;
+  }
+
+  span {
+    color: ${Theme.logo};
+    font-size: 1.5rem;
+  }
+
+  .active {
+    color: ${Theme.primary};
+    border-bottom: 3px solid ${Theme.primary};
+  }
+`;
+
+const Spantext = styled.span`
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
+  padding-left: 1rem;
+  text-align: center;
 `;
 
 export function Navbar() {
@@ -66,45 +88,45 @@ export function Navbar() {
 
   return (
     <StyledNav>
-      <ul>
+      <LogoWrapper>
         <h2>
           GamePad Tester
           <span className="logo">
             <GrGamepad />
           </span>
         </h2>
-        <StyledSpace></StyledSpace>
-        <li>
-          <NavLink
-            to="/main"
-            className={activeLink === ("/" || "/main") ? "active" : ""}
-          >
-            <span>
-              <FaHome />
-            </span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/guides"
-            className={activeLink === "/guides" ? "active" : ""}
-          >
-            <span>
-              <FaTools />
-            </span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={activeLink === "/about" ? "active" : ""}
-          >
-            <span>
-              <FaInfoCircle />
-            </span>
-          </NavLink>
-        </li>
-      </ul>
+      </LogoWrapper>
+      <MenuWrapper>
+        <NavLink
+          to="/main"
+          className={activeLink === ("/" || "/main") ? "active" : ""}
+        >
+          <span>
+            <FaHome />
+            <Spantext>Main</Spantext>
+          </span>
+        </NavLink>
+
+        <NavLink
+          to="/guides"
+          className={activeLink === "/guides" ? "active" : ""}
+        >
+          <span>
+            <FaTools />
+            <Spantext>Guides</Spantext>
+          </span>
+        </NavLink>
+
+        <NavLink
+          to="/about"
+          className={activeLink === "/about" ? "active" : ""}
+        >
+          <span>
+            <FaInfoCircle />
+            <Spantext>About</Spantext>
+          </span>
+        </NavLink>
+      </MenuWrapper>
     </StyledNav>
   );
 }
