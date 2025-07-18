@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
+import x_series_full from "../../media/x_series_full.webp";
+import x_series_open from "../../media/x_series_open.webp";
+import ps5_full from "../../media/ps5_full.webp";
+import ps5_mb from "../../media/ps5_mb.webp";
 
 const StyledMainPageWrapper = styled.div`
   width: 90%;
@@ -12,8 +16,26 @@ const StyledMainPageWrapper = styled.div`
   }
 `;
 
+const StyledImgWrapper = styled.div`
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+
+  @media (max-width: 1250px) {
+    display: grid;
+  }
+
+  img {
+    width: 90%;
+    max-width: 450px;
+    margin: 1rem 2rem;
+    height: auto;
+  }
+`;
+
 const StyledMainPageInfo = styled.div`
   margin-bottom: 2rem;
+  text-align: center;
 
   h1 {
     padding-bottom: 0.5rem;
@@ -43,6 +65,20 @@ export function MainPageInfo() {
         <h1>
           Free Online Gamepad Tester – Test Your PS5, PS4, PS3, Xbox Controller
         </h1>
+        <StyledImgWrapper>
+          <img
+            src={x_series_full}
+            loading="lazy"
+            decoding="async"
+            alt="Xbox Series X controller test – front view"
+          />
+          <img
+            src={x_series_open}
+            loading="lazy"
+            decoding="async"
+            alt="Xbox Series X controller inside – analogs and button modules"
+          />
+        </StyledImgWrapper>
 
         <article>
           Test your controller online with our free{" "}
@@ -101,6 +137,21 @@ export function MainPageInfo() {
           .
         </article>
       </StyledMainPageInfo>
+
+      <StyledImgWrapper>
+        <img
+          src={ps5_full}
+          loading="lazy"
+          decoding="async"
+          alt="PS5 DualSense controller test – front view"
+        />
+        <img
+          src={ps5_mb}
+          loading="lazy"
+          decoding="async"
+          alt="PS5 DualSense controller inside – analogs module"
+        />
+      </StyledImgWrapper>
 
       <StyledMainPageInfo>
         <h2>Controller Button Test – Fix Faulty Buttons Easily</h2>

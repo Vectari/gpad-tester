@@ -9,8 +9,12 @@ const StyledUl = styled.ul`
   font-size: 1.1rem;
   background-color: ${Theme.interface};
 
+  @media (max-width: 765px) {
+    flex-direction: column;
+  }
+
   li {
-    width: 9rem;
+    width: 11rem;
     padding: 1rem;
     box-sizing: border-box;
     color: ${Theme.logo};
@@ -33,6 +37,23 @@ const StyledUl = styled.ul`
   }
 `;
 
+const FirstTwo = styled.div`
+  display: flex;
+
+  @media (max-width: 765px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+const SecondTwo = styled.div`
+  display: flex;
+
+  @media (max-width: 765px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
 const StyledConnected = styled.p`
   color: ${Theme.connected};
 `;
@@ -112,65 +133,69 @@ export function Main() {
   return (
     <>
       <StyledUl>
-        <NavLink
-          to="/main/one"
-          className={
-            activeLink === "/" || activeLink === "/main" ? "active" : ""
-          }
-        >
-          <li>
-            Gamepad #1
-            <StyledConnected>
-              {connectionStatusOne ? "Connected" : ""}
-            </StyledConnected>
-            <StyledNotFound>
-              {!connectionStatusOne ? "Not found" : ""}
-            </StyledNotFound>
-          </li>
-        </NavLink>
-        <NavLink
-          to="/main/two"
-          className={activeLink === "/main/two" ? "active" : ""}
-        >
-          <li>
-            Gamepad #2
-            <StyledConnected>
-              {connectionStatusTwo ? "Connected" : ""}
-            </StyledConnected>
-            <StyledNotFound>
-              {!connectionStatusTwo ? "Not found" : ""}
-            </StyledNotFound>
-          </li>
-        </NavLink>
+        <FirstTwo>
+          <NavLink
+            to="/main/one"
+            className={
+              activeLink === "/" || activeLink === "/main" ? "active" : ""
+            }
+          >
+            <li>
+              Gamepad #1
+              <StyledConnected>
+                {connectionStatusOne ? "Connected" : ""}
+              </StyledConnected>
+              <StyledNotFound>
+                {!connectionStatusOne ? "Not found" : ""}
+              </StyledNotFound>
+            </li>
+          </NavLink>
+          <NavLink
+            to="/main/two"
+            className={activeLink === "/main/two" ? "active" : ""}
+          >
+            <li>
+              Gamepad #2
+              <StyledConnected>
+                {connectionStatusTwo ? "Connected" : ""}
+              </StyledConnected>
+              <StyledNotFound>
+                {!connectionStatusTwo ? "Not found" : ""}
+              </StyledNotFound>
+            </li>
+          </NavLink>
+        </FirstTwo>
 
-        <NavLink
-          to="/main/three"
-          className={activeLink === "/main/three" ? "active" : ""}
-        >
-          <li>
-            Gamepad #3
-            <StyledConnected>
-              {connectionStatusThree ? "Connected" : ""}
-            </StyledConnected>
-            <StyledNotFound>
-              {!connectionStatusThree ? "Not found" : ""}
-            </StyledNotFound>
-          </li>
-        </NavLink>
-        <NavLink
-          to="/main/four"
-          className={activeLink === "/main/four" ? "active" : ""}
-        >
-          <li>
-            Gamepad #4
-            <StyledConnected>
-              {connectionStatusFour ? "Connected" : ""}
-            </StyledConnected>
-            <StyledNotFound>
-              {!connectionStatusFour ? "Not found" : ""}
-            </StyledNotFound>
-          </li>
-        </NavLink>
+        <SecondTwo>
+          <NavLink
+            to="/main/three"
+            className={activeLink === "/main/three" ? "active" : ""}
+          >
+            <li>
+              Gamepad #3
+              <StyledConnected>
+                {connectionStatusThree ? "Connected" : ""}
+              </StyledConnected>
+              <StyledNotFound>
+                {!connectionStatusThree ? "Not found" : ""}
+              </StyledNotFound>
+            </li>
+          </NavLink>
+          <NavLink
+            to="/main/four"
+            className={activeLink === "/main/four" ? "active" : ""}
+          >
+            <li>
+              Gamepad #4
+              <StyledConnected>
+                {connectionStatusFour ? "Connected" : ""}
+              </StyledConnected>
+              <StyledNotFound>
+                {!connectionStatusFour ? "Not found" : ""}
+              </StyledNotFound>
+            </li>
+          </NavLink>
+        </SecondTwo>
       </StyledUl>
       <Outlet />
     </>

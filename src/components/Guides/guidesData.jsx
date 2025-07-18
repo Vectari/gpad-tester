@@ -1,9 +1,12 @@
+import { BrokenButtonGuide } from "./articles/Microsoft/Xbox One (original)/BrokenButton";
+import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Nintendo_Switch_teardown";
+
 export const guidesData = {
   Microsoft: {
     devices: {
       "Xbox One (original)": {
         guides: {
-          // one: "one",
+          "How to fix a broken button on Xbox One": <BrokenButtonGuide />,
         },
       },
       "Xbox One S": {
@@ -47,7 +50,12 @@ export const guidesData = {
     devices: {
       "Nintendo Switch": {
         guides: {
-          // one: "one",
+          "Nintendo Switch teardown & disassembly": (
+            <Nintendo_Switch_teardown />
+          ),
+          "Second guide": (
+            <Nintendo_Switch_teardown />
+          )
         },
       },
       "Nintendo Switch Lite": {
