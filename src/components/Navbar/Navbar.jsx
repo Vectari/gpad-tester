@@ -60,7 +60,7 @@ const MenuWrapper = styled.div`
 
   span {
     color: ${Theme.logo};
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .active {
