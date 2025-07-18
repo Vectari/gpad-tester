@@ -26,7 +26,8 @@ const StyledImgWrapper = styled.div`
   }
 
   img {
-    width: 450px;
+    width: 90%;
+    max-width: 450px;
     margin: 1rem 2rem;
     height: auto;
   }
