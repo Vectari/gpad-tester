@@ -22,6 +22,7 @@ import {
   StyledVibrationLoopButtonWrapper,
   StyledSmallInfo,
   StyledLoaderTextWrapper,
+  MobileInfo,
 } from "./MainGamepad.styles";
 import { MainPageInfo } from "../MainPageInfo/MainPageInfo";
 import { AudioRecorder } from "../AudioRecorder/AudioRecorder";
@@ -289,6 +290,7 @@ export function MainGamepad({ playerNumber }) {
   if (buttons === 0 || !connectionStatus) {
     return (
       <>
+        <MobileInfo />
         <StyledLoaderTextWrapper className={scaleValue}>
           <StyledLoader>
             <div></div>
@@ -313,6 +315,7 @@ export function MainGamepad({ playerNumber }) {
   } else if (buttons === 17) {
     return (
       <>
+        <MobileInfo />
         <StyledContener className={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
@@ -364,6 +367,7 @@ export function MainGamepad({ playerNumber }) {
   } else {
     return (
       <>
+        <MobileInfo />
         <StyledContener className={scaleValue}>
           <AxesAndButtonsWrapper>
             {scaleInterface}
