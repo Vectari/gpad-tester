@@ -37,4 +37,12 @@ export const StyledArticleWrapper = styled.div`
       margin: 0.5rem 2rem;
     }
   }
+
+  table {
+    border: 1px solid ${Theme.interface};
+
+    td {
+      border-top: 1px solid ${Theme.interface};
+    }
+  }
 `;
