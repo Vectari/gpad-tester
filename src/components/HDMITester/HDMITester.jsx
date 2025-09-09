@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
 `;
 
 const Title = styled.h2`
@@ -31,7 +31,6 @@ const Column = styled.div`
 const PinRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 70px;
   margin: 2px 0;
 
@@ -45,11 +44,14 @@ const PinRow = styled.div`
     font-size: 0.7rem;
     font-weight: bold;
     border-radius: 3px;
+    flex-shrink: 0;
   }
 
   .value {
-    margin-left: 6px;
+    /* margin-left: 5px; */
     color: ${({ valueColor }) => valueColor};
+    /* text-align: left; */
+    flex: 1;
   }
 `;
 
