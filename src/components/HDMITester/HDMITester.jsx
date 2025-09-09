@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   /* margin: 2rem 0; */
+  margin-bottom: 0.5rem;
 `;
 
 const Title = styled.h2`
