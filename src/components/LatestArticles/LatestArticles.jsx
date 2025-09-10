@@ -18,7 +18,7 @@ const LatestArticlesWrapper = styled.div`
     max-width: 900px;
     max-height: 360px;
     overflow-y: auto;
-    overflow-x: auto; /* <-- ważne na mobile */
+    overflow-x: auto;
     border: 1px solid #ececec;
     border-radius: 8px;
     background: #fff;
@@ -27,7 +27,7 @@ const LatestArticlesWrapper = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 400px; /* żeby nie łamało się zbyt ciasno */
+    min-width: 400px;
   }
 
   thead th {
@@ -47,7 +47,7 @@ const LatestArticlesWrapper = styled.div`
     border-bottom: 1px solid #eee;
     font-size: 0.95rem;
     text-align: left;
-    white-space: nowrap; /* w mobile lepiej scroll niż łamanie */
+    white-space: nowrap;
   }
 
   tbody tr:hover {
