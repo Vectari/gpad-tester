@@ -9,8 +9,12 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
+
+  span {
+    font-size: 1.1rem;
+  }
 `;
 
 const MatrixBox = styled.div`
@@ -59,7 +63,10 @@ const PinRow = styled.div`
 export const HDMITester = ({ title, leftPins, rightPins }) => {
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      <Title>
+        <span>HDMI diode test:</span>
+        {title}
+      </Title>
       <MatrixBox>
         <Column>
           {leftPins.map((pin) => (
