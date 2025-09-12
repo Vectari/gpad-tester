@@ -5,6 +5,7 @@ export const StyledArticleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-bottom: 2rem;
   width: 95%;
   max-width: 700px;
   border-top: 3px solid ${Theme.interface};
@@ -43,6 +44,18 @@ export const StyledArticleWrapper = styled.div`
 
     td {
       border-top: 1px solid ${Theme.interface};
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    img {
+      max-width: 50%;
+      border-radius: 1rem;
     }
   }
 `;
