@@ -38,6 +38,24 @@ const StyledLink = styled(Link)`
   color: ${Theme.black};
 `;
 
+const StyledLinkMenu = styled(Link)`
+  font-size: 1rem;
+  color: ${Theme.black};
+  background-color: ${Theme.background};
+  padding: 0.8rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  max-width: 350px;
+
+  &:hover {
+    background-color: ${Theme.interface};
+    color: ${Theme.white};
+    transition: 0.5s;
+  }
+`;
+
 export function Guides() {
   const { companySlug, deviceSlug, guideSlug } = useParams();
 
@@ -90,7 +108,9 @@ export function Guides() {
         <ul>
           {Object.keys(guidesData).map((company) => (
             <li key={company}>
-              <StyledLink to={`/guides/${company}`}>{company}</StyledLink>
+              <StyledLinkMenu to={`/guides/${company}`}>
+                {company}
+              </StyledLinkMenu>
             </li>
           ))}
         </ul>
@@ -116,9 +136,9 @@ export function Guides() {
         <ul>
           {Object.keys(companyData.devices).map((device) => (
             <li key={device}>
-              <StyledLink to={`/guides/${companySlug}/${device}`}>
+              <StyledLinkMenu to={`/guides/${companySlug}/${device}`}>
                 {device}
-              </StyledLink>
+              </StyledLinkMenu>
             </li>
           ))}
         </ul>
@@ -144,9 +164,11 @@ export function Guides() {
         <ul>
           {Object.keys(deviceData.guides).map((guide) => (
             <li key={guide}>
-              <StyledLink to={`/guides/${companySlug}/${deviceSlug}/${guide}`}>
+              <StyledLinkMenu
+                to={`/guides/${companySlug}/${deviceSlug}/${guide}`}
+              >
                 {guide.replace("_", " ")}
-              </StyledLink>
+              </StyledLinkMenu>
             </li>
           ))}
         </ul>

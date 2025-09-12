@@ -4,6 +4,7 @@ import x_series_full from "../../media/x_series_full.webp";
 import x_series_open from "../../media/x_series_open.webp";
 import ps5_full from "../../media/ps5_full.webp";
 import ps5_mb from "../../media/ps5_mb.webp";
+import { LatestArticles } from "../LatestArticles/LatestArticles";
 
 const StyledMainPageWrapper = styled.div`
   width: 90%;
@@ -61,6 +62,7 @@ const StyledMainPageInfo = styled.div`
 export function MainPageInfo() {
   return (
     <StyledMainPageWrapper>
+      <LatestArticles />
       <StyledMainPageInfo>
         <h1>
           Free Online Gamepad Tester – Test Your PS5, PS4, PS3, Xbox Controller
