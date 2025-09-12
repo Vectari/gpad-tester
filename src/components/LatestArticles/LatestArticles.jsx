@@ -86,6 +86,14 @@ export function LatestArticles() {
           </thead>
           <tbody>
             <tr>
+              <td>2025-09-11</td>
+              <td>
+                <a href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test">
+                  All consoles HDMI diode test
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>2025-09-10</td>
               <td>
                 <a href="/guides/Sony/PlayStation%205%20(PS5)/PS5%20HDMI%20Replacement">

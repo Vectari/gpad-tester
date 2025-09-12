@@ -151,7 +151,7 @@ export const guidesData = {
     devices: {
       "All consoles": {
         guides: {
-          "All HDMI": <AllHDMI />,
+          "All consoles HDMI diode test": <AllHDMI />,
         },
       },
     },
