@@ -54,7 +54,8 @@ export const StyledArticleWrapper = styled.div`
     align-items: center;
 
     img {
-      max-width: 50%;
+      margin-top: 1rem;
+      max-width: 80%;
       border-radius: 1rem;
     }
   }

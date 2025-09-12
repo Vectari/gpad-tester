@@ -25,7 +25,7 @@ const StyledGuidesWrapper = styled.div`
 `;
 
 const StyledLinkWrapper = styled.div`
-  background-color: ${Theme.background};
+  background-color: ${Theme.secondary};
   padding: 0.5rem;
   margin: 0.5rem 0;
   border-radius: 1rem;
@@ -35,13 +35,13 @@ const StyledLinkWrapper = styled.div`
 const StyledLink = styled(Link)`
   width: 95%;
   font-size: 1rem;
-  color: ${Theme.black};
+  color: ${Theme.white};
 `;
 
 const StyledLinkMenu = styled(Link)`
   font-size: 1rem;
-  color: ${Theme.black};
-  background-color: ${Theme.background};
+  color: ${Theme.white};
+  background-color: ${Theme.secondary};
   padding: 0.8rem;
   border-radius: 1rem;
   display: flex;
@@ -50,8 +50,8 @@ const StyledLinkMenu = styled(Link)`
   max-width: 350px;
 
   &:hover {
-    background-color: ${Theme.interface};
-    color: ${Theme.white};
+    background-color: ${Theme.background};
+    color: ${Theme.black};
     transition: 0.5s;
   }
 `;

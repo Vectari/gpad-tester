@@ -24,18 +24,26 @@ const AllHDMIWrapper = styled.div`
 
 export function AllHDMI() {
   return (
-    <AllHDMIWrapper>
-      <HDMI_PS4_FAT />
-      <HDMI_PS4_SLIM />
-      <HDMI_PS4_PRO />
-      <HDMI_PS5_FAT />
-      <HDMI_PS5_PRO />
-      <HDMI_XBOX_ONE_FAT />
-      <HDMI_XBOX_ONE_S />
-      <HDMI_XBOX_ONE_X />
-      <HDMI_XBOX_SERIES_S />
-      <HDMI_XBOX_SERIES_X />
-      <HDMI_PS3_FAT />
-    </AllHDMIWrapper>
+    <>
+      <br />
+      <h3>
+        USB-C is reversible — when you connect the tester, the results may
+        appear in the opposite order.
+      </h3>
+
+      <AllHDMIWrapper>
+        <HDMI_PS4_FAT />
+        <HDMI_PS4_SLIM />
+        <HDMI_PS4_PRO />
+        <HDMI_PS5_FAT />
+        <HDMI_PS5_PRO />
+        <HDMI_XBOX_ONE_FAT />
+        <HDMI_XBOX_ONE_S />
+        <HDMI_XBOX_ONE_X />
+        <HDMI_XBOX_SERIES_S />
+        <HDMI_XBOX_SERIES_X />
+        <HDMI_PS3_FAT />
+      </AllHDMIWrapper>
+    </>
   );
 }
