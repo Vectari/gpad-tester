@@ -86,99 +86,27 @@ export function LatestArticles() {
           </thead>
           <tbody>
             <tr>
-              <td>2025-09-01</td>
+              <td>2025-09-10</td>
               <td>
-                <a href="#">Jak zrobić X — krótki przewodnik</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-20</td>
-              <td>
-                <a href="#">
-                  Poradnik Y z długim tytułem, który się zawija w mobile
+                <a href="/guides/Sony/PlayStation%205%20(PS5)/PS5%20HDMI%20Replacement">
+                  PS5 HDMI Replacement
                 </a>
               </td>
             </tr>
             <tr>
-              <td>2025-08-10</td>
+              <td>2025-09-10</td>
               <td>
-                <a href="#">Test</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-01</td>
-              <td>
-                <a href="#">Kolejny artykuł</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-07-15</td>
-              <td>
-                <a href="#">Przykład</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-09-01</td>
-              <td>
-                <a href="#">Jak zrobić X — krótki przewodnik</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-20</td>
-              <td>
-                <a href="#">
-                  Poradnik Y z długim tytułem, który się zawija w mobile
+                <a href="/guides/Sony/PlayStation%205%20Slim%20(PS5%20Slim)/PS5%20Slim%20HDMI%20Replacement">
+                  PS5 Slim HDMI Replacement
                 </a>
               </td>
             </tr>
             <tr>
-              <td>2025-08-10</td>
+              <td>2025-09-10</td>
               <td>
-                <a href="#">Test</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-01</td>
-              <td>
-                <a href="#">Kolejny artykuł</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-07-15</td>
-              <td>
-                <a href="#">Przykład</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-09-01</td>
-              <td>
-                <a href="#">Jak zrobić X — krótki przewodnik</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-20</td>
-              <td>
-                <a href="#">
-                  Poradnik Y z długim tytułem, który się zawija w mobile
+                <a href="/guides/Sony/PlayStation%205%20PRO%20(PS5%20PRO)/PS5%20PRO%20HDMI%20Replacement">
+                  PS5 PRO HDMI Replacement
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-10</td>
-              <td>
-                <a href="#">Test</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-08-01</td>
-              <td>
-                <a href="#">Kolejny artykuł</a>
-              </td>
-            </tr>
-            <tr>
-              <td>2025-07-15</td>
-              <td>
-                <a href="#">Przykład</a>
               </td>
             </tr>
           </tbody>

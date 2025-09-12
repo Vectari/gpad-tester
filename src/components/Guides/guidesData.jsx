@@ -1,12 +1,18 @@
+import { AllHDMI } from "./articles/AllHDMI";
 import { BrokenButtonGuide } from "./articles/Microsoft/Xbox One (original)/BrokenButton";
+import { NoAudioVideoBrokenHDMI } from "./articles/Microsoft/Xbox One (original)/NoAudioVideoBrokenHDMI";
+import { SystemErrors } from "./articles/Microsoft/Xbox One (original)/SystemErrors";
 import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Nintendo_Switch_teardown";
+import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HDMI_Replacement";
 
 export const guidesData = {
   Microsoft: {
     devices: {
-      "Xbox One (original)": {
+      "Xbox One FAT (original)": {
         guides: {
           "How to fix a broken button on Xbox One": <BrokenButtonGuide />,
+          "No audio,video or broken HDMI": <NoAudioVideoBrokenHDMI />,
+          "System errors: E100, E101, E102, etc.": <SystemErrors />,
         },
       },
       "Xbox One S": {
@@ -53,9 +59,7 @@ export const guidesData = {
           "Nintendo Switch teardown & disassembly": (
             <Nintendo_Switch_teardown />
           ),
-          "Second guide": (
-            <Nintendo_Switch_teardown />
-          )
+          "Second guide": <Nintendo_Switch_teardown />,
         },
       },
       "Nintendo Switch Lite": {
@@ -109,7 +113,17 @@ export const guidesData = {
       },
       "PlayStation 5 (PS5)": {
         guides: {
-          // one: "one",
+          "PS5 HDMI Replacement": <PS5_HDMI_Replacement />
+        },
+      },
+      "PlayStation 5 Slim (PS5 Slim)": {
+        guides: {
+          "PS5 Slim HDMI Replacement": <PS5_HDMI_Replacement />
+        },
+      },
+      "PlayStation 5 PRO (PS5 PRO)": {
+        guides: {
+          "PS5 PRO HDMI Replacement": <PS5_HDMI_Replacement />
         },
       },
       "PS5 Gamepad (DualSense)": {
@@ -134,6 +148,15 @@ export const guidesData = {
       "SteamDeck 1030 (OLED)": {
         guides: {
           // one: "one",
+        },
+      },
+    },
+  },
+  HDMI: {
+    devices: {
+      "All consoles": {
+        guides: {
+          "All HDMI": <AllHDMI />,
         },
       },
     },
