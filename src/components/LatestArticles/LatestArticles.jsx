@@ -70,6 +70,18 @@ const LatestArticlesWrapper = styled.div`
       padding: 0.5rem;
     }
   }
+
+  .pinned {
+    border-bottom: 3px solid black;
+  }
+
+  .text {
+    &::after {
+      content: "✪";
+      margin-left: 0.4rem;
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 export function LatestArticles() {
@@ -85,6 +97,38 @@ export function LatestArticles() {
             </tr>
           </thead>
           <tbody>
+            <tr className="pinned">
+              <td className="pinned text">2025-09-11</td>
+              <td className="pinned">
+                <a href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test">
+                  All consoles HDMI diode test
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-15</td>
+              <td>
+                <a href="/guides/Sony/PlayStation%204%20FAT%20(PS4)/PS4%20FAT%20HDMI%20Replacement">
+                  PS4 FAT HDMI Replacement
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-15</td>
+              <td>
+                <a href="/guides/Sony/PlayStation%204%20Slim%20(PS4%20Slim)/PS4%20Slim%20HDMI%20Replacement">
+                  PS4 Slim HDMI Replacement
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-15</td>
+              <td>
+                <a href="/guides/Sony/PlayStation%204%20PRO%20(PS4%20PRO)/PS4%20PRO%20HDMI%20Replacement">
+                  PS4 PRO HDMI Replacement
+                </a>
+              </td>
+            </tr>
             <tr>
               <td>2025-09-11</td>
               <td>
