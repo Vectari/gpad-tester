@@ -1,6 +1,7 @@
 import { AllHDMI } from "./articles/AllHDMI";
 import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Nintendo_Switch_teardown";
 import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HDMI_Replacement";
+import { PS4_HDMI_Replacement } from "./articles/Sony/PlayStation 4 (PS4)/PS4_HDMI_Replacement";
 
 export const guidesData = {
   Microsoft: {
@@ -96,9 +97,19 @@ export const guidesData = {
           // one: "one",
         },
       },
-      "PlayStation 4 (PS4)": {
+      "PlayStation 4 FAT (PS4)": {
         guides: {
-          // one: "one",
+          "PS4 FAT HDMI Replacement": <PS4_HDMI_Replacement />,
+        },
+      },
+      "PlayStation 4 Slim (PS4 Slim)": {
+        guides: {
+          "PS4 Slim HDMI Replacement": <PS4_HDMI_Replacement />,
+        },
+      },
+      "PlayStation 4 PRO (PS4 PRO)": {
+        guides: {
+          "PS4 PRO HDMI Replacement": <PS4_HDMI_Replacement />,
         },
       },
       "PS4 Gamepad (DualShock 4 V1/V2)": {

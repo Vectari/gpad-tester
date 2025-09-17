@@ -30,6 +30,12 @@ export function AllHDMI() {
         USB-C is reversible — when you connect the tester, the results may
         appear in the opposite order.
       </h3>
+      <br />
+      <h3>
+        On the CUH-1116 (PS4 FAT), I noticed that PIN 4 on the new HDMI shows
+        red before the first console startup. After that, PIN 4 turns green on
+        the tester.
+      </h3>
 
       <AllHDMIWrapper>
         <HDMI_PS4_FAT />
