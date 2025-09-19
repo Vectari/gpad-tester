@@ -3,7 +3,7 @@ import { HDMITester } from "./HDMITester";
 export function HDMI_XBOX_ONE_S() {
   return (
     <HDMITester
-      title="XBOX ONE S"
+      title="HDMI diode test: XBOX ONE S"
       leftPins={[
         {
           number: 1,

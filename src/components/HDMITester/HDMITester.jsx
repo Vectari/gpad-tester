@@ -64,7 +64,6 @@ export const HDMITester = ({ title, leftPins, rightPins }) => {
   return (
     <Wrapper>
       <Title>
-        <span>HDMI diode test:</span>
         {title}
       </Title>
       <MatrixBox>

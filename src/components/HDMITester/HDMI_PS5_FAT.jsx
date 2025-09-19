@@ -3,7 +3,7 @@ import { HDMITester } from "./HDMITester";
 export function HDMI_PS5_FAT() {
   return (
     <HDMITester
-      title="PS5 FAT"
+      title="HDMI diode test: PS5 FAT"
       leftPins={[
         {
           number: 1,

@@ -2,41 +2,48 @@ import { AllHDMI } from "./articles/AllHDMI";
 import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Nintendo_Switch_teardown";
 import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HDMI_Replacement";
 import { PS4_HDMI_Replacement } from "./articles/Sony/PlayStation 4 (PS4)/PS4_HDMI_Replacement";
+import { USB_PS5_GAMEPAD } from "../USBTester/USB_PS5_GAMEPAD";
+import { PS5_Gamepad_USB_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_USB_replacement";
 
 export const guidesData = {
   Microsoft: {
     devices: {
-      "Xbox One FAT (original)": {
-        guides: {
-          // one: "one",
-        },
-      },
-      "Xbox One S": {
-        guides: {
-          // one: "one",
-        },
-      },
-      "Xbox One X": {
-        guides: {
-          // one: "one",
-        },
-      },
+      // "Xbox One FAT (original)": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
+      // "Xbox One S": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
+      // "Xbox One X": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
       "Xbox One Gamepad": {
         guides: {
           // one: "one",
         },
       },
-      "Xbox Series S": {
+      "Xbox Series Gamepad": {
         guides: {
           // one: "one",
         },
       },
-      "Xbox Series X": {
-        guides: {
-          // one: "one",
-        },
-      },
-      "Xbox Elite Series Gamepad": {
+      // "Xbox Series S": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
+      // "Xbox Series X": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
+      "Xbox One Elite Gamepad": {
         guides: {
           // one: "one",
         },
@@ -87,16 +94,16 @@ export const guidesData = {
   },
   Sony: {
     devices: {
-      "PlayStation 3 (PS3)": {
-        guides: {
-          // one: "one",
-        },
-      },
-      "PS3 Gamepad (DualShock 3)": {
-        guides: {
-          // one: "one",
-        },
-      },
+      // "PlayStation 3 (PS3)": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
+      // "PS3 Gamepad (DualShock 3)": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
       "PlayStation 4 FAT (PS4)": {
         guides: {
           "PS4 FAT HDMI Replacement": <PS4_HDMI_Replacement />,
@@ -112,11 +119,11 @@ export const guidesData = {
           "PS4 PRO HDMI Replacement": <PS4_HDMI_Replacement />,
         },
       },
-      "PS4 Gamepad (DualShock 4 V1/V2)": {
-        guides: {
-          // one: "one",
-        },
-      },
+      // "PS4 Gamepad (DualShock 4 V1/V2)": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
       "PlayStation 5 (PS5)": {
         guides: {
           "PS5 HDMI Replacement": <PS5_HDMI_Replacement />,
@@ -134,14 +141,14 @@ export const guidesData = {
       },
       "PS5 Gamepad (DualSense)": {
         guides: {
-          // one: "one",
+          "PS5 Gamepad (DualSense) USB-C Replacement": <PS5_Gamepad_USB_Replacement />,
         },
       },
-      "PS5 Gamepad (DualSense Edge)": {
-        guides: {
-          // one: "one",
-        },
-      },
+      // "PS5 Gamepad (DualSense Edge)": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
     },
   },
   Valve: {
@@ -163,6 +170,15 @@ export const guidesData = {
       "All consoles": {
         guides: {
           "All consoles HDMI diode test": <AllHDMI />,
+        },
+      },
+    },
+  },
+  "USB-C": {
+    devices: {
+      "PS5 Gamepad (DualSense)": {
+        guides: {
+          "PS5 Gamepad (DualSense) USB-C diode test": <USB_PS5_GAMEPAD />,
         },
       },
     },

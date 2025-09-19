@@ -1,9 +1,9 @@
-import { HDMITester } from "./HDMITester";
+import { HDMITester } from "../../components/HDMITester/HDMITester";
 
-export function HDMI_PS4_SLIM() {
+export function USB_PS5_GAMEPAD() {
   return (
     <HDMITester
-      title="HDMI diode test: PS4 SLIM"
+      // title="PS5 Gamepad USB-C diode test"
       leftPins={[
         {
           number: 1,
@@ -13,61 +13,61 @@ export function HDMI_PS4_SLIM() {
         },
         {
           number: 2,
-          value: "0.53",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },
         {
           number: 3,
-          value: "0.07",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },
         {
           number: 4,
-          value: "0.53",
+          value: "0.67",
           valueColor: "green",
           squareColor: "orange",
         },
         {
           number: 5,
-          value: "0.53",
+          value: "1.28",
           valueColor: "green",
           squareColor: "orange",
         },
         {
           number: 6,
-          value: "0.07",
-          valueColor: "red",
-          squareColor: "red",
+          value: "0.54",
+          valueColor: "green",
+          squareColor: "orange",
         },
         {
           number: 7,
-          value: "0.53",
+          value: "0.55",
           valueColor: "green",
           squareColor: "orange",
         },
         {
           number: 8,
-          value: "0.53",
-          valueColor: "green",
-          squareColor: "orange",
-        },
-        {
-          number: 9,
-          value: "0.07",
+          value: "OL",
           valueColor: "red",
           squareColor: "red",
         },
         {
+          number: 9,
+          value: "0.66",
+          valueColor: "green",
+          squareColor: "orange",
+        },
+        {
           number: 10,
-          value: "0.53",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },
         {
           number: 11,
-          value: "0.54",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },
@@ -87,19 +87,19 @@ export function HDMI_PS4_SLIM() {
         },
         {
           number: 14,
-          value: "0.07",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },
         {
           number: 15,
-          value: "0.54",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },
         {
           number: 16,
-          value: "0.52",
+          value: "0.66",
           valueColor: "green",
           squareColor: "orange",
         },
@@ -111,31 +111,31 @@ export function HDMI_PS4_SLIM() {
         },
         {
           number: 18,
-          value: "0.64",
+          value: "0.55",
           valueColor: "green",
           squareColor: "orange",
         },
         {
           number: 19,
-          value: "0.64",
+          value: "0.54",
           valueColor: "green",
           squareColor: "orange",
         },
         {
           number: 20,
-          value: "0.07",
-          valueColor: "red",
-          squareColor: "red",
+          value: "1.29",
+          valueColor: "green",
+          squareColor: "orange",
         },
         {
           number: 21,
-          value: "0.65",
+          value: "0.66",
           valueColor: "green",
           squareColor: "orange",
         },
         {
           number: 22,
-          value: "0.63",
+          value: "OL",
           valueColor: "white",
           squareColor: "orange",
         },

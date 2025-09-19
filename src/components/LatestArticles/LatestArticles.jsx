@@ -106,6 +106,22 @@ export function LatestArticles() {
               </td>
             </tr>
             <tr>
+              <td>2025-09-20</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20Replacement">
+                  PS5 Gamepad (DualSense) USB-C Replacement
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-19</td>
+              <td>
+                <a href="/guides/USB-C/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20diode%20test">
+                  PS5 Gamepad (DualSense) USB-C diode test
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>2025-09-15</td>
               <td>
                 <a href="/guides/Sony/PlayStation%204%20FAT%20(PS4)/PS4%20FAT%20HDMI%20Replacement">
