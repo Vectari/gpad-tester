@@ -3,7 +3,7 @@ import { HDMITester } from "./HDMITester";
 export function HDMI_PS4_PRO() {
   return (
     <HDMITester
-      title="PS4 PRO"
+      title="HDMI diode test: PS4 PRO"
       leftPins={[
         {
           number: 1,

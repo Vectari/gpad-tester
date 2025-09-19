@@ -3,7 +3,7 @@ import { HDMITester } from "./HDMITester";
 export function HDMI_PS4_FAT() {
   return (
     <HDMITester
-      title="PS4 FAT"
+      title="HDMI diode test: PS4 FAT"
       leftPins={[
         {
           number: 1,

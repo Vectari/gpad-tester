@@ -3,7 +3,7 @@ import { HDMITester } from "./HDMITester";
 export function HDMI_PS4_SLIM() {
   return (
     <HDMITester
-      title="PS4 SLIM"
+      title="HDMI diode test: PS4 SLIM"
       leftPins={[
         {
           number: 1,
