@@ -92,11 +92,11 @@ export function PS4_HDMI_Replacement() {
         <div className="gallery">
           {isOpen && (
             <div className="gallery">
-              <img src={PHOTO_1} alt="PS4 HDMI replacement" />
-              <img src={PHOTO_2} alt="PS4 HDMI replacement" />
-              <img src={PHOTO_3} alt="PS4 HDMI replacement" />
-              <img src={PHOTO_4} alt="PS4 HDMI replacement" />
-              <img src={PHOTO_5} alt="PS4 HDMI replacement" />
+              <img src={PHOTO_1} loading="lazy" alt="PS4 HDMI replacement" />
+              <img src={PHOTO_2} loading="lazy" alt="PS4 HDMI replacement" />
+              <img src={PHOTO_3} loading="lazy" alt="PS4 HDMI replacement" />
+              <img src={PHOTO_4} loading="lazy" alt="PS4 HDMI replacement" />
+              <img src={PHOTO_5} loading="lazy" alt="PS4 HDMI replacement" />
             </div>
           )}
         </div>
