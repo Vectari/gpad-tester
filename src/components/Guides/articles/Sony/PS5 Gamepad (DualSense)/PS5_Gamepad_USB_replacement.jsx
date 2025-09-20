@@ -76,14 +76,17 @@ export function PS5_Gamepad_USB_Replacement() {
             <div className="gallery">
               <img
                 src={PHOTO_1}
+                loading="lazy"
                 alt="PS5 Gamepad Dualsense USB-C replacement"
               />
               <img
                 src={PHOTO_2}
+                loading="lazy"
                 alt="PS5 Gamepad Dualsense USB-C replacement"
               />
               <img
                 src={PHOTO_3}
+                loading="lazy"
                 alt="PS5 Gamepad Dualsense USB-C replacement"
               />
             </div>

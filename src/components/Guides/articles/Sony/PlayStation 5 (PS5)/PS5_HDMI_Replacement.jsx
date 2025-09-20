@@ -17,7 +17,6 @@ const DiodeTesterWrapper = styled.div`
   justify-content: center;
 `;
 
-
 // eslint-disable-next-line react-refresh/only-export-components
 const GalleryButton = styled.button`
   font-size: 1.4rem;
@@ -88,10 +87,10 @@ export function PS5_HDMI_Replacement() {
         <div className="gallery">
           {isOpen && (
             <div className="gallery">
-              <img src={PHOTO_1} alt="PS5 HDMI replacement" />
-              <img src={PHOTO_2} alt="PS5 HDMI replacement" />
-              <img src={PHOTO_3} alt="PS5 HDMI replacement" />
-              <img src={PHOTO_4} alt="PS5 HDMI replacement" />
+              <img src={PHOTO_1} loading="lazy" alt="PS5 HDMI replacement" />
+              <img src={PHOTO_2} loading="lazy" alt="PS5 HDMI replacement" />
+              <img src={PHOTO_3} loading="lazy" alt="PS5 HDMI replacement" />
+              <img src={PHOTO_4} loading="lazy" alt="PS5 HDMI replacement" />
             </div>
           )}
         </div>
