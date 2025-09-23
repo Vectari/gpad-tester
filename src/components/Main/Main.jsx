@@ -5,7 +5,7 @@ import { Theme } from "../../styles/Theme";
 
 const StyledUl = styled.ul`
   display: flex;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   font-size: 1.1rem;
   background-color: ${Theme.interface};
 
@@ -26,13 +26,13 @@ const StyledUl = styled.ul`
     border-right: 3px solid ${Theme.greyTwo};
     border-bottom: 3px solid ${Theme.greyTwo}; */
     color: ${Theme.primary};
-    border-bottom: 5px solid ${Theme.primary};
+    border-top: 3px solid ${Theme.primary};
 
     &:first-child {
-      border-radius: 0 0 0 1rem;
+      /* border-radius: 0 0 0 rem; */
     }
     &:last-child {
-      border-radius: 0 0 1rem 0;
+      /* border-radius: 0 0 1rem 0; */
     }
   }
 `;

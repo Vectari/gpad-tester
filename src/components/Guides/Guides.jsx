@@ -25,11 +25,15 @@ const StyledGuidesWrapper = styled.div`
 `;
 
 const StyledLinkWrapper = styled.div`
-  background-color: ${Theme.secondary};
+  background-color: ${Theme.interface};
   padding: 0.5rem;
   margin: 0.5rem 0;
   border-radius: 1rem;
   text-align: center;
+
+  .active {
+    color: white;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -41,7 +45,7 @@ const StyledLink = styled(Link)`
 const StyledLinkMenu = styled(Link)`
   font-size: 1rem;
   color: ${Theme.white};
-  background-color: ${Theme.secondary};
+  background-color: ${Theme.interface};
   padding: 0.8rem;
   border-radius: 1rem;
   display: flex;
@@ -50,10 +54,14 @@ const StyledLinkMenu = styled(Link)`
   max-width: 350px;
 
   &:hover {
-    background-color: ${Theme.background};
+    background-color: ${Theme.primary};
     color: ${Theme.black};
     transition: 0.5s;
   }
+`;
+
+const StyledArrows = styled.span`
+  color: rgb(151, 150, 149);
 `;
 
 export function Guides() {
@@ -75,7 +83,7 @@ export function Guides() {
         <StyledLink to="/guides">Guides</StyledLink>
         {companySlug && (
           <>
-            <span>&#10140;</span>
+            <StyledArrows>&#10140;</StyledArrows>
             <StyledLink to={`/guides/${companySlug}`}>
               {(companySlug || "").replaceAll("_", " ")}
             </StyledLink>
@@ -83,7 +91,7 @@ export function Guides() {
         )}
         {deviceSlug && (
           <>
-            <span>&#10140;</span>
+            <StyledArrows>&#10140;</StyledArrows>
             <StyledLink to={`/guides/${companySlug}/${deviceSlug}`}>
               {(deviceSlug || "").replaceAll("_", " ")}
             </StyledLink>
@@ -91,8 +99,10 @@ export function Guides() {
         )}
         {guideSlug && (
           <>
-            <span>&#10140;</span>
-            <span>{(guideSlug || "").replaceAll("_", " ")}</span>
+            <StyledArrows>&#10140;</StyledArrows>
+            <span className="active">
+              {(guideSlug || "").replaceAll("_", " ")}
+            </span>
           </>
         )}
       </StyledLinkWrapper>

@@ -50,6 +50,15 @@ const LatestArticlesWrapper = styled.div`
     white-space: nowrap;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   tbody tr:hover {
     background: #fafafa;
   }
