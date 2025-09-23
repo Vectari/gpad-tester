@@ -60,3 +60,23 @@ export const StyledArticleWrapper = styled.div`
     }
   }
 `;
+
+export const DiodeTesterWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+`;
+
+export const GalleryWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  img {
+    margin-top: 1rem;
+    width: 45%;
+    margin: 0.5rem;
+    border-radius: 1rem;
+  }
+`;

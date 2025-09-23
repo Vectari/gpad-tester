@@ -1,38 +1,16 @@
-import styled from "styled-components";
 import { HDMI_PS4_FAT } from "../../../../HDMITester/HDMI_PS4_FAT";
 import { HDMI_PS4_SLIM } from "../../../../HDMITester/HDMI_PS4_SLIM";
 import { HDMI_PS4_PRO } from "../../../../HDMITester/HDMI_PS4_PRO";
-import { StyledArticleWrapper } from "../../ArticleStyles";
+import {
+  DiodeTesterWrapper,
+  GalleryWrapper,
+  StyledArticleWrapper,
+} from "../../ArticleStyles";
 import PHOTO_1 from "./PS4_photo/1.webp";
-import PHOTO_2 from "./PS4_photo/2.webp";
 import PHOTO_3 from "./PS4_photo/3.webp";
 import PHOTO_4 from "./PS4_photo/4.webp";
-import PHOTO_5 from "./PS4_photo/5.webp";
-import { useState } from "react";
-
-// eslint-disable-next-line react-refresh/only-export-components
-const DiodeTesterWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-`;
-
-// eslint-disable-next-line react-refresh/only-export-components
-const GalleryButton = styled.button`
-  font-size: 1.4rem;
-  font-weight: bold;
-  background: none;
-  border: none;
-  margin-top: 0.9rem;
-  text-align: left;
-  text-decoration: underline;
-`;
 
 export function PS4_HDMI_Replacement() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <StyledArticleWrapper>
@@ -86,20 +64,12 @@ export function PS4_HDMI_Replacement() {
           <li>Perform a diode test again.</li>
           <li>Check video and audio output with a display.</li>
         </ol>
-        <GalleryButton onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? "● Close Gallery" : "● Open Gallery"}
-        </GalleryButton>
-        <div className="gallery">
-          {isOpen && (
-            <div className="gallery">
-              <img src={PHOTO_1} loading="lazy" alt="PS4 HDMI replacement" />
-              <img src={PHOTO_2} loading="lazy" alt="PS4 HDMI replacement" />
-              <img src={PHOTO_3} loading="lazy" alt="PS4 HDMI replacement" />
-              <img src={PHOTO_4} loading="lazy" alt="PS4 HDMI replacement" />
-              <img src={PHOTO_5} loading="lazy" alt="PS4 HDMI replacement" />
-            </div>
-          )}
-        </div>
+        <h2>● Gallery</h2>
+        <GalleryWrapper>
+          <img src={PHOTO_1} loading="lazy" alt="PS4 HDMI replacement" />
+          <img src={PHOTO_3} loading="lazy" alt="PS4 HDMI replacement" />
+          <img src={PHOTO_4} loading="lazy" alt="PS4 HDMI replacement" />
+        </GalleryWrapper>
       </StyledArticleWrapper>
     </>
   );

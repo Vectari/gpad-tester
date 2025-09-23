@@ -1,34 +1,9 @@
-import styled from "styled-components";
 import { USB_PS5_GAMEPAD } from "../../../../USBTester/USB_PS5_GAMEPAD";
-import { StyledArticleWrapper } from "../../ArticleStyles";
+import { GalleryWrapper, StyledArticleWrapper } from "../../ArticleStyles";
 import PHOTO_1 from "./PS5_photo/1.webp";
 import PHOTO_2 from "./PS5_photo/2.webp";
-import PHOTO_3 from "./PS5_photo/3.webp";
-import { useState } from "react";
-
-// eslint-disable-next-line react-refresh/only-export-components
-const DiodeTesterWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-`;
-
-// eslint-disable-next-line react-refresh/only-export-components
-const GalleryButton = styled.button`
-  font-size: 1.4rem;
-  font-weight: bold;
-  background: none;
-  border: none;
-  margin-top: 0.9rem;
-  text-align: left;
-  text-decoration: underline;
-`;
 
 export function PS5_Gamepad_USB_Replacement() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <StyledArticleWrapper>
@@ -51,9 +26,7 @@ export function PS5_Gamepad_USB_Replacement() {
             the key is the location of the green, red, and white pins.
           </li>
 
-          <DiodeTesterWrapper>
-            <USB_PS5_GAMEPAD />
-          </DiodeTesterWrapper>
+          <USB_PS5_GAMEPAD />
         </ol>
         <h2>● Repair Steps</h2>
         <ol>
@@ -68,30 +41,19 @@ export function PS5_Gamepad_USB_Replacement() {
           <li>Perform a diode test again.</li>
           <li>Check charging and data transfer (connect to PC or console).</li>
         </ol>
-        <GalleryButton onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? "● Close Gallery" : "● Open Gallery"}
-        </GalleryButton>
-        <div className="gallery">
-          {isOpen && (
-            <div className="gallery">
-              <img
-                src={PHOTO_1}
-                loading="lazy"
-                alt="PS5 Gamepad Dualsense USB-C replacement"
-              />
-              <img
-                src={PHOTO_2}
-                loading="lazy"
-                alt="PS5 Gamepad Dualsense USB-C replacement"
-              />
-              <img
-                src={PHOTO_3}
-                loading="lazy"
-                alt="PS5 Gamepad Dualsense USB-C replacement"
-              />
-            </div>
-          )}
-        </div>
+        <h2>● Gallery</h2>
+        <GalleryWrapper>
+          <img
+            src={PHOTO_1}
+            loading="lazy"
+            alt="PS5 Gamepad Dualsense USB-C replacement"
+          />
+          <img
+            src={PHOTO_2}
+            loading="lazy"
+            alt="PS5 Gamepad Dualsense USB-C replacement"
+          />
+        </GalleryWrapper>
       </StyledArticleWrapper>
     </>
   );
