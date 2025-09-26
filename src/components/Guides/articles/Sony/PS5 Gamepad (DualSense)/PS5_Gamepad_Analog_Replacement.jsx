@@ -7,33 +7,39 @@ export function PS5_Gamepad_Analog_Replacement() {
   return (
     <>
       <StyledArticleWrapper>
-        <h1>RED Note</h1>
+        <h1>
+          Note: Replacing analog requires experience and the right equipment!
+        </h1>
         <h2>● Issue Description</h2>
-        <p>
-          <ol>
-            <li>Issue 1</li>
-            <li>Issue 2</li>
-            <li>Issue 3</li>
-          </ol>
-        </p>
-        <img src="" alt="" />
+        <ol>
+          <li>
+            One of the analog sticks drifts automatically in a certain
+            direction.
+          </li>
+          <li>Analog stick clicking (L3 or R3) does not work.</li>
+        </ol>
+
         <h2>● Diagnostics</h2>
         <ol>
-          <li>Diagnostics 1</li>
-          <li>Diagnostics 2</li>
-          <li>Diagnostics 3</li>
+          <li>
+            The analog stick movement path in the test on the main page is
+            incorrect or moves on its own.
+          </li>
         </ol>
+
         <h2>● Repair Steps</h2>
         <ol>
-          <li>Steps 1</li>
-          <li>Steps 2</li>
-          <li>Steps 3</li>
-          <li>Steps 4</li>
+          <li>Apply flux and fresh solder.</li>
+          <li>Use hot air at 350°C, airflow 2–3.</li>
+          <li>Heat the area – using a soldering iron can help.</li>
+          <li>Clean the pads thoroughly.</li>
+          <li>Install a new analog.</li>
         </ol>
         <h2>● Testing</h2>
         <ol>
-          <li>Testing 1</li>
-          <li>Testing 2</li>
+          <li>
+            <a href="http://gpadtester.com/">Use gpadtester.com</a>
+          </li>
         </ol>
         <h2>● Gallery</h2>
         <GalleryWrapper>

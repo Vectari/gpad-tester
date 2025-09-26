@@ -6,33 +6,35 @@ export function PS5_Gamepad_Buttons_Fix() {
   return (
     <>
       <StyledArticleWrapper>
-        <h1>RED Note</h1>
         <h2>● Issue Description</h2>
-        <p>
-          <ol>
-            <li>Issue 1</li>
-            <li>Issue 2</li>
-            <li>Issue 3</li>
-          </ol>
-        </p>
-        <img src="" alt="" />
-        <h2>● Diagnostics</h2>
         <ol>
-          <li>Diagnostics 1</li>
-          <li>Diagnostics 2</li>
-          <li>Diagnostics 3</li>
+          <li>Buttons do not work.</li>
+          <li>Buttons are hard to press or require excessive force.</li>
+          <li>L2 and R2 buttons do not work within the full range.</li>
         </ol>
         <h2>● Repair Steps</h2>
         <ol>
-          <li>Steps 1</li>
-          <li>Steps 2</li>
-          <li>Steps 3</li>
-          <li>Steps 4</li>
+          <li>
+            Clean the connectors on the motherboard and on the inner side of the
+            button flex (gallery photo #1).
+          </li>
+          <li>
+            Clean the top side of the flex on the button side along with the
+            button rubbers.
+          </li>
+          <li>
+            Check if the button rubbers are mechanically damaged, replace them
+            if necessary.
+          </li>
+          <li>
+            Replace the button flex according to your controller’s version.
+          </li>
         </ol>
         <h2>● Testing</h2>
         <ol>
-          <li>Testing 1</li>
-          <li>Testing 2</li>
+          <li>
+            <a href="http://gpadtester.com/">Use gpadtester.com</a>
+          </li>
         </ol>
         <h2>● Gallery</h2>
         <GalleryWrapper>

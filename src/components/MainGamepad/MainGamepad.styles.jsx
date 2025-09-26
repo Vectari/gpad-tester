@@ -70,10 +70,10 @@ export const StyledLoader = styled.div`
   }
 
   @media (max-width: 765px) {
-    /* margin: 2rem auto;
+    margin: 2rem auto;
     width: 60px;
-    height: 60px; */
-    display: none;
+    height: 60px;
+    top: -30px;
   }
 `;
 
