@@ -23,6 +23,7 @@ import {
   StyledSmallInfo,
   StyledLoaderTextWrapper,
   MobileInfo,
+  ConnectInfo,
 } from "./MainGamepad.styles";
 import { MainPageInfo } from "../MainPageInfo/MainPageInfo";
 import { AudioRecorder } from "../AudioRecorder/AudioRecorder";
@@ -297,10 +298,10 @@ export function MainGamepad({ playerNumber }) {
             <div></div>
           </StyledLoader>
 
-          <h2>
-            Connect the controller via USB or Bluetooth (only USB on Linux) and
+          <ConnectInfo>
+            Connect gamepad via USB or Bluetooth (only USB on Linux) and
             press any key
-          </h2>
+          </ConnectInfo>
 
           <StyledSVG>
             <img src={USB_SVG} alt="usb logo" />
