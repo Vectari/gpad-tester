@@ -4,6 +4,9 @@ import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HD
 import { PS4_HDMI_Replacement } from "./articles/Sony/PlayStation 4 (PS4)/PS4_HDMI_Replacement";
 import { USB_PS5_GAMEPAD } from "../USBTester/USB_PS5_GAMEPAD";
 import { PS5_Gamepad_USB_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_USB_replacement";
+import { PS5_Gamepad_Buttons_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Buttons_Fix";
+import { PS5_Gamepad_Analog_Drift_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Drift_Fix";
+import { PS5_Gamepad_Analog_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Replacement";
 
 export const guidesData = {
   Microsoft: {
@@ -141,7 +144,12 @@ export const guidesData = {
       },
       "PS5 Gamepad (DualSense)": {
         guides: {
-          "PS5 Gamepad (DualSense) USB-C Replacement": <PS5_Gamepad_USB_Replacement />,
+          "PS5 Gamepad (DualSense) USB-C Replacement": (
+            <PS5_Gamepad_USB_Replacement />
+          ),
+          "PS5 Gamepad buttons not working": <PS5_Gamepad_Buttons_Fix />,
+          "PS5 Gamepad analog drift fix": <PS5_Gamepad_Analog_Drift_Fix />,
+          "PS5 Gamepad analog replacement": <PS5_Gamepad_Analog_Replacement />,
         },
       },
       // "PS5 Gamepad (DualSense Edge)": {

@@ -75,7 +75,7 @@ export const GalleryWrapper = styled.div`
   justify-content: center;
   img {
     margin-top: 1rem;
-    width: 45%;
+    /* width: 45%; */
     margin: 0.5rem;
     border-radius: 1rem;
   }

@@ -12,7 +12,7 @@ const StyledNav = styled.div`
   background-color: ${Theme.interface};
   width: 100%;
   max-width: 1100px;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   border-bottom: 1px solid ${Theme.secondary};
   justify-content: space-between;
   padding: 0.5rem 2rem;
@@ -30,8 +30,8 @@ const LogoWrapper = styled.div`
 
   h2 {
     color: ${Theme.logo};
-    border-left: 4px solid ${Theme.primary};
-    border-top: 2px solid ${Theme.primary};
+    /* border-left: 4px solid ${Theme.primary}; */
+    /* border-top: 2px solid ${Theme.primary}; */
     border-right: 1px solid ${Theme.primary};
     border-bottom: 2px solid ${Theme.primary};
     border-radius: 1rem;

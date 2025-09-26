@@ -50,6 +50,15 @@ const LatestArticlesWrapper = styled.div`
     white-space: nowrap;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   tbody tr:hover {
     background: #fafafa;
   }
@@ -102,6 +111,30 @@ export function LatestArticles() {
               <td className="pinned">
                 <a href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test">
                   All consoles HDMI diode test
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-25</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20replacement">
+                  PS5 Gamepad analog replacement
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-25</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20drift%20fix">
+                  PS5 Gamepad analog drift fix
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-25</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20buttons%20not%20working">
+                  PS5 Gamepad buttons not working
                 </a>
               </td>
             </tr>

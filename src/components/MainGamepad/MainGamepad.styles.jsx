@@ -70,9 +70,34 @@ export const StyledLoader = styled.div`
   }
 
   @media (max-width: 765px) {
-    margin: 2rem auto;
+    /* margin: 2rem auto;
     width: 60px;
-    height: 60px;
+    height: 60px; */
+    display: none;
+  }
+`;
+
+export const ConnectInfo = styled.p`
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  color: transparent;
+  position: relative;
+
+  &::after {
+    content: "Connect gamepad via Bluetooth and press any key";
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  @media (min-width: 769px) {
+    color: inherit;
+
+    &::after {
+      content: none;
+    }
   }
 `;
 
@@ -124,8 +149,9 @@ export const StyledSVG = styled.div`
   }
 
   @media (max-width: 765px) {
-    scale: 1;
-    margin-bottom: 200px;
+    /* scale: 1;
+    margin-bottom: 200px; */
+    display: none;
   }
 `;
 
@@ -184,7 +210,6 @@ export const StyledContener = styled.div`
     padding: 0.5rem;
     margin-left: auto;
     margin-right: auto;
-    
 
     p {
       font-size: 1rem;

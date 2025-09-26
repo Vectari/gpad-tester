@@ -17,6 +17,7 @@ const AllHDMIWrapper = styled.div`
   flex-wrap: wrap;
   justify-self: center;
   justify-content: center;
+  max-width: 1150px;
   margin-top: 2rem;
   gap: 5rem;
   position: absolute;
