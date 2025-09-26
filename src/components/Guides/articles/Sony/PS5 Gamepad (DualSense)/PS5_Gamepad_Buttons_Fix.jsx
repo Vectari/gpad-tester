@@ -1,10 +1,8 @@
-import {
-  DiodeTesterWrapper,
-  GalleryWrapper,
-  StyledArticleWrapper,
-} from "../../ArticleStyles";
+import { StyledArticleWrapper, GalleryWrapper } from "../../ArticleStyles";
+import PHOTO1 from "./PS5_photo/3.webp";
+import PHOTO2 from "./PS5_photo/4.webp";
 
-export function ArticleCore() {
+export function PS5_Gamepad_Buttons_Fix() {
   return (
     <>
       <StyledArticleWrapper>
@@ -23,11 +21,6 @@ export function ArticleCore() {
           <li>Diagnostics 1</li>
           <li>Diagnostics 2</li>
           <li>Diagnostics 3</li>
-
-          <DiodeTesterWrapper>
-            {/* DIODE TEST 1  */}
-            {/* DIOSE TEST 2 */}
-          </DiodeTesterWrapper>
         </ol>
         <h2>● Repair Steps</h2>
         <ol>
@@ -43,10 +36,12 @@ export function ArticleCore() {
         </ol>
         <h2>● Gallery</h2>
         <GalleryWrapper>
-          {/* Gallery 1 */}
-          {/* <a href={PHOTO} target="_blank" rel="noopener noreferrer"> */}
-          {/* <img src={PHOTO} loading="lazy" alt="" /> */}
-          {/* </a> */}
+          <a href={PHOTO1} target="_blank" rel="noopener noreferrer">
+            <img src={PHOTO1} loading="lazy" alt="PS5 Gamepad buttons fix" />
+          </a>
+          <a href={PHOTO2} target="_blank" rel="noopener noreferrer">
+            <img src={PHOTO2} loading="lazy" alt="PS5 Gamepad buttons fix" />
+          </a>
         </GalleryWrapper>
       </StyledArticleWrapper>
     </>

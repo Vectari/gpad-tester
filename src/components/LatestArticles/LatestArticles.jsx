@@ -115,6 +115,30 @@ export function LatestArticles() {
               </td>
             </tr>
             <tr>
+              <td>2025-09-25</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20replacement">
+                  PS5 Gamepad analog replacement
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-25</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20drift%20fix">
+                  PS5 Gamepad analog drift fix
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-09-25</td>
+              <td>
+                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20buttons%20not%20working">
+                  PS5 Gamepad buttons not working
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>2025-09-20</td>
               <td>
                 <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20Replacement">
