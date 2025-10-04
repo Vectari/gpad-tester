@@ -3,6 +3,7 @@ import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Ni
 import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HDMI_Replacement";
 import { PS4_HDMI_Replacement } from "./articles/Sony/PlayStation 4 (PS4)/PS4_HDMI_Replacement";
 import { USB_PS5_GAMEPAD } from "../USBTester/USB_PS5_GAMEPAD";
+import { USB_XBOX_SERIES_GAMEPAD } from "../USBTester/USB_XBOX_SERIES_GAMEPAD";
 import { PS5_Gamepad_USB_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_USB_replacement";
 import { PS5_Gamepad_Buttons_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Buttons_Fix";
 import { PS5_Gamepad_Analog_Drift_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Drift_Fix";
@@ -187,6 +188,11 @@ export const guidesData = {
       "PS5 Gamepad (DualSense)": {
         guides: {
           "PS5 Gamepad (DualSense) USB-C diode test": <USB_PS5_GAMEPAD />,
+        },
+      },
+      "XBOX Series Gamepad": {
+        guides: {
+          "XBOX Series Gamepad USB-C diode test": <USB_XBOX_SERIES_GAMEPAD />,
         },
       },
     },

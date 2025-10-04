@@ -114,6 +114,15 @@ export function LatestArticles() {
                 </a>
               </td>
             </tr>
+            {/* PINNED */}
+            <tr>
+              <td>2025-10-01</td>
+              <td>
+                <a href="/guides/USB-C/XBOX%20Series%20Gamepad/XBOX%20Series%20Gamepad%20USB-C%20diode%20test">
+                  XBOX Series Gamepad USB-C diode test
+                </a>
+              </td>
+            </tr>
             <tr>
               <td>2025-09-25</td>
               <td>
