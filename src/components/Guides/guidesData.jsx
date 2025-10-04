@@ -1,5 +1,4 @@
 import { AllHDMI } from "./articles/AllHDMI";
-import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Nintendo_Switch_teardown";
 import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HDMI_Replacement";
 import { PS4_HDMI_Replacement } from "./articles/Sony/PlayStation 4 (PS4)/PS4_HDMI_Replacement";
 import { USB_PS5_GAMEPAD } from "../USBTester/USB_PS5_GAMEPAD";
@@ -63,10 +62,7 @@ export const guidesData = {
     devices: {
       "Nintendo Switch": {
         guides: {
-          "Nintendo Switch teardown & disassembly": (
-            <Nintendo_Switch_teardown />
-          ),
-          "Second guide": <Nintendo_Switch_teardown />,
+          // one: "one",
         },
       },
       "Nintendo Switch Lite": {

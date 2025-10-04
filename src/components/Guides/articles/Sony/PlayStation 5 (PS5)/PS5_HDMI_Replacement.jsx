@@ -19,20 +19,26 @@ export function PS5_HDMI_Replacement() {
         <h2>● Issue Description</h2>
         <p>
           <ol>
-            <li>Mechanical damage</li>
-            <li>Video/Audio signal depends on cable movement</li>
-            <li>No Video/Audio output</li>
+            <li>Visible mechanical damage.</li>
+            <li>
+              Video or audio signal depends on cable position or movement.
+            </li>
+            <li>No video or audio output at all.</li>
           </ol>
         </p>
         <img src="" alt="" />
         <h2>● Diagnostics</h2>
         <ol>
-          <li>Check for visible mechanical damage.</li>
-          <li>Verify the console light – solid white = good.</li>
-          <li>Connect a gamepad to confirm console response.</li>
+          <li>Inspect the HDMI port for visible physical damage.</li>
           <li>
-            Perform a diode test as shown below. Values may vary slightly, but
-            the key is the location of the green, red, and white pins.
+            Check the console light – a solid white light means the system is
+            working.
+          </li>
+          <li>Connect a controller to verify the console responds properly.</li>
+          <li>
+            Perform a diode test as shown below. Readings may vary slightly, but
+            pay attention to the position of the green, red, and white pins –
+            this shows whether the signal lines are in good condition.
           </li>
 
           <DiodeTesterWrapper>
@@ -43,22 +49,29 @@ export function PS5_HDMI_Replacement() {
         <h2>● Repair Steps</h2>
         <ol>
           <li>
-            The PS5 motherboard is robust. Use hot air at 420°C, airflow 2–3,
-            with preheating at 160°C.
+            The PS5 motherboard is durable, but precise temperature control is
+            important. Use hot air at about 420°C with airflow level 2–3 and
+            preheat the board to 160°C.
           </li>
-          <li>Apply flux and fresh solder.</li>
-          <li>Heat the area – using a soldering iron can help.</li>
+          <li>Apply flux and a small amount of fresh solder to the joints.</li>
           <li>
-            Be careful with the small components located behind the HDMI port –
-            they can be easily displaced or damaged.
+            Heat the port evenly until the solder melts. You can use a soldering
+            iron to help with the process.
           </li>
-          <li>Clean the pads thoroughly.</li>
-          <li>Install the new HDMI port.</li>
+          <li>
+            Be careful with the small SMD components behind the HDMI port – they
+            are easy to move or damage with too much heat.
+          </li>
+          <li>Clean the pads thoroughly once the old port is removed.</li>
+          <li>Position and solder the new HDMI port in place carefully.</li>
         </ol>
         <h2>● Testing</h2>
         <ol>
-          <li>Perform a diode test again.</li>
-          <li>Check video and audio output with a display.</li>
+          <li>Perform another diode test to confirm correct readings.</li>
+          <li>
+            Connect the console to a monitor or TV and verify stable video and
+            audio output.
+          </li>
         </ol>
         <h2>● Gallery</h2>
         <GalleryWrapper>
