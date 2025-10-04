@@ -7,6 +7,7 @@ import { PS5_Gamepad_USB_Replacement } from "./articles/Sony/PS5 Gamepad (DualSe
 import { PS5_Gamepad_Buttons_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Buttons_Fix";
 import { PS5_Gamepad_Analog_Drift_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Drift_Fix";
 import { PS5_Gamepad_Analog_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Replacement";
+import { X_SERIES_GAMEPAD_LT_RT } from "./articles/Microsoft/Xbox Series Gamepad/X_SERIES_GAMEPAD_LT_RT";
 
 export const guidesData = {
   Microsoft: {
@@ -33,7 +34,9 @@ export const guidesData = {
       },
       "Xbox Series Gamepad": {
         guides: {
-          // one: "one",
+          "Xbox Series Gamepad loud or sticky LT or RT buttons": (
+            <X_SERIES_GAMEPAD_LT_RT />
+          ),
         },
       },
       // "Xbox Series S": {
