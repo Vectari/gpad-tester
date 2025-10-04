@@ -63,6 +63,10 @@ const MenuWrapper = styled.div`
     font-size: 1.3rem;
   }
 
+  a {
+    border-bottom: 3px solid ${Theme.interface};
+  }
+
   .active {
     color: ${Theme.primary};
     border-bottom: 3px solid ${Theme.primary};

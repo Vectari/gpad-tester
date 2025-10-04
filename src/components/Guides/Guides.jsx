@@ -28,7 +28,7 @@ const StyledLinkWrapper = styled.div`
   background-color: ${Theme.interface};
   padding: 0.5rem;
   margin: 0.5rem 0;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   text-align: center;
 
   .active {
@@ -47,7 +47,7 @@ const StyledLinkMenu = styled(Link)`
   color: ${Theme.white};
   background-color: ${Theme.interface};
   padding: 0.8rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   margin: 1rem auto;

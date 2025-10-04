@@ -18,27 +18,36 @@ export function PS4_HDMI_Replacement() {
           Note: Replacing HDMI requires experience and the right equipment!
         </h1>
         <h2>
-          On the CUH-1116 (PS4 FAT), I noticed that PIN 4 on the new HDMI shows
-          red before the first console startup. After that, PIN 4 turns green on
-          the tester.
+          On the CUH-1116 (PS4 FAT), PIN 4 on the new HDMI port may show red
+          before the first console startup. After the initial boot, the same PIN
+          usually turns green on the tester – this is normal behavior.
         </h2>
         <h2>● Issue Description</h2>
         <p>
           <ol>
-            <li>Mechanical damage</li>
-            <li>Video/Audio signal depends on cable movement</li>
-            <li>No Video/Audio output</li>
+            <li>Visible mechanical damage to the port or surrounding area.</li>
+            <li>
+              Video or audio signal depends on cable movement or position.
+            </li>
+            <li>
+              No video or audio output, even though the console powers on.
+            </li>
           </ol>
         </p>
-        <img src="" alt="" />
         <h2>● Diagnostics</h2>
         <ol>
-          <li>Check for visible mechanical damage.</li>
-          <li>Verify the console light – solid white = good.</li>
-          <li>Connect a gamepad to confirm console response.</li>
+          <li>Inspect the HDMI port for physical or mechanical damage.</li>
           <li>
-            Perform a diode test as shown below. Values may vary slightly, but
-            the key is the location of the green, red, and white pins.
+            Check the console indicator light – a solid white light means the
+            console is working properly.
+          </li>
+          <li>
+            Connect a controller to confirm that the console responds to input.
+          </li>
+          <li>
+            Perform a diode test as shown below. Readings may vary slightly, but
+            focus on the correct position of the green, red, and white pins –
+            they indicate proper signal line continuity.
           </li>
 
           <DiodeTesterWrapper>
@@ -49,20 +58,36 @@ export function PS4_HDMI_Replacement() {
         </ol>
         <h2>● Repair Steps</h2>
         <ol>
-          <li>Use hot air at 420°C, airflow 2–3, with preheating at 160°C.</li>
-          <li>Apply flux and fresh solder.</li>
-          <li>Heat the area – using a soldering iron can help.</li>
           <li>
-            Be careful with the small components located behind the HDMI port –
-            they can be easily displaced or damaged.
+            Use hot air at around 420°C with airflow level 2–3. Preheat the
+            board to approximately 160°C.
           </li>
-          <li>Clean the pads thoroughly.</li>
-          <li>Install the new HDMI port.</li>
+          <li>
+            Apply flux and a small amount of fresh solder to prepare the joints.
+          </li>
+          <li>
+            Heat the area evenly – using a soldering iron may help to release
+            the pins more easily.
+          </li>
+          <li>
+            Be careful with the small SMD components located behind the HDMI
+            port – they can be easily displaced or damaged by excess heat.
+          </li>
+          <li>
+            Clean the solder pads thoroughly once the damaged port is removed.
+          </li>
+          <li>
+            Align and solder the new HDMI port in place, ensuring all pins are
+            properly seated.
+          </li>
         </ol>
         <h2>● Testing</h2>
         <ol>
-          <li>Perform a diode test again.</li>
-          <li>Check video and audio output with a display.</li>
+          <li>Perform another diode test to confirm correct readings.</li>
+          <li>
+            Connect the console to a display and verify that both video and
+            audio output work correctly.
+          </li>
         </ol>
         <h2>● Gallery</h2>
         <GalleryWrapper>

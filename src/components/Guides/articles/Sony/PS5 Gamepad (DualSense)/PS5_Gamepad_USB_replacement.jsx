@@ -13,33 +13,60 @@ export function PS5_Gamepad_USB_Replacement() {
         <h2>● Issue Description</h2>
         <p>
           <ol>
-            <li>Mechanical damage</li>
-            <li>Charging/connection via USB depends on cable movement</li>
+            <li>
+              Visible mechanical damage to the USB-C port or surrounding area.
+            </li>
+            <li>
+              Charging or connection via USB depends on cable position or
+              movement.
+            </li>
           </ol>
         </p>
         <h2>● Diagnostics</h2>
         <ol>
-          <li>Check for visible mechanical damage.</li>
-          <li>USB power error messages in Windows can be helpful.</li>
           <li>
-            Perform a diode test as shown below. Values may vary slightly, but
-            the key is the location of the green, red, and white pins.
+            Inspect the USB-C port for visible physical or mechanical damage.
+          </li>
+          <li>
+            If connected to a PC, look for USB power or connection error
+            messages in Windows — they can help identify a faulty port.
+          </li>
+          <li>
+            Perform a diode test as shown below. Readings may vary slightly, but
+            the key indicator is the correct position of the green, red, and
+            white pins.
           </li>
 
           <USB_PS5_GAMEPAD />
         </ol>
         <h2>● Repair Steps</h2>
         <ol>
-          <li>Use hot air at 420°C, airflow 2–3, with preheating at 160°C.</li>
-          <li>Apply flux and fresh solder.</li>
-          <li>Heat the area – using a soldering iron can help.</li>
-          <li>Clean the pads thoroughly.</li>
-          <li>Install the new USB-C port.</li>
+          <li>
+            Use hot air at around 420°C with airflow level 2–3 and preheat the
+            board to approximately 160°C.
+          </li>
+          <li>
+            Apply flux and a small amount of fresh solder to improve contact.
+          </li>
+          <li>
+            Heat the area evenly – using a soldering iron can help loosen the
+            port pins.
+          </li>
+          <li>
+            Clean the solder pads thoroughly once the damaged port is removed.
+          </li>
+          <li>
+            Position and solder the new USB-C port in place, ensuring all
+            connections are solid.
+          </li>
         </ol>
         <h2>● Testing</h2>
         <ol>
-          <li>Perform a diode test again.</li>
-          <li>Check charging and data transfer (connect to PC or console).</li>
+          <li>Perform another diode test to confirm proper readings.</li>
+          <li>
+            Verify charging and data transfer by connecting the controller to a
+            PC or console.
+          </li>
         </ol>
         <h2>● Gallery</h2>
         <GalleryWrapper>

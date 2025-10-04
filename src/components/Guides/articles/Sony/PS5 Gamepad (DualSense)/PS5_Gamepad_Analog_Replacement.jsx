@@ -13,27 +13,38 @@ export function PS5_Gamepad_Analog_Replacement() {
         <h2>● Issue Description</h2>
         <ol>
           <li>
-            One of the analog sticks drifts automatically in a certain
-            direction.
+            One of the analog sticks moves automatically in a certain direction
+            (drifting).
           </li>
-          <li>Analog stick clicking (L3 or R3) does not work.</li>
+          <li>
+            The analog stick button (L3 or R3) does not register when pressed.
+          </li>
         </ol>
 
         <h2>● Diagnostics</h2>
         <ol>
           <li>
-            The analog stick movement path in the test on the main page is
-            incorrect or moves on its own.
+            During testing on the main page, the analog movement path appears
+            inaccurate or moves by itself without any input.
           </li>
         </ol>
 
         <h2>● Repair Steps</h2>
         <ol>
-          <li>Apply flux and fresh solder.</li>
-          <li>Use hot air at 350°C, airflow 2–3.</li>
-          <li>Heat the area – using a soldering iron can help.</li>
-          <li>Clean the pads thoroughly.</li>
-          <li>Install a new analog.</li>
+          <li>Apply flux and a small amount of fresh solder to the joints.</li>
+          <li>
+            Use hot air at around 350°C with airflow level 2–3 to desolder the
+            damaged analog module.
+          </li>
+          <li>
+            Heat the area evenly – you can assist with a soldering iron if
+            needed.
+          </li>
+          <li>Clean the solder pads thoroughly after removing the old part.</li>
+          <li>
+            Align and solder the new analog stick in place, ensuring all pins
+            are properly connected.
+          </li>
         </ol>
         <h2>● Testing</h2>
         <ol>

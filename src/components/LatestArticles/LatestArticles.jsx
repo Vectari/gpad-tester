@@ -109,15 +109,45 @@ export function LatestArticles() {
             <tr className="pinned">
               <td className="pinned text">2025-09-11</td>
               <td className="pinned">
-                <a href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test">
+                <a
+                  target="_blank"
+                  href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test"
+                >
                   All consoles HDMI diode test
+                </a>
+              </td>
+            </tr>
+            {/* PINNED */}
+            <tr>
+              <td>2025-10-01</td>
+              <td>
+                <a
+                  target="_blank"
+                  href="/guides/Microsoft/Xbox%20Series%20Gamepad/Xbox%20Series%20Gamepad%20loud%20or%20sticky%20LT%20or%20RT%20buttons"
+                >
+                  Xbox Series Gamepad loud or sticky LT or RT buttons
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>2025-10-01</td>
+              <td>
+                <a
+                  target="_blank"
+                  href="/guides/USB-C/XBOX%20Series%20Gamepad/XBOX%20Series%20Gamepad%20USB-C%20diode%20test"
+                >
+                  XBOX Series Gamepad USB-C diode test
                 </a>
               </td>
             </tr>
             <tr>
               <td>2025-09-25</td>
               <td>
-                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20replacement"
+                >
                   PS5 Gamepad analog replacement
                 </a>
               </td>
@@ -125,7 +155,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-25</td>
               <td>
-                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20drift%20fix">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20analog%20drift%20fix"
+                >
                   PS5 Gamepad analog drift fix
                 </a>
               </td>
@@ -133,7 +166,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-25</td>
               <td>
-                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20buttons%20not%20working">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20buttons%20not%20working"
+                >
                   PS5 Gamepad buttons not working
                 </a>
               </td>
@@ -141,7 +177,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-20</td>
               <td>
-                <a href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20Replacement"
+                >
                   PS5 Gamepad (DualSense) USB-C Replacement
                 </a>
               </td>
@@ -149,7 +188,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-19</td>
               <td>
-                <a href="/guides/USB-C/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20diode%20test">
+                <a
+                  target="_blank"
+                  href="/guides/USB-C/PS5%20Gamepad%20(DualSense)/PS5%20Gamepad%20(DualSense)%20USB-C%20diode%20test"
+                >
                   PS5 Gamepad (DualSense) USB-C diode test
                 </a>
               </td>
@@ -157,7 +199,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-15</td>
               <td>
-                <a href="/guides/Sony/PlayStation%204%20FAT%20(PS4)/PS4%20FAT%20HDMI%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PlayStation%204%20FAT%20(PS4)/PS4%20FAT%20HDMI%20Replacement"
+                >
                   PS4 FAT HDMI Replacement
                 </a>
               </td>
@@ -165,7 +210,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-15</td>
               <td>
-                <a href="/guides/Sony/PlayStation%204%20Slim%20(PS4%20Slim)/PS4%20Slim%20HDMI%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PlayStation%204%20Slim%20(PS4%20Slim)/PS4%20Slim%20HDMI%20Replacement"
+                >
                   PS4 Slim HDMI Replacement
                 </a>
               </td>
@@ -173,7 +221,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-15</td>
               <td>
-                <a href="/guides/Sony/PlayStation%204%20PRO%20(PS4%20PRO)/PS4%20PRO%20HDMI%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PlayStation%204%20PRO%20(PS4%20PRO)/PS4%20PRO%20HDMI%20Replacement"
+                >
                   PS4 PRO HDMI Replacement
                 </a>
               </td>
@@ -181,7 +232,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-11</td>
               <td>
-                <a href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test">
+                <a
+                  target="_blank"
+                  href="/guides/HDMI/All%20consoles/All%20consoles%20HDMI%20diode%20test"
+                >
                   All consoles HDMI diode test
                 </a>
               </td>
@@ -189,7 +243,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-10</td>
               <td>
-                <a href="/guides/Sony/PlayStation%205%20(PS5)/PS5%20HDMI%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PlayStation%205%20(PS5)/PS5%20HDMI%20Replacement"
+                >
                   PS5 HDMI Replacement
                 </a>
               </td>
@@ -197,7 +254,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-10</td>
               <td>
-                <a href="/guides/Sony/PlayStation%205%20Slim%20(PS5%20Slim)/PS5%20Slim%20HDMI%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PlayStation%205%20Slim%20(PS5%20Slim)/PS5%20Slim%20HDMI%20Replacement"
+                >
                   PS5 Slim HDMI Replacement
                 </a>
               </td>
@@ -205,7 +265,10 @@ export function LatestArticles() {
             <tr>
               <td>2025-09-10</td>
               <td>
-                <a href="/guides/Sony/PlayStation%205%20PRO%20(PS5%20PRO)/PS5%20PRO%20HDMI%20Replacement">
+                <a
+                  target="_blank"
+                  href="/guides/Sony/PlayStation%205%20PRO%20(PS5%20PRO)/PS5%20PRO%20HDMI%20Replacement"
+                >
                   PS5 PRO HDMI Replacement
                 </a>
               </td>

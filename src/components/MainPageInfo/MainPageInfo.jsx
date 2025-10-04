@@ -42,9 +42,31 @@ const StyledMainPageInfo = styled.div`
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid ${Theme.secondary};
+    background-color: ${Theme.primary};
+    color: ${Theme.black};
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: ${Theme.white};
+      background-color: ${Theme.interface};
+      transition: 0.5s;
+    }
   }
   h2 {
     padding-bottom: 0.5rem;
+    background-color: ${Theme.primary};
+    color: ${Theme.black};
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: ${Theme.white};
+      background-color: ${Theme.interface};
+      transition: 0.5s;
+    }
   }
 
   article {
@@ -90,48 +112,57 @@ export function MainPageInfo() {
           <strong>PS3 controller test</strong>,{" "}
           <strong>Xbox One controller test</strong>, and{" "}
           <strong>Xbox Series controller test</strong> directly in your browser
-          — no download needed. Our <strong>online gamepad tester</strong>{" "}
-          checks:
+          — no download required.
+          <br />
+          <br />
+          Our <strong>online gamepad tester</strong> checks:
           <ul>
             <li>
-              Button response (<strong>controller button test</strong>)
+              - Button response (<strong>controller button test</strong>)
             </li>
             <li>
-              Joystick accuracy and <strong>stick drift test</strong>
+              - Joystick accuracy and <strong>stick drift test</strong>
             </li>
             <li>
-              <strong>Controller vibration test</strong>
+              <strong>- Controller vibration test</strong>
             </li>
             <li>
-              <strong>Microphone test</strong> for compatible controllers
+              <strong>- Microphone test</strong> for supported devices
             </li>
+            <br />
           </ul>
           Simply connect your gamepad, run a <strong>joystick tester</strong> or{" "}
           <strong>controller vibration tester</strong>, and view live feedback.
+          <br />
+          <br />
           Our tool supports:
           <ul>
-            <li>PS5 DualSense controllers</li>
-            <li>PS4 DualShock controllers</li>
-            <li>PS3 controllers</li>
-            <li>Xbox One, Xbox Series controllers</li>
-            <li>Generic PC gamepads</li>
+            <li>- PS5 DualSense controllers</li>
+            <li>- PS4 DualShock controllers</li>
+            <li>- PS3 controllers</li>
+            <li>- Xbox One and Xbox Series controllers</li>
+            <li>- Generic PC gamepads</li>
           </ul>
+          <br />
+          Visit our website for detailed{" "}
+          <strong>repair guides and tutorials</strong> for all major consoles
+          and controllers — including PlayStation, Xbox, and Nintendo devices.
         </article>
       </StyledMainPageInfo>
 
       <StyledMainPageInfo>
         <h2>Stick Drift Test – How to Diagnose and Fix Joystick Drift</h2>
         <article>
-          If your gamepad drifts on its own, use our{" "}
-          <strong>stick drift tester</strong> to diagnose the issue. Steps to
+          If your gamepad moves on its own, use our{" "}
+          <strong>stick drift tester</strong> to locate the problem. Steps to
           fix joystick drift:
           <br />
-          <span>1.</span> Calibrate your controller with built-in{" "}
+          <span>1.</span> Calibrate your controller using built-in{" "}
           <strong>controller calibration</strong> tools.
           <br />
           <span>2.</span> Clean the joystick with isopropyl alcohol.
           <br />
-          <span>3.</span> Replace joystick modules if necessary.
+          <span>3.</span> Replace joystick modules if needed.
           <br />
           <span>4.</span> Update firmware or drivers.
           <br />
@@ -151,7 +182,7 @@ export function MainPageInfo() {
           src={ps5_mb}
           loading="lazy"
           decoding="async"
-          alt="PS5 DualSense controller inside – analogs module"
+          alt="PS5 DualSense controller inside – analog module"
         />
       </StyledImgWrapper>
 
@@ -159,35 +190,43 @@ export function MainPageInfo() {
         <h2>Controller Button Test – Fix Faulty Buttons Easily</h2>
         <article>
           Run a <strong>controller button test</strong> to identify unresponsive
-          buttons. Fix issues by:
+          or stuck buttons.
           <br />
-          <span>1.</span> Cleaning button contacts.
+          How to fix button issues:
           <br />
-          <span>2.</span> Inspecting and replacing rubber domes.
+          <span>1.</span> Clean button contacts carefully.
           <br />
-          <span>3.</span> Re-soldering faulty connections.
+          <span>2.</span> Check and replace worn-out rubber pads.
           <br />
-          <span>4.</span> Updating drivers.
+          <span>3.</span> Re-solder damaged connections.
           <br />
-          <span>5.</span> Retesting with our <strong>controller tester</strong>.
+          <span>4.</span> Update controller drivers.
+          <br />
+          <span>5.</span> Retest using our <strong>controller tester</strong>.
         </article>
       </StyledMainPageInfo>
 
       <StyledMainPageInfo>
         <h2>Why Choose Our Gamepad Tester?</h2>
         <article>
-          Our free <strong>controller tester</strong> is trusted by gamers for:
+          Our free <strong>controller tester</strong> is trusted by gamers and
+          repair professionals for:
           <ul>
             <li>
-              Fast and accurate <strong>gamepad test online</strong>
+              - Fast and accurate <strong>online gamepad testing</strong>
             </li>
             <li>
-              Built-in <strong>controller vibration tester</strong> and{" "}
+              - Built-in <strong>controller vibration tester</strong> and{" "}
               <strong>microphone test</strong>
             </li>
-            <li>No installation — 100% browser-based</li>
-            <li>Compatible with major brands and PC gamepads</li>
+            <li>- No installation – 100% browser-based</li>
+            <li>- Compatible with all major controller brands</li>
           </ul>
+          <br />
+          In addition, explore our growing library of{" "}
+          <strong>repair tutorials and troubleshooting guides</strong> —
+          covering everything from joystick drift fixes to USB port replacements
+          and all consoles repair.
         </article>
       </StyledMainPageInfo>
     </StyledMainPageWrapper>

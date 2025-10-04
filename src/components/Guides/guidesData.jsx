@@ -1,12 +1,13 @@
 import { AllHDMI } from "./articles/AllHDMI";
-import { Nintendo_Switch_teardown } from "./articles/Nintendo/Nintendo Switch/Nintendo_Switch_teardown";
 import { PS5_HDMI_Replacement } from "./articles/Sony/PlayStation 5 (PS5)/PS5_HDMI_Replacement";
 import { PS4_HDMI_Replacement } from "./articles/Sony/PlayStation 4 (PS4)/PS4_HDMI_Replacement";
 import { USB_PS5_GAMEPAD } from "../USBTester/USB_PS5_GAMEPAD";
+import { USB_XBOX_SERIES_GAMEPAD } from "../USBTester/USB_XBOX_SERIES_GAMEPAD";
 import { PS5_Gamepad_USB_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_USB_replacement";
 import { PS5_Gamepad_Buttons_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Buttons_Fix";
 import { PS5_Gamepad_Analog_Drift_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Drift_Fix";
 import { PS5_Gamepad_Analog_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Replacement";
+import { X_SERIES_GAMEPAD_LT_RT } from "./articles/Microsoft/Xbox Series Gamepad/X_SERIES_GAMEPAD_LT_RT";
 
 export const guidesData = {
   Microsoft: {
@@ -33,7 +34,9 @@ export const guidesData = {
       },
       "Xbox Series Gamepad": {
         guides: {
-          // one: "one",
+          "Xbox Series Gamepad loud or sticky LT or RT buttons": (
+            <X_SERIES_GAMEPAD_LT_RT />
+          ),
         },
       },
       // "Xbox Series S": {
@@ -62,10 +65,7 @@ export const guidesData = {
     devices: {
       "Nintendo Switch": {
         guides: {
-          "Nintendo Switch teardown & disassembly": (
-            <Nintendo_Switch_teardown />
-          ),
-          "Second guide": <Nintendo_Switch_teardown />,
+          // one: "one",
         },
       },
       "Nintendo Switch Lite": {
@@ -187,6 +187,11 @@ export const guidesData = {
       "PS5 Gamepad (DualSense)": {
         guides: {
           "PS5 Gamepad (DualSense) USB-C diode test": <USB_PS5_GAMEPAD />,
+        },
+      },
+      "XBOX Series Gamepad": {
+        guides: {
+          "XBOX Series Gamepad USB-C diode test": <USB_XBOX_SERIES_GAMEPAD />,
         },
       },
     },

@@ -20,6 +20,10 @@ const StyledUl = styled.ul`
     color: ${Theme.logo};
   }
 
+  a {
+    border-top: 3px solid ${Theme.interface};
+  }
+
   .active {
     /* border-top: 3px solid transparent;
     border-left: 3px solid ${Theme.greyTwo};

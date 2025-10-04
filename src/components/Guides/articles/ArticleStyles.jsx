@@ -20,6 +20,10 @@ export const StyledArticleWrapper = styled.div`
     color: ${Theme.black};
     margin: 1rem 0;
     text-align: left;
+    background-color: ${Theme.primary};
+    color: ${Theme.black};
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 
   img {
