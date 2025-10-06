@@ -6,6 +6,7 @@ export const Theme = {
   primary: "rgb(151, 150, 149)",
   secondary: "rgb(99, 99, 99)",
   interface: "rgb(44, 44, 44)",
+  hover: "rgba(44, 44, 44, 0.904)",
   background: "rgb(233,227,213)",
   logo: "rgb(230, 229, 229)",
 };
