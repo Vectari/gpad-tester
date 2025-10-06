@@ -17,13 +17,12 @@ export const StyledArticleWrapper = styled.div`
   }
 
   h2 {
-    color: ${Theme.black};
     margin: 1rem 0;
     text-align: left;
-    background-color: ${Theme.primary};
+    border-bottom: 2px solid ${Theme.secondary};
     color: ${Theme.black};
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   img {

@@ -42,31 +42,43 @@ const StyledMainPageInfo = styled.div`
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid ${Theme.secondary};
-    background-color: ${Theme.primary};
+    /* background-color: ${Theme.primary}; */
     color: ${Theme.black};
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     margin-bottom: 1rem;
 
-    &:hover {
+    /* &:hover {
       color: ${Theme.white};
       background-color: ${Theme.interface};
       transition: 0.5s;
-    }
+    } */
   }
+
+  .h2_styles {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid ${Theme.secondary};
+    color: ${Theme.black};
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
   h2 {
     padding-bottom: 0.5rem;
-    background-color: ${Theme.primary};
+    /* background-color: ${Theme.primary}; */
+    border-bottom: 2px solid ${Theme.secondary};
     color: ${Theme.black};
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     margin-bottom: 1rem;
 
-    &:hover {
+    /* &:hover {
       color: ${Theme.white};
       background-color: ${Theme.interface};
       transition: 0.5s;
-    }
+    } */
   }
 
   article {
@@ -151,7 +163,10 @@ export function MainPageInfo() {
       </StyledMainPageInfo>
 
       <StyledMainPageInfo>
-        <h2>Stick Drift Test – How to Diagnose and Fix Joystick Drift</h2>
+        <p className="h2_styles">
+          Stick Drift Test – How to Diagnose and Fix Joystick Drift
+        </p>
+        {/* <h2>Stick Drift Test – How to Diagnose and Fix Joystick Drift</h2> */}
         <article>
           If your gamepad moves on its own, use our{" "}
           <strong>stick drift tester</strong> to locate the problem. Steps to
@@ -187,7 +202,10 @@ export function MainPageInfo() {
       </StyledImgWrapper>
 
       <StyledMainPageInfo>
-        <h2>Controller Button Test – Fix Faulty Buttons Easily</h2>
+        <p className="h2_styles">
+          Controller Button Test – Fix Faulty Buttons Easily
+        </p>
+        {/* <h2>Controller Button Test – Fix Faulty Buttons Easily</h2> */}
         <article>
           Run a <strong>controller button test</strong> to identify unresponsive
           or stuck buttons.
@@ -207,7 +225,8 @@ export function MainPageInfo() {
       </StyledMainPageInfo>
 
       <StyledMainPageInfo>
-        <h2>Why Choose Our Gamepad Tester?</h2>
+        <p className="h2_styles">Why Choose Our Gamepad Tester?</p>
+        {/* <h2>Why Choose Our Gamepad Tester?</h2> */}
         <article>
           Our free <strong>controller tester</strong> is trusted by gamers and
           repair professionals for:
