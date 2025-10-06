@@ -52,11 +52,11 @@ const StyledLinkMenu = styled(Link)`
   flex-direction: column;
   margin: 1rem auto;
   max-width: 350px;
+  transition: 0.5s;
 
   &:hover {
-    background-color: ${Theme.primary};
-    color: ${Theme.black};
-    transition: 0.5s;
+    border-radius: 1rem;
+    background-color: ${Theme.hover};
   }
 `;
 
