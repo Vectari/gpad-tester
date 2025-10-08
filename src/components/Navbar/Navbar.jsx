@@ -112,6 +112,16 @@ export function Navbar() {
         </NavLink>
 
         <NavLink
+          to="/calibration"
+          className={activeLink === "/calibration" ? "active" : ""}
+        >
+          <span>
+            <FaTools />
+            <Spantext>Calibration</Spantext>
+          </span>
+        </NavLink>
+
+        <NavLink
           to="/guides"
           className={activeLink === "/guides" ? "active" : ""}
         >
