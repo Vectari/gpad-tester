@@ -55,30 +55,20 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector("[data-bs-target='#extraInfo']");
+        const collapse = document.querySelector("#extraInfo");
 
-    <nav class="navbar bg-body-tertiary navbar-expand-md bg-body-tertiary">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        collapse.addEventListener("shown.bs.collapse", () => {
+          btn.textContent = "Hide";
+        });
 
-        <div
-          class="collapse navbar-collapse container-fluid justify-content-end"
-          id="navbarNavDropdown"
-        >
-          <ul class="navbar-nav"></ul>
-        </div>
-      </div>
-    </nav>
-
+        collapse.addEventListener("hidden.bs.collapse", () => {
+          btn.textContent = "More Info";
+        });
+      });
+    </script>
     <div class="container p-2">
       <div id="missinghid" style="display: none">
         <p class="ds-i18n">
@@ -89,8 +79,8 @@
 
       <div id="offlinebar" class="vstack p-2" style="display: none">
         <p class="ds-i18n">
-          Please connect a DualShock 4, a DualSense or DualSense Edge controller
-          to your computer and press Connect.
+          Please connect a DualShock 4 (PS4), DualSense (PS5) or DualSense Edge
+          (PS5 Edge) controller to your computer and press Connect.
         </p>
         <button
           id="btnconnect"
@@ -148,19 +138,28 @@
                     >
                   </div>
                   <dl class="row px-3 py-2" id="fwinfo"></dl>
+
                   <div class="card-body">
-                    <dl class="row" id="fwinfoextra-fw"></dl>
+                    <!-- Przycisk rozwijania -->
+                    <button
+                      class="btn btn-sm btn-outline-primary mb-2"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#extraInfo"
+                      aria-expanded="false"
+                      aria-controls="extraInfo"
+                    >
+                      More Info
+                    </button>
+
+                    <div class="collapse" id="extraInfo">
+                      <dl class="row" id="fwinfoextra-fw"></dl>
+                      <dl class="row" id="fwinfoextra-hw"></dl>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <dl class="row" id="fwinfoextra-hw"></dl>
-                  </div>
-                  <span id="infoshowall" class="pb-4 px-4 row"> </span>
                 </div>
                 <br />
-
-                <br />
               </div>
-
               <div class="col-md-6 col-sm-12" style="min-width: 330px">
                 <div class="vstack gap-2 p-2">
                   <button
@@ -321,46 +320,15 @@
           id="footbody"
         >
           <p class="mb-0">
+            This part of the application is based on the repository
             <a
+              href="https://github.com/dualshock-tools/dualshock-tools.github.io"
               target="_blank"
-              href="https://github.com/dualshock-tools/dualshock-tools.github.io/commits/main/"
-              ><span class="ds-i18n">Version</span> 2.17</a
+              >dualshock-tools.github.io</a
             >
-            (2025-09-28) -
-            <a href="#" class="ds-i18n" onclick="show_donate_modal();"
-              >Support this project</a
-            >&nbsp;<span id="authorMsg"></span>
+            (version 2.17, retrieved on October 8, 2025), originally licensed
+            under the MIT License © 2024 the_al.
           </p>
-
-          <ul class="list-unstyled d-flex mb-0">
-            <li class="ms-3">
-              <a
-                class="link-body-emphasis"
-                href="mailto:ds4@the.al"
-                target="_blank"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#mail" /></svg
-              ></a>
-            </li>
-            <li class="ms-3">
-              <a
-                class="link-body-emphasis"
-                href="https://discord.gg/w2P7Rrs2Yp"
-                target="_blank"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#discord" /></svg
-              ></a>
-            </li>
-            <li class="ms-3">
-              <a
-                class="link-body-emphasis"
-                href="https://github.com/dualshock-tools/"
-                target="_blank"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#github" /></svg
-              ></a>
-            </li>
-          </ul>
         </div>
       </div>
     </footer>

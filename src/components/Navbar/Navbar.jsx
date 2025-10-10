@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
-import { TbLoadBalancer } from "react-icons/tb";
+import { RiCrosshair2Line } from "react-icons/ri";
 
 const StyledNav = styled.div`
   display: flex;
@@ -117,7 +117,7 @@ export function Navbar() {
           className={activeLink === "/calibration" ? "active" : ""}
         >
           <span>
-            <TbLoadBalancer />
+            <RiCrosshair2Line />
             <Spantext>Calibration</Spantext>
           </span>
         </NavLink>
