@@ -1,6 +1,6 @@
 export function Calibration() {
   return (
-    <div style={{ width: "100%", height: "100vh", background: "#111" }}>
+    <div style={{ width: "100%", height: "100vh", background: "#FFF" }}>
       <iframe
         src="/dualshock-tools/index.html"
         // src="/dualshock-tools/dist/index.html"
