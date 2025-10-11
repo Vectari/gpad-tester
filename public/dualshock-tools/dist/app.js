@@ -4571,18 +4571,20 @@ window.disconnect = disconnectSync;
 window.show_faq_modal = show_faq_modal;
 window.show_info_tab = show_info_tab;
 
-window.calibrate_range = () =>
+window.calibrate_range = () => {
   calibrate_range(controller, {
-    resetStickDiagrams: window.resetStickDiagrams ?? (() => {}),
+    resetStickDiagrams,
     successAlert,
   });
+};
 
-window.calibrate_stick_centers = () =>
+window.calibrate_stick_centers = () => {
   calibrate_stick_centers(controller, {
-    resetStickDiagrams: window.resetStickDiagrams ?? (() => {}),
+    resetStickDiagrams,
     show_popup,
     set_progress,
   });
+};
 
 window.auto_calibrate_stick_centers = () =>
   auto_calibrate_stick_centers(controller, {
