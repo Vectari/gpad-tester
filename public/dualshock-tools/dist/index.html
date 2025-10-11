@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      id="bootstrap-css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+      integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"
+      integrity="sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <script type="module" src="./app.js"></script>
+    
+
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" /> -->
+
+    <!-- <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="DS Tools" /> -->
+
+    <!-- External CSS files -->
+    <!-- <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/finetune.css" /> -->
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector("[data-bs-target='#extraInfo']");
+        const collapse = document.querySelector("#extraInfo");
+
+        collapse.addEventListener("shown.bs.collapse", () => {
+          btn.textContent = "Hide";
+        });
+
+        collapse.addEventListener("hidden.bs.collapse", () => {
+          btn.textContent = "More Info";
+        });
+      });
+    </script>
+    <div class="container p-2">
+      <div id="missinghid" style="display: none">
+        <p class="ds-i18n">
+          Unsupported browser. Please use a web browser with WebHID support
+          (e.g. Chrome).
+        </p>
+      </div>
+
+      <div id="offlinebar" class="vstack p-2" style="display: none">
+        <p class="ds-i18n">
+          Please connect a DualShock 4 (PS4), DualSense (PS5) or DualSense Edge
+          (PS5 Edge) controller to your computer and press Connect.
+        </p>
+        <button
+          id="btnconnect"
+          type="button"
+          class="btn btn-outline-primary"
+          onclick="connect()"
+        >
+          <span
+            class="spinner-border spinner-border-sm"
+            style="display: none"
+            id="connectspinner"
+            aria-hidden="true"
+          ></span>
+          <span class="ds-i18n">Connect</span>
+        </button>
+        <br />
+      </div>
+
+      <div id="onlinebar" class="vstack p-2" style="display: none">
+        <div class="row">
+          <div class="col-sm-9 hstack">
+            <p><b class="ds-i18n">Connected to:</b></p>
+            &nbsp;
+            <p id="devname"></p>
+          </div>
+          <div class="col-sm-3">
+            <p id="d-bat" style="text-align: right"></p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn btn-outline-secondary ds-i18n"
+          onclick="disconnect()"
+        >
+          Disconnect</button
+        ><br />
+      </div>
+
+      <div id="mainmenu" class="container" style="display: none">
+        <div class="tab-content" id="mainTabsContent">
+          <div
+            class="tab-pane show active"
+            id="controller-content"
+            role="tabpanel"
+            aria-labelledby="controller-tab"
+          >
+            <!-- Main page content (controller info, calibration, joystick info) -->
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="card text-bg-light">
+                  <div class="card-header">
+                    <i class="fas fa-gamepad"></i>&nbsp;&nbsp;<span
+                      class="ds-i18n"
+                      >Controller Info</span
+                    >
+                  </div>
+                  <dl class="row px-3 py-2" id="fwinfo"></dl>
+
+                  <div class="card-body">
+                    <!-- Przycisk rozwijania -->
+                    <button
+                      class="btn btn-sm btn-outline-primary mb-2"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#extraInfo"
+                      aria-expanded="false"
+                      aria-controls="extraInfo"
+                    >
+                      More Info
+                    </button>
+
+                    <div class="collapse" id="extraInfo">
+                      <dl class="row" id="fwinfoextra-fw"></dl>
+                      <dl class="row" id="fwinfoextra-hw"></dl>
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </div>
+              <div class="col-md-6 col-sm-12" style="min-width: 330px">
+                <div class="vstack gap-2 p-2">
+                  <button
+                    type="button"
+                    class="btn btn-primary ds-btn ds-i18n"
+                    onclick="calibrate_stick_centers()"
+                  >
+                    Calibrate stick center
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary ds-btn ds-i18n"
+                    onclick="calibrate_range()"
+                  >
+                    Calibrate stick range
+                  </button>
+                  <hr />
+                  <button
+                    id="savechanges"
+                    type="button"
+                    class="btn btn-success ds-btn ds-i18n"
+                    onclick="flash_all_changes()"
+                    id="resetBtn"
+                  >
+                    Save changes permanently
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger ds-btn ds-i18n"
+                    onclick="reboot_controller()"
+                    id="resetBtn"
+                  >
+                    Reboot controller
+                  </button>
+
+                  <div class="card text-bg-light">
+                    <div class="card-header">
+                      <i class="fas fa-crosshairs"></i>&nbsp;&nbsp;<span
+                        class="ds-i18n"
+                        >Joystick Info</span
+                      >
+                    </div>
+                    <div class="vstack px-2">
+                      <center>
+                        <canvas
+                          id="stickCanvas"
+                          width="300"
+                          height="150"
+                        ></canvas>
+                      </center>
+                    </div>
+                    <div class="px-2">
+                      <div class="hstack">
+                        <div class="vstack" style="text-align: center">
+                          <span>LX:</span>
+                          <pre id="lx-lbl" style="min-width: 80px"></pre>
+                        </div>
+
+                        <div class="vstack" style="text-align: center">
+                          <span>LY:</span>
+                          <pre id="ly-lbl" style="min-width: 80px"></pre>
+                        </div>
+
+                        <div class="vstack" style="text-align: center">
+                          <span>RX:</span>
+                          <pre id="rx-lbl" style="min-width: 80px"></pre>
+                        </div>
+
+                        <div class="vstack" style="text-align: center">
+                          <span>RY:</span>
+                          <pre id="ry-lbl" style="min-width: 80px"></pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-2">
+                      <center>
+                        <div
+                          class="btn-group mb-3"
+                          role="group"
+                          aria-label="Display mode options"
+                        >
+                          <input
+                            type="radio"
+                            class="btn-check"
+                            name="displayMode"
+                            id="normalMode"
+                            value="normal"
+                            checked
+                          />
+                          <label
+                            class="btn btn-outline-secondary btn-sm ds-i18n"
+                            for="normalMode"
+                            >Normal</label
+                          >
+
+                          <input
+                            type="radio"
+                            class="btn-check"
+                            name="displayMode"
+                            id="centerZoomMode"
+                            value="centerZoom"
+                          />
+                          <label
+                            class="btn btn-outline-secondary btn-sm ds-i18n"
+                            for="centerZoomMode"
+                            >10x zoom</label
+                          >
+
+                          <input
+                            type="radio"
+                            class="btn-check"
+                            name="displayMode"
+                            id="checkCircularityMode"
+                            value="checkCircularity"
+                          />
+                          <label
+                            class="btn btn-outline-secondary btn-sm ds-i18n"
+                            for="checkCircularityMode"
+                            >Check circularity</label
+                          >
+                        </div>
+                      </center>
+                    </div>
+                  </div>
+                  <div
+                    class="my-3 text-center mx-3"
+                    id="controller-svg-container"
+                  >
+                    <!-- DualSense 5 Controller SVG loaded from template -->
+                    <div id="controller-svg-placeholder"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert Messages Container -->
+    <div
+      class="container-fluid fixed-bottom"
+      style="z-index: 1040; pointer-events: none; bottom: 70px"
+    >
+      <div class="container">
+        <div id="alert-container" class="mb-3" style="pointer-events: auto">
+          <!-- Alert messages will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="fixed-bottom bg-body-tertiary border-top">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-3"
+          id="footbody"
+        >
+          <p class="mb-0">
+            This part of the application is based on the repository
+            <a
+              href="https://github.com/dualshock-tools/dualshock-tools.github.io"
+              target="_blank"
+              >dualshock-tools.github.io</a
+            >
+            (version 2.17, retrieved on October 8, 2025), originally licensed
+            under the MIT License © 2024 the_al.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
