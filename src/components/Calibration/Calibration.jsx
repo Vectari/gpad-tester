@@ -1,9 +1,11 @@
 export function Calibration() {
+  const iframeSrc =
+    "/dualshock-tools/index.html" || "/dualshock-tools/dist/index.html";
+
   return (
     <div style={{ width: "100%", height: "100vh", background: "#FFF" }}>
       <iframe
-        src="/dualshock-tools/index.html"
-        // src="/dualshock-tools/dist/index.html"
+        src={iframeSrc}
         title="WebHID Calibration"
         style={{
           width: "100%",
