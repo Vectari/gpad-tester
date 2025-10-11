@@ -4045,7 +4045,6 @@ function resetStickDiagrams() {
   clear_circularity();
   refresh_stick_pos();
 }
-window.resetStickDiagrams = resetStickDiagrams;
 
 const on_stick_mode_change = () => resetStickDiagrams();
 
@@ -4435,7 +4434,7 @@ function board_model_info() {
   );
   const l3 =
     l("Board model detection thanks to") +
-    ' <a href="https://battlebeavercustoms.com/" target="_blank">Battle Beaver Customs</a>.';
+    ' <a href="https://battlebeavercustoms.com/">Battle Beaver Customs</a>.';
   show_popup(l3 + "<br><br>" + l1 + " " + l2, true);
 }
 
@@ -4570,37 +4569,22 @@ window.connect = connect;
 window.disconnect = disconnectSync;
 window.show_faq_modal = show_faq_modal;
 window.show_info_tab = show_info_tab;
-
-window.calibrate_range = () => {
-  calibrate_range(controller, {
-    resetStickDiagrams,
-    successAlert,
-  });
-};
-
-window.calibrate_stick_centers = () => {
+window.calibrate_range = () =>
+  calibrate_range(controller, { resetStickDiagrams, successAlert });
+window.calibrate_stick_centers = () =>
   calibrate_stick_centers(controller, {
     resetStickDiagrams,
     show_popup,
     set_progress,
   });
-};
-
 window.auto_calibrate_stick_centers = () =>
   auto_calibrate_stick_centers(controller, {
-    resetStickDiagrams: window.resetStickDiagrams ?? (() => {}),
+    resetStickDiagrams,
     successAlert,
     set_progress,
   });
-
 window.ds5_finetune = () =>
-  ds5_finetune(controller, {
-    ll_data,
-    rr_data,
-    clear_circularity,
-    resetStickDiagrams: window.resetStickDiagrams ?? (() => {}),
-  });
-
+  ds5_finetune(controller, { ll_data, rr_data, clear_circularity });
 window.flash_all_changes = flash_all_changes;
 window.reboot_controller = reboot_controller;
 window.refresh_nvstatus = refresh_nvstatus;
@@ -4610,18 +4594,6 @@ window.welcome_accepted = welcome_accepted;
 window.show_donate_modal = show_donate_modal;
 window.board_model_info = board_model_info;
 window.edge_color_info = edge_color_info;
-
-Object.assign(window, {
-  connect,
-  disconnect,
-  calibrate_stick_centers,
-  calibrate_range,
-  flash_all_changes,
-  reboot_controller,
-  show_faq_modal,
-  show_donate_modal,
-  resetStickDiagrams,
-});
 
 // Auto-initialize the application when the module loads
 gboot();
