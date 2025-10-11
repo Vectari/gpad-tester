@@ -6,6 +6,7 @@ import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
+// import { RiCrosshair2Line } from "react-icons/ri";
 
 const StyledNav = styled.div`
   display: flex;
@@ -60,7 +61,7 @@ const MenuWrapper = styled.div`
 
   span {
     color: ${Theme.logo};
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   a {
@@ -78,7 +79,7 @@ const Spantext = styled.span`
     display: none;
   }
 
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   text-align: center;
 `;
 
@@ -110,6 +111,16 @@ export function Navbar() {
             <Spantext>Main</Spantext>
           </span>
         </NavLink>
+
+        {/* <NavLink
+          to="/calibration"
+          className={activeLink === "/calibration" ? "active" : ""}
+        >
+          <span>
+            <RiCrosshair2Line />
+            <Spantext>Calibration</Spantext>
+          </span>
+        </NavLink> */}
 
         <NavLink
           to="/guides"
