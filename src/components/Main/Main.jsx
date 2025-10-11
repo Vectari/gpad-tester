@@ -22,6 +22,7 @@ const StyledUl = styled.ul`
 
   a {
     border-top: 3px solid ${Theme.interface};
+    transition: all 0.2s ease-in-out;
   }
 
   .active {

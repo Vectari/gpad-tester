@@ -90,7 +90,7 @@ export function AudioRecorder() {
   return (
     <AudioRecorderWrapper>
       <h3>
-        Gamepad Microphone Tester <span>(Experimental)</span>
+        Gamepad Microphone Tester
         <StyledSmallInfo>If supported</StyledSmallInfo>
       </h3>
 
