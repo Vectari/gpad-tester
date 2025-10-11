@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { GrGamepad } from "react-icons/gr";
-// import { RiCrosshair2Line } from "react-icons/ri";
+import { RiCrosshair2Line } from "react-icons/ri";
 
 const StyledNav = styled.div`
   display: flex;
@@ -112,7 +112,7 @@ export function Navbar() {
           </span>
         </NavLink>
 
-        {/* <NavLink
+        <NavLink
           to="/calibration"
           className={activeLink === "/calibration" ? "active" : ""}
         >
@@ -120,7 +120,7 @@ export function Navbar() {
             <RiCrosshair2Line />
             <Spantext>Calibration</Spantext>
           </span>
-        </NavLink> */}
+        </NavLink>
 
         <NavLink
           to="/guides"
