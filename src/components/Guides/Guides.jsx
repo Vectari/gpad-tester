@@ -42,10 +42,10 @@ const StyledLink = styled(Link)`
   color: ${Theme.white};
 `;
 
-const StyledLinkMenu = styled(Link)`
-  font-size: 1rem;
-  color: ${Theme.white};
-  background-color: ${Theme.interface};
+export const StyledLinkMenu = styled(Link)`
+  font-size: 1.1rem;
+  color: ${Theme.interface};
+  background-color: ${Theme.white};
   padding: 0.8rem;
   border-radius: 0.5rem;
   display: flex;
@@ -53,10 +53,11 @@ const StyledLinkMenu = styled(Link)`
   margin: 1rem auto;
   max-width: 350px;
   transition: 0.5s;
+  border: 2px solid ${Theme.interface};
 
   &:hover {
-    border-radius: 1rem;
-    background-color: ${Theme.hover};
+    background-color: ${Theme.interface};
+    color: ${Theme.white};
   }
 `;
 

@@ -3,8 +3,9 @@ import { Theme } from "../../styles/Theme";
 
 const StyledSendMail = styled.a`
   font-size: 1rem;
-  color: ${Theme.white};
-  background-color: ${Theme.interface};
+  color: ${Theme.interface};
+  background-color: ${Theme.white};
+  border: 2px solid ${Theme.interface};
   padding: 0.8rem;
   border-radius: 0.5rem;
   display: flex;
@@ -14,8 +15,8 @@ const StyledSendMail = styled.a`
   transition: 0.5s;
 
   &:hover {
-    border-radius: 1rem;
-    background-color: ${Theme.hover};
+    background-color: ${Theme.interface};
+    color: ${Theme.white};
   }
 `;
 
@@ -27,7 +28,7 @@ export function About() {
       <br />
       <h3>Any suggestions? Let me know. Thanks!</h3>
       <StyledSendMail href="mailto:gpadtester.info@gmail.com">
-        Send mail
+        Send an email
       </StyledSendMail>
       <p>gpadtester.info@gmail.com</p>
       <br />
