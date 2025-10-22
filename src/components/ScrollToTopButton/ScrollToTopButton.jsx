@@ -5,7 +5,7 @@ import { Theme } from "../../styles/Theme";
 
 const ScrollButton = styled.button`
   position: fixed;
-  bottom: 20px;
+  bottom: 120px;
   right: 50px;
   width: 45px;
   height: 45px;
