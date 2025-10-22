@@ -150,11 +150,20 @@ export function MainPageInfo() {
           Our tool supports:
           <ul>
             <li>- PS5 DualSense controllers</li>
+            <li>- PS5 DualSense Edge controllers</li>
             <li>- PS4 DualShock controllers</li>
             <li>- PS3 controllers</li>
             <li>- Xbox One and Xbox Series controllers</li>
             <li>- Generic PC gamepads</li>
           </ul>
+          <br />
+          It also includes a built-in <strong>
+            analog calibration tool
+          </strong>{" "}
+          for <strong>PS4 DualShock</strong>, <strong>PS5 DualSense</strong>,
+          and <strong>PS5 DualSense Edge</strong> controllers – perfect for
+          adjusting dead zones and improving joystick precision.
+          <br />
           <br />
           Visit our website for detailed{" "}
           <strong>repair guides and tutorials</strong> for all major consoles
@@ -166,7 +175,6 @@ export function MainPageInfo() {
         <p className="h2_styles">
           Stick Drift Test – How to Diagnose and Fix Joystick Drift
         </p>
-        {/* <h2>Stick Drift Test – How to Diagnose and Fix Joystick Drift</h2> */}
         <article>
           If your gamepad moves on its own, use our{" "}
           <strong>stick drift tester</strong> to locate the problem. Steps to
@@ -205,7 +213,6 @@ export function MainPageInfo() {
         <p className="h2_styles">
           Controller Button Test – Fix Faulty Buttons Easily
         </p>
-        {/* <h2>Controller Button Test – Fix Faulty Buttons Easily</h2> */}
         <article>
           Run a <strong>controller button test</strong> to identify unresponsive
           or stuck buttons.
@@ -226,7 +233,6 @@ export function MainPageInfo() {
 
       <StyledMainPageInfo>
         <p className="h2_styles">Why Choose Our Gamepad Tester?</p>
-        {/* <h2>Why Choose Our Gamepad Tester?</h2> */}
         <article>
           Our free <strong>controller tester</strong> is trusted by gamers and
           repair professionals for:
@@ -238,6 +244,10 @@ export function MainPageInfo() {
               - Built-in <strong>controller vibration tester</strong> and{" "}
               <strong>microphone test</strong>
             </li>
+            <li>
+              - Integrated <strong>analog calibration tool</strong> for PS4 and
+              PS5 controllers
+            </li>
             <li>- No installation – 100% browser-based</li>
             <li>- Compatible with all major controller brands</li>
           </ul>
@@ -247,6 +257,13 @@ export function MainPageInfo() {
           covering everything from joystick drift fixes to USB port replacements
           and all consoles repair.
         </article>
+        <footer style={{ display: "none" }}>
+          PS4 analog calibration, PS5 DualSense calibration, PS5 Edge
+          calibration, DualShock drift fix, DualSense Hall sensor calibration,
+          TMR analog calibration, Windows gamepad calibration, browser HID
+          calibration, fix controller drift online, recalibrate PlayStation
+          analog sticks
+        </footer>
       </StyledMainPageInfo>
     </StyledMainPageWrapper>
   );
