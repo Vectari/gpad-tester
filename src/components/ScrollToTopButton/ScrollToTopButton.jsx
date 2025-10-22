@@ -59,7 +59,7 @@ const ScrollToTopButton = () => {
 
   return (
     <ScrollButton onClick={scrollToTop} aria-label="Scroll to top">
-      <FaArrowUp />
+      <FaArrowUp size={20}/>
     </ScrollButton>
   );
 };
