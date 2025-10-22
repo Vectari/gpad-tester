@@ -6,7 +6,7 @@ import ps5_full from "../../media/ps5_full.webp";
 import ps5_mb from "../../media/ps5_mb.webp";
 import { LatestArticles } from "../LatestArticles/LatestArticles";
 
-const StyledMainPageWrapper = styled.div`
+export const StyledMainPageWrapper = styled.div`
   width: 90%;
   max-width: 1150px;
   margin: 0 auto;
@@ -17,7 +17,7 @@ const StyledMainPageWrapper = styled.div`
   }
 `;
 
-const StyledImgWrapper = styled.div`
+export const StyledImgWrapper = styled.div`
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -34,14 +34,14 @@ const StyledImgWrapper = styled.div`
   }
 `;
 
-const StyledMainPageInfo = styled.div`
+export const StyledMainPageInfo = styled.div`
   margin-bottom: 2rem;
   text-align: center;
 
   h1 {
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid ${Theme.secondary};
+    border-bottom: 1px solid ${Theme.secondary};
     /* background-color: ${Theme.primary}; */
     color: ${Theme.black};
     padding: 0.5rem;
@@ -59,7 +59,7 @@ const StyledMainPageInfo = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid ${Theme.secondary};
+    border-bottom: 1px solid ${Theme.secondary};
     color: ${Theme.black};
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -68,7 +68,7 @@ const StyledMainPageInfo = styled.div`
   h2 {
     padding-bottom: 0.5rem;
     /* background-color: ${Theme.primary}; */
-    border-bottom: 2px solid ${Theme.secondary};
+    border-bottom: 1px solid ${Theme.secondary};
     color: ${Theme.black};
     padding: 0.5rem;
     /* border-radius: 0.5rem; */
