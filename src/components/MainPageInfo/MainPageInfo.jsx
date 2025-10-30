@@ -257,13 +257,6 @@ export function MainPageInfo() {
           covering everything from joystick drift fixes to USB port replacements
           and all consoles repair.
         </article>
-        <footer style={{ display: "none" }}>
-          PS4 analog calibration, PS5 DualSense calibration, PS5 Edge
-          calibration, DualShock drift fix, DualSense Hall sensor calibration,
-          TMR analog calibration, Windows gamepad calibration, browser HID
-          calibration, fix controller drift online, recalibrate PlayStation
-          analog sticks
-        </footer>
       </StyledMainPageInfo>
     </StyledMainPageWrapper>
   );
