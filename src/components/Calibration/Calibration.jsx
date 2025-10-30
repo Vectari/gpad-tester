@@ -194,14 +194,6 @@ export function Calibration() {
             sticks.
           </article>
         </StyledMainPageInfo>
-
-        <footer style={{ display: "none" }}>
-          PS4 analog calibration, PS5 DualSense calibration, PS5 Edge
-          calibration, DualShock drift fix, DualSense Hall sensor calibration,
-          TMR analog calibration, Windows gamepad calibration, browser HID
-          calibration, fix controller drift online, recalibrate PlayStation
-          analog sticks
-        </footer>
       </StyledMainPageWrapper>
     </>
   );
