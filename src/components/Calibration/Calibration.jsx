@@ -34,6 +34,14 @@ export function Calibration() {
 
       <StyledMainPageWrapper>
         <StyledMainPageInfo>
+          <a
+            className="ps5_edge_guide"
+            target="_blank"
+            href="/guides/Sony/PS5%20Gamepad%20(DualSense%20Edge)/PS5%20Edge%20Gamepad%20analog%20replacement%20and%20calibration:%20HALLA,%20TMR,%20original"
+          >
+            GUIDE HERE: PS5 Edge Gamepad analog replacement and calibration:
+            HALLA, TMR, original
+          </a>
           <h1>Gamepad Analog Stick Calibration</h1>
           <article>
             <strong>Note:</strong> Calibration works{" "}

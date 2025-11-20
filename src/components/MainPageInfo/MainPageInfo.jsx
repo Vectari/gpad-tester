@@ -91,6 +91,11 @@ export const StyledMainPageInfo = styled.div`
     font-weight: bold;
     color: ${Theme.secondary};
   }
+
+  .ps5_edge_guide {
+    color: ${Theme.black};
+    text-decoration: underline;
+  }
 `;
 
 export function MainPageInfo() {
