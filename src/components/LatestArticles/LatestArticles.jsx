@@ -123,6 +123,18 @@ export function LatestArticles() {
               <td>
                 <a
                   target="_blank"
+                  href="/guides/Sony/PS5%20Gamepad%20(DualSense%20Edge)/PS5%20Edge%20Gamepad%20analog%20replacement%20and%20calibration:%20HALLA,%20TMR,%20original"
+                >
+                  PS5 Edge Gamepad analog replacement and calibration: HALLA,
+                  TMR, original
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2025-11-20</td>
+              <td>
+                <a
+                  target="_blank"
                   href="/guides/Microsoft/Xbox%20Series%20Gamepad/XBOX%20Series%20Gamepad%20drift%20on%20new%20analog%20and%20manual%20resistance%20adjustment"
                 >
                   XBOX Series Gamepad drift on new analog and &quot;Manual&quot;
