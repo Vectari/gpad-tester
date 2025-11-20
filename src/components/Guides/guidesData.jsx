@@ -8,6 +8,7 @@ import { PS5_Gamepad_Buttons_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)
 import { PS5_Gamepad_Analog_Drift_Fix } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Drift_Fix";
 import { PS5_Gamepad_Analog_Replacement } from "./articles/Sony/PS5 Gamepad (DualSense)/PS5_Gamepad_Analog_Replacement";
 import { X_SERIES_GAMEPAD_LT_RT } from "./articles/Microsoft/Xbox Series Gamepad/X_SERIES_GAMEPAD_LT_RT";
+import { X_ONE_DRIFT_ON_NEW_ANALOG } from "./articles/Microsoft/Xbox One Gamepad/x_one_drift_on_new_analog";
 
 export const guidesData = {
   Microsoft: {
@@ -29,7 +30,8 @@ export const guidesData = {
       // },
       "Xbox One Gamepad": {
         guides: {
-          // one: "one",
+          "XBOX ONE Gamepad drift on new analog and manual resistance adjustment":
+            <X_ONE_DRIFT_ON_NEW_ANALOG />,
         },
       },
       "Xbox Series Gamepad": {
@@ -37,6 +39,8 @@ export const guidesData = {
           "Xbox Series Gamepad loud or sticky LT or RT buttons": (
             <X_SERIES_GAMEPAD_LT_RT />
           ),
+          "XBOX Series Gamepad drift on new analog and manual resistance adjustment":
+            <X_ONE_DRIFT_ON_NEW_ANALOG />,
         },
       },
       // "Xbox Series S": {
@@ -49,16 +53,16 @@ export const guidesData = {
       //     // one: "one",
       //   },
       // },
-      "Xbox One Elite Gamepad": {
-        guides: {
-          // one: "one",
-        },
-      },
-      "Xbox Elite Series 2 Gamepad": {
-        guides: {
-          // one: "one",
-        },
-      },
+      // "Xbox One Elite Gamepad": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
+      // "Xbox Elite Series 2 Gamepad": {
+      //   guides: {
+      //     // one: "one",
+      //   },
+      // },
     },
   },
   Nintendo: {
