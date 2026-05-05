@@ -82,7 +82,7 @@ export function Navbar() {
       <MenuWrapper>
         <Logo>
           <GrGamepad />
-          <span>GamePad Tester</span>
+          <span>GPadTester.com</span>
         </Logo>
 
         <NavLinks>
