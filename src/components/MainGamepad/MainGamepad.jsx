@@ -237,7 +237,7 @@ export function MainGamepad({ playerNumber }) {
           >
             <GiVibratingBall />
           </button>
-          <StyledSmallInfo>PS5 not supported</StyledSmallInfo>
+          <StyledSmallInfo>PS5 not supported on Windows</StyledSmallInfo>
         </StyledVibrationLoopButtonWrapper>
       </StyledHistoryAndVibrationButtonsWrapper>
     </HistoryWrapper>

@@ -11,75 +11,109 @@ import PHOTO_3 from "./PS5_photo/3.webp";
 
 export function PS5_HDMI_Replacement() {
   return (
-    <>
-      <StyledArticleWrapper>
-        <h1>
-          Note: Replacing HDMI requires experience and the right equipment!
-        </h1>
-        <h2>● Issue Description</h2>
-        <p>
-          <ol>
-            <li>Visible mechanical damage.</li>
-            <li>
-              Video or audio signal depends on cable position or movement.
-            </li>
-            <li>No video or audio output at all.</li>
-          </ol>
-        </p>
-        <img src="" alt="" />
-        <h2>● Diagnostics</h2>
-        <ol>
-          <li>Inspect the HDMI port for visible physical damage.</li>
-          <li>
-            Check the console light – a solid white light means the system is
-            working.
-          </li>
-          <li>Connect a controller to verify the console responds properly.</li>
-          <li>
-            Perform a diode test as shown below. Readings may vary slightly, but
-            pay attention to the position of the green, red, and white pins –
-            this shows whether the signal lines are in good condition.
-          </li>
+    <StyledArticleWrapper>
+      <h1>
+        PS5 HDMI Port Not Working – How to Diagnose and Fix No Signal Issue
+      </h1>
 
-          <DiodeTesterWrapper>
-            <HDMI_PS5_FAT />
-            <HDMI_PS5_PRO />
-          </DiodeTesterWrapper>
-        </ol>
-        <h2>● Repair Steps</h2>
-        <ol>
-          <li>
-            The PS5 motherboard is durable, but precise temperature control is
-            important. Use hot air at about 420°C with airflow level 2–3 and
-            preheat the board to 160°C.
-          </li>
-          <li>Apply flux and a small amount of fresh solder to the joints.</li>
-          <li>
-            Heat the port evenly until the solder melts. You can use a soldering
-            iron to help with the process.
-          </li>
-          <li>
-            Be careful with the small SMD components behind the HDMI port – they
-            are easy to move or damage with too much heat.
-          </li>
-          <li>Clean the pads thoroughly once the old port is removed.</li>
-          <li>Position and solder the new HDMI port in place carefully.</li>
-        </ol>
-        <h2>● Testing</h2>
-        <ol>
-          <li>Perform another diode test to confirm correct readings.</li>
-          <li>
-            Connect the console to a monitor or TV and verify stable video and
-            audio output.
-          </li>
-        </ol>
-        <h2>● Gallery</h2>
-        <GalleryWrapper>
-          <img src={PHOTO_1} loading="lazy" alt="PS5 HDMI replacement" />
-          <img src={PHOTO_2} loading="lazy" alt="PS5 HDMI replacement" />
-          <img src={PHOTO_3} loading="lazy" alt="PS5 HDMI replacement" />
-        </GalleryWrapper>
-      </StyledArticleWrapper>
-    </>
+      <p>
+        If your <strong>PS5 has no signal</strong>, no image on the screen, or
+        the HDMI connection only works when the cable is moved — the HDMI port
+        may be damaged.
+      </p>
+
+      <p>
+        👉 Before opening the console, check if the system is actually working.
+        <br />
+        Look for a solid white light.
+      </p>
+
+      <h2>● Quick Check – Is Your PS5 Working?</h2>
+      <ol>
+        <li>Turn on the console.</li>
+        <li>Look for a solid white light.</li>
+        <li>Connect a controller.</li>
+        <li>
+          Open{" "}
+          <a
+            href="http://gpadtester.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            gamepad tester
+          </a>{" "}
+          and press buttons.
+        </li>
+        <li>
+          If inputs are detected → console works, HDMI is likely the issue.
+        </li>
+      </ol>
+
+      <h2>● Common HDMI Issues</h2>
+      <ul>
+        <li>Visible mechanical damage inside the port</li>
+        <li>Signal appears/disappears when moving the cable</li>
+        <li>No video or audio output at all</li>
+      </ul>
+
+      <h2>● Diagnostics</h2>
+      <ol>
+        <li>Inspect HDMI port for bent or broken pins.</li>
+        <li>Check console LED (white = system is running).</li>
+        <li>Confirm controller input works.</li>
+        <li>
+          Perform a diode test – compare readings with reference values below.
+        </li>
+      </ol>
+
+      <DiodeTesterWrapper>
+        <HDMI_PS5_FAT />
+        <HDMI_PS5_PRO />
+      </DiodeTesterWrapper>
+
+      <h2>● HDMI Port Replacement</h2>
+      <h3>
+        This repair requires experience – incorrect technique can damage the
+        motherboard.
+      </h3>
+
+      <ol>
+        <li>
+          Preheat the board to ~160°C. Use hot air at ~420°C (airflow 2–3).
+        </li>
+        <li>Apply flux and a small amount of fresh solder.</li>
+        <li>Heat evenly until solder melts completely.</li>
+        <li>Carefully remove the HDMI port.</li>
+        <li>
+          Watch out for nearby SMD components — they are easy to move or damage.
+        </li>
+        <li>Clean pads thoroughly.</li>
+        <li>Align and solder the new HDMI port.</li>
+      </ol>
+
+      <h2>● Testing After Repair</h2>
+      <ol>
+        <li>Repeat diode test and compare values.</li>
+        <li>Connect PS5 to a TV or monitor.</li>
+        <li>Check if image is stable and not flickering.</li>
+        <li>Verify audio output works correctly.</li>
+      </ol>
+
+      <p>
+        👉 If the console works but you had no signal before — HDMI replacement
+        solved the issue.
+      </p>
+
+      <h2>● Gallery</h2>
+      <GalleryWrapper>
+        <img src={PHOTO_1} loading="lazy" alt="PS5 HDMI port damage example" />
+        <img
+          src={PHOTO_2}
+          loading="lazy"
+          alt="PS5 HDMI port replacement process"
+        />
+        <img src={PHOTO_3} loading="lazy" alt="PS5 motherboard HDMI repair" />
+      </GalleryWrapper>
+    </StyledArticleWrapper>
   );
 }
